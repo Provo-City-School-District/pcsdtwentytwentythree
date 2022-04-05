@@ -1,0 +1,152 @@
+/*
+Theme Name: Provo City School District 2023 Parent Theme
+Theme URI: https://provo.edu
+Author: Provo City School District | WebTeam
+Author URI: https://tech.provo.edu
+Description: Parent Theme for PCSD. Started in 2022 to consolidate all themes into a framework and make updating easier.
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pcsd-2023-ParentTheme
+*/
+/*================================================================================================
+Variables
+================================================================================================*/
+:root {
+  --main-primary: black;
+  --main-secondary: red;
+  --main-tertiary: brown;
+  --theme-white: #fff;
+  --theme-grey: #ccc;
+  --anchor-color:blue;
+  --anchor-hover:orange;
+}
+/*===============================================================================================
+    The new CSS reset - version 1.5.1 (last updated 1.3.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+===============================================================================================*/
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property - The "symbol *" part is to solve Firefox SVG sprite bug */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+    font-size: 100%;
+}
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {cursor: revert;}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {list-style: none;}
+
+/* For images to not be able to exceed their container */
+img {max-width: 100%;}
+
+/* removes spacing between cells in tables */
+table {border-collapse: collapse;}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {white-space: revert;}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {color: unset;}
+
+/* fix the feature of 'hidden' attribute. display:revert; revert to element instead of attribute*/
+:where([hidden]) {display: none;}
+
+/* revert for bug in Chromium browsers - fix for the content editable attribute will work properly. */
+:where([contenteditable]) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+/* elements that are required, but are not needed visually */
+.visuallyhidden{
+  position: absolute;;
+  margin-top: 9000px
+}
+/*============================================================================================
+  Main Structure Styles
+==============================================================================================*/
+#mainHeader {
+	background:#dce3e8;
+	background:-moz-linear-gradient(top,#dce3e8,#f6f9fb 50%,#f6f9fb 55%,#dbe2e8);
+	background:-webkit-linear-gradient(top,#dce3e8,#f6f9fb 50%,#f6f9fb 55%,#dbe2e8);
+	background:linear-gradient(to bottom,#dce3e8,#f6f9fb 50%,#f6f9fb 55%,#dbe2e8);
+}
+#mainNav{}
+#mainHeaderInfo{}
+#siteWrapper {
+  background-image: url(assets/img/contentarea-texture-dk.jpg);
+}
+#pageContent{}
+#mainSidebar{}
+#mainFooter{}
+/*============================================================================================
+  Typography
+    10px = 0.625rem
+    12px = 0.75rem
+    14px = 0.875rem
+    16px = 1rem (base)
+    18px = 1.125rem
+    20px = 1.25rem
+    24px = 1.5rem
+    30px = 1.875rem
+    32px = 2rem
+==============================================================================================*/
+/* Headings */
+h1 {
+   font-size: 3rem;
+}
+h2 {
+   font-size: 2.5rem;
+}
+h3 {
+   font-size: 2rem;
+}
+strong {font-weight:700;}
+em {font-style:italic;}
+a{color: var(--anchor-color);}
+a:hover{color: var(--anchor-hover);}
+
+/*============================================================================================
+  Responsive Styles
+==============================================================================================*/
+@media (min-width: 700px){
+  h1 {
+     font-size: 3.5rem;
+  }
+  h2 {
+     font-size: 3rem;
+  }
+  h3 {
+     font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1000px){
+  h1 {
+     font-size: 4rem;
+  }
+  h2 {
+     font-size: 3.5rem;
+  }
+  h3 {
+     font-size: 3rem;
+  }
+}
