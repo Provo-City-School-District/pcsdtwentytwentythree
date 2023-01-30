@@ -1,0 +1,148 @@
+.rightSidebar {
+  margin-top: -26px
+}
+
+.rightSidebar ul {
+  list-style: none;
+}
+
+.rightSidebar ul li a {
+  color: var(--even-color);
+}
+
+.rightSidebar ul li a:hover {
+  color: var(--link-hover-color);
+}
+
+/* ============================================== Headings ============================================== */
+
+
+.rightSidebar h2,
+.rightSidebar h2 a {
+  color: #dce2e8;
+  font-size: 1.25em;
+  clear: both;
+}
+
+.rightSidebar h3,
+.rightSidebar h3 a {
+  color: #dce2e8;
+  font-size: 1.05em;
+}
+.rightSidebar.categories h2,
+.rightSidebar.categories h2 a {
+  color: var( --main-blue-color);
+
+}
+/* ============================================== Utility Classes ============================================== */
+
+.sidebarImg {
+  margin: 20px 0 10px 0;
+}
+
+/* social links */
+.rightSidebar .sociallinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 45px);
+  justify-content: space-evenly;
+}
+
+.imagelist li a {
+  display: grid;
+  /* max-height: 35px; */
+  grid-template-columns: 35px 1fr;
+  gap: 1em;
+  align-items: center;
+  margin: 1em 0 1em 0;
+}
+
+/* ============================================== contact cards ============================================== */
+.rightSidebar .personalvCard {
+  margin: 20px 0 30px 0;
+  min-height: 150px;
+}
+
+.rightSidebar .personalvCard img {
+  max-width: 100px;
+  float: right;
+  height: auto;
+  margin-bottom: 0 0 1em 1em;
+}
+
+.rightSidebar .personalvCard ul {
+  width: calc(100% - 120px);
+  font-size: .65em;
+}
+
+.rightSidebar .personalvCard .title {
+  font-size: 1em;
+  font-style: italic;
+}
+
+.sidebar .personalvCard .assignedschool {
+  margin-top: 15px;
+}
+
+/* ============================================== Categories Sidebar ============================================== */
+#rightSidebar.categories {
+  background-color: var(--odd-color);
+}
+#rightSidebar.categories a {
+  color:var(--link-color);
+}
+#rightSidebar.categories a:hover {
+  color:var(--link-hover-color);
+}
+#rightSidebar.categories .categories-6h ul {
+	display: grid;
+	grid-template-columns: 1fr;
+	list-style: none;
+	gap: 1em;
+}
+#rightSidebar.categories .categories-6h ul li {
+	background-color: var(--theme-white);
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+  /* max-width: 225px; */
+}
+#rightSidebar.categories .categories-6h ul li.classroom:before {
+	/* content: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg); */
+  background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg);
+}
+
+#rightSidebar.categories .categories-6h ul li.recog:before {
+  background-image: url(https://provo.edu/wp-content/uploads/2023/01/recog.jpg);
+}
+
+#rightSidebar.categories .categories-6h ul li.schools:before {
+  background-image: url(https://provo.edu/wp-content/uploads/2023/01/schools.jpg);
+}
+
+#rightSidebar.categories .categories-6h ul li.cte:before {
+  background-image: url(https://provo.edu/wp-content/uploads/2023/01/cte.jpg);
+}
+
+#rightSidebar.categories .categories-6h ul li.inno:before {
+  background-image: url(https://provo.edu/wp-content/uploads/2023/01/innovation.jpg);
+}
+
+#rightSidebar.categories .categories-6h ul li.business:before {
+  background-image: url(https://provo.edu/wp-content/uploads/2023/01/business.jpg);
+}
+
+#rightSidebar.categories .categories-6h ul li:before {
+	/* content: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg); */
+  content: '';
+  background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg);
+  /* background-size: contain; */
+  width: 100%;
+  padding-bottom: 50%;
+  /* height: 200px; */
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: center center;
+  background-size: cover;
+}

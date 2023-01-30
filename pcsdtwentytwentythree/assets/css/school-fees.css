@@ -1,0 +1,55 @@
+.schoolFeesMenu .post {
+    text-align: center;
+    font-size: 23px;
+}
+
+
+
+/*================================================================================================================
+fees styles
+https://provo.edu/school-fees/
+================================================================================================================*/
+.feeDisplay {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.activePost .feeDisplay .fee {
+  width: 20.7%;
+  padding: 10px 2% 10px 2%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: right;
+}
+
+.activePost .feeBreakdown .fee {
+  max-width: 12%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+
+}
+
+.noprior .feeBreakdown .fee {
+  max-width: 15%
+}
+
+.activePost .feeBreakdown .fee span {
+  text-align: left;
+  display: block;
+}
+
+.activePost .feeDisplay .fee p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.schoolFeesMenu .postgrid .post {
+  /* width: 27%; */
+}
+
+.schoolFeesMenu .postgrid .post a {
+  text-align: center;
+  display: block;
+  font-size: 23px;
+}

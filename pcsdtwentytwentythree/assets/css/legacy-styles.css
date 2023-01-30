@@ -1,0 +1,116 @@
+.grid2 {
+  gap: unset
+}
+.square2Image {
+  min-height: 400px;
+}
+.staticVid video {
+  max-height: 400px;
+}
+.currentContent,
+.slide {
+  min-height: 400px;
+}
+
+@media (min-width:700px) {
+  .currentContent {
+    overflow-y: scroll;
+  }
+
+}
+
+@media (min-width:1200px) {
+
+  .currentContent,
+  #slider {
+    width: 50%;
+    float: left;
+    max-height: 400px;
+  }
+
+}
+
+.grid3 {
+  max-width: 1500px;
+  margin: 0 auto;
+  clear: both
+}
+
+.slide span {
+  display: block;
+  color: #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+  height: auto;
+  background-color: #ccd5df;
+  background-color: rgba(204, 213, 223, 0.9);
+}
+
+.slide span h2,
+.slide span p {
+  max-width: 32vw;
+  padding-left: 15px;
+  padding-right: 10px;
+  margin: 5px 0;
+}
+
+.rightSidebar,
+#currentPage {
+  max-height: 1300px;
+  overflow-y: scroll;
+}
+
+#currentPage {
+  max-height: 1250px;
+}
+
+.rightSidebar {
+  width: 280px;
+}
+
+
+/* Directory search/filtering */
+
+#currentPage .directoryFilter {
+  display: block;
+}
+
+.directoryFilter #directorySearchIcon {
+  width: 22px;
+  height: 22px;
+  margin-bottom: -7px;
+}
+
+.directoryFilter label {
+  display: none;
+}
+
+.directoryFilter input {
+  border: 1px solid #ccc;
+  width: calc(100% - 30px);
+  padding: 5px 0;
+}
+
+.sidebar #directorySearchIcon {
+  display: inline;
+}
+
+@media (min-width:900px) {
+  #currentPage .directoryFilter {
+    display: none;
+  }
+}
+
+.legacyTop {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.fwContent {
+  max-width: 1500px;
+  margin: 0 auto;
+}

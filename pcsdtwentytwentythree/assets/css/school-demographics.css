@@ -1,0 +1,127 @@
+/*
+================================================================================================================
+school demo page
+https://provo.edu/school-demographics/
+================================================================================================================
+*/
+.demographics {
+    padding: 2%;
+  }
+  
+  .activePost .demographics:nth-child(even) {
+    background-color: #f1f5f9;
+  }
+  
+  .activePost .demographics:nth-child(odd) {
+    background-color: #dbe1e7;
+  }
+  
+  .demographics ul,
+  .demographics ul li {
+    list-style: none;
+    margin-left: 0;
+  }
+  
+  .demographics .socialicons {
+    list-style: none;
+    list-style-image: unset;
+    width: 40px;
+    margin-left: 2%;
+    display: inline-block;
+  }
+  
+  .demographics .princimg {
+    max-width: 120px;
+  }
+  
+  /* for the fake table area */
+  .demographics .demoDisplay {
+    padding: 0px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 400px;
+    min-width: 350px;
+  }
+  
+  .demoDisplay p {
+    margin-bottom: 35px;
+    flex-basis: 100%;
+  }
+  
+  .activePost .demoDisplay .demo-info:first-of-type {
+    flex-basis: 35%;
+    min-width: 166px;
+    text-align: left;
+  }
+  
+  .activePost .demoDisplay .demo-info {
+    /* Change the flex-basis to adjust how many columns there can be. */
+    flex-basis: 13%;
+    min-width: 93px;
+    background-color: #fff;
+    margin: 0;
+    text-align: right;
+  }
+  
+  .activePost .demoDisplay .demo-info ul {
+    margin: 0!important;
+  }
+  
+  .activePost .demoDisplay .demo-info ul li:first-of-type {
+    background-color: #013c6c;
+    color: #fff;
+  }
+  
+  .activePost .demoDisplay .demo-info ul li {
+    margin: 0!important;
+    padding: 5px 1% 5px 1%;
+    border: 1px solid #ccc;
+  }
+  
+  .activePost .demoDisplay .demo-info ul .demo_ell:after {
+    content: "ELL";
+  }
+  
+  .activePost .demoDisplay .demo-info ul .demo_eco:after {
+    content: 'Eco. Disadvantaged';
+  }
+  
+  @media (min-width: 1000px) {
+    .demographics .schoolContact {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  
+    .demographics .mapFeederNewsSocialPrincipal {
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .demographics .schoolContact {
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }
+  
+    .demographics .schoolContact ul {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+  
+    .demographics .schoolImgTable {
+      display: grid;
+      grid-template-columns: 35% 60%;
+      column-gap: 5%;
+    }
+  
+    .demographics .schoolImgTable img {
+      margin-top: 20px;
+    }
+  }
+  
