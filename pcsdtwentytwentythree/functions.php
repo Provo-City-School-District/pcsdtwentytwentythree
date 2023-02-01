@@ -11,6 +11,7 @@ function pcsd_assets()
 	wp_register_script('linkDetection', get_template_directory_uri() . '/assets/js/linkDetection.js', '', '1.0.0', true);
 	wp_register_script('404easterEgg', get_template_directory_uri() . '/assets/js/404.js', '', '1.0.0', true);
 	// wp_register_script('test', get_template_directory_uri() . '/assets/js/test.js', '', '1.0.0', true);
+	wp_register_script('formfix', get_template_directory_uri() . '/assets/js/formfix.js', '', '1.0.0', true);
 	//load CSS files
 
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
@@ -57,6 +58,9 @@ function pcsd_assets()
 	}
 	if (is_404()) {
 		wp_enqueue_script('404easterEgg');
+	}
+	if (is_page(array(4026,18049))) {
+		wp_enqueue_script('formfix');
 	}
 	if (is_page_template(array('template-school-listing.php'))) {
 		wp_enqueue_style('school-demo', get_template_directory_uri() . '/assets/css/school-demographics.css', '', '1.0.0', false);
@@ -1057,9 +1061,12 @@ add_action('init', 'cptui_register_my_taxes');
 
 
 
-// new
 
 
+
+
+// adds class .active to top menu item if the current active page is the page in the menu 
+// so that we can style that differently.
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
 function special_nav_class ($classes, $item) {

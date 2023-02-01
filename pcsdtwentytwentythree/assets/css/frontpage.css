@@ -16,13 +16,22 @@
 Front page Slider
 ================================================================================================================
 */
+#announcments {
+	background-image: url(../img/background/slider-background.png);
+}
+#announcments video {
+	max-width: 100%;
+	max-height: 600px;
+	display: block;
+	margin:0 auto;
+}
 #announcments h2 {
 	position: absolute;
 	left: -9999px
 }
 
 .slick-wrapper {
-	background-image: url(../img/background/slider-background.png);
+	/* background-image: url(../img/background/slider-background.png); */
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
@@ -138,7 +147,7 @@ Home Page News
 	flex-wrap: wrap;
 }
 
-#homeNews .categories-6h ul li.classroom:before {
+/* #homeNews .categories-6h ul li.classroom:before {
 	background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg);
 }
 
@@ -160,17 +169,17 @@ Home Page News
 
 #homeNews .categories-6h ul li.business:before {
 	background-image: url(https://provo.edu/wp-content/uploads/2023/01/business.jpg);
-}
+} */
 
 #homeNews .categories-6h ul li:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg);
+	/* background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg); */
 	content: '';
 	width: 100%;
 	padding-bottom: 50%;
 	background-repeat: no-repeat;
-  background-attachment: local;
-  background-position: center center;
-  background-size: cover;
+	background-attachment: local;
+	background-position: center center;
+	background-size: cover;
 }
 
 /*

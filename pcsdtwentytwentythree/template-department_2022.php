@@ -4,6 +4,8 @@
 */
 
 get_header();
+
+//print_r(get_fields());
 ?>
 <main id="mainContent" class="sidebar">
 	<?php custom_breadcrumbs(); ?>
@@ -11,28 +13,46 @@ get_header();
 	<div id="currentPage">
 
 		<!-- <h1><?php the_title(); ?></h1> -->
-		<div class="grid2">
+		<?php
+		if (get_field('activate_calendar') == true) {
+		?>
+			<div class="grid2">
 
-			<div>
+				<div>
+					<h1><?php the_title(); ?></h1>
+					<?php the_content();
+					the_post_thumbnail();
+					?>
+				</div>
+				<div>
+					<?php
+					$calSelect = get_field('select_cal');
+					echo do_shortcode('[calendar id="' . $calSelect . '"]');
+					if (get_field('fw_calendar_link_label')) {
+					?>
+						<a href="<?php echo get_field('fw_calendar_address'); ?>"><?php echo get_field('fw_calendar_link_label') ?></a>
+					<?php
+					}
+					?>
+
+
+				</div>
+			</div>
+		<?php
+		} else {
+		?>
+			<div class="fwtop">
 				<h1><?php the_title(); ?></h1>
 				<?php the_content();
 				the_post_thumbnail();
 				?>
-			</div>
-			<div>
-				<?php
-				$calSelect = get_field('select_cal');
-				echo do_shortcode('[calendar id="' . $calSelect . '"]');
-				if (get_field('fw_calendar_link_label')) {
-				?>
-					<a href="<?php echo get_field('fw_calendar_address'); ?>"><?php echo get_field('fw_calendar_link_label') ?></a>
-				<?php
-				}
-				?>
-
 
 			</div>
-		</div>
+
+		<?php
+		}
+
+		?>
 		<nav class="wpMenu">
 			<?php
 			wp_reset_query();

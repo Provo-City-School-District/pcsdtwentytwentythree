@@ -53,7 +53,7 @@ $get_to_know_fields = get_fields();
 		if ($get_to_know_fields['video_or_slider'] == 'video') {
 		?>
 
-			<video id="heroVideo" autoplay loop>
+			<video id="heroVideo" autoplay loop controls>
 				<source src="<?php echo $get_to_know_fields['video_url'] ?>" type="video/mp4">
 				Your browser does not support MP4 Format videos or HTML5 Video.
 			</video>
@@ -149,7 +149,7 @@ $get_to_know_fields = get_fields();
 				endif;
 				?>
 			</div>
-			<p class="moreNews"><a href="https://provo.edu/news/">Read More district news <span class="rightarrow"></span></a></p>
+			<p class="moreNews"><a href="https://provo.edu/news/">Read More District News <span class="rightarrow"></span></a></p>
 			<h2>News Categories</h2>
 			<div class="categories-6h">
 			

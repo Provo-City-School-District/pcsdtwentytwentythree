@@ -93,8 +93,10 @@ get_header();
 							<?php
 							}
 							?>
-							<h2><?php echo wpautop($tile['tile_title']); ?> </h2>
-							<?php echo wpautop($tile['tile_content']); ?>
+							<!-- <h2><?php echo wpautop($tile['tile_title']); ?> </h2> -->
+							<h2><?php echo $tile['tile_title']; ?> </h2>
+							<!-- <?php echo wpautop($tile['tile_content']); ?> -->
+							<?php echo $tile['tile_content']; ?>
 						</aside>
 				<?php
 					}

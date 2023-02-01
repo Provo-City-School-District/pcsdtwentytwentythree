@@ -1,10 +1,11 @@
 .departmentTiles {
 	display: grid;
 	margin-top: 1em;
+	gap: 1em;
 }
 
 .departmentTiles>* {
-	padding: 1em;
+	/* padding: 1em; */
 }
 
 .departmentTiles h2 {

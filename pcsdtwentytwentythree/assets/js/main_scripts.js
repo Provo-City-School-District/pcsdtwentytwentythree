@@ -154,10 +154,15 @@ jQuery(document).ready(function () {
 
 
 
-
-//forms with textarea with ID "message". when focused it should scroll to place the textarea at the top of the viewport to the best of its ability.
-let formMessageInput = document.getElementById("textareamessage");
-
-formMessageInput.addEventListener("focus", function () {
-  formMessageInput.scrollIntoView();
-});
+/*
+==================================================================================================
+make video on home page autoplay despite browser controls
+==================================================================================================
+*/
+var autoPlayVideo = document.getElementById("heroVideo");
+autoPlayVideo.oncanplaythrough = function () {
+  autoPlayVideo.muted = true;
+  autoPlayVideo.play();
+  autoPlayVideo.pause();
+  autoPlayVideo.play();
+};
