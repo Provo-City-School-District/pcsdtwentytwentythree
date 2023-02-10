@@ -42,7 +42,7 @@ get_header();
 		</div>
 	</div>
 	<?php
-	get_sidebar('globalsidebar');
+	get_sidebar('categories');
 	?>
 </main>
 <?php

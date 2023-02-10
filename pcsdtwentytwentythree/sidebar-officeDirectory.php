@@ -4,7 +4,7 @@
 <form class="directoryFilter">
 	<label for="dsearch" class="visuallyhidden" id="directorySearch">Directory Search: </label>
 	<input type="text" name="dsearch" class="text-input" aria-labelledby="directorySearch" id="sidebar-filter" value="" placeholder="Search our staff..." />
-	<img id="directorySearchIcon" src="//globalassets.provo.edu/image/icons/search-lt.svg" alt="" />
+	<!-- <img id="directorySearchIcon" src="//globalassets.provo.edu/image/icons/search-lt.svg" alt="" /> -->
 </form>
 	<h2>Department Pages</h2>
 	<ul class="imagelist">

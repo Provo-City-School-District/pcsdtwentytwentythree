@@ -23,6 +23,10 @@
 
 
 
+#trp-floater-ls.trp-color-dark {
+    right: 50px;
+    left: unset;
+}
 @media (min-width:600px) {
     #mainFooter {
         position: fixed;
@@ -34,3 +38,7 @@
     #mainFooter ul {
         display: flex;
     }
+    #trp-floater-ls.trp-color-dark {
+          margin-bottom: 57px;
+    }
+}

@@ -279,6 +279,9 @@ On Page Elements
 
 
 /* PostList styling */
+.postList.policies img {
+    max-width: 50px;
+}
 .postList .post {
     padding: 1em;
 }
@@ -290,7 +293,11 @@ On Page Elements
 .postList .post p {
     margin-top: unset;
 }
-
+#homeNews .featured-image,
+.postList .featured-image {
+	max-height: 220px;
+	overflow: hidden;
+}
 /* post meta  */
 .postmeta ul {
     display: flex;
@@ -474,7 +481,72 @@ Stay Connected/Stay Current
     background: transparent;
 }
 
-
+/*
+--------------------------------------------------------------------
+Policy styles
+--------------------------------------------------------------------
+*/
+/* .postgrid .post img.svg {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  } */
+  
+  #currentPage ul.policystyle {
+    margin:0 0 0 0;
+    overflow-x: auto;
+  }
+  
+  #currentPage ul.policystyle li {
+    list-style-position: inside;
+    width: 100%;
+    padding-left: 40px;
+    margin: 0;
+    white-space: nowrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  ul.policystyle li a {
+    font-size: 1.5em;
+  }
+  
+  ul.policystyle li:nth-child(even) {
+    background-color: #dbe1e7;
+  }
+  
+  ul.policystyle li:nth-child(odd) {
+    background-color: #f1f5f9;
+  }
+  
+  .policystyle article:nth-child(even) {
+    background-color: #dbe1e7;
+  }
+  
+  .policystyle article:nth-child(odd) {
+    background-color: #f1f5f9;
+  }
+  
+  .policystyle article {
+    padding: 5px 25px 10px;
+  }
+  
+  .policystyle article.min-height {
+    min-height: 300px;
+  }
+  
+  .policystyle article img {
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  
+  ul.policystyle li:nth-child(odd) ul li,
+  ul.policystyle li:nth-child(even) ul li {
+    background-color: transparent;
+  }
+  
 /* Policy Pages */
 .policyIcon {
     max-width: 4.5em;
@@ -485,7 +557,9 @@ Stay Connected/Stay Current
 
 /* Last Modified  */
 .lastmodified {
-    text-align: right;
+    /* text-align: right; */
+    display: inline;
+    float: right;;
 }
 
 
@@ -494,6 +568,8 @@ Stay Connected/Stay Current
 .directoryGrid {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .directoryGrid>* {
@@ -515,7 +591,6 @@ Stay Connected/Stay Current
         width: calc(100% / 7);
     }
 }
-
 .directoryGrid>*:nth-child(even) {
     background-color: var(--even-color);
 }
@@ -527,8 +602,8 @@ Stay Connected/Stay Current
 .directoryGrid .personalvCard img {
     display: block;
     margin: 0 auto;
-    max-width: 120px;
-    max-height: 150px;
+    width: 120px;
+    height: 150px;
 }
 
 .directoryGrid .personalvCard ul {

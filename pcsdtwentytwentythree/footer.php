@@ -26,7 +26,7 @@ if (is_page('search-results')) {
 				customerId: 10000352,
 				engineId: 10000520,
 				// searchUrl: 'https://provo.edu/search-results/',
-				searchUrl: 'https://sandbox.provo.edu:8443/search-results/',
+				searchUrl: 'https://provo.edu/search-results/',
 				language: 'en',
 				searchInputs: ['cludo-search-form'],
 				template: 'StandardInlineImages',

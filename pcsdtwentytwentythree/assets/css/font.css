@@ -74,3 +74,7 @@ a h4:hover {
   background-color: unset!important;
   padding: unset!important;;
 }
+
+#currentPage h1 {
+  margin-bottom: 15px;
+}

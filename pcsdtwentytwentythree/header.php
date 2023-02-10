@@ -69,7 +69,7 @@
 
 		</nav>
 		<div class="siteSearch griditem">
-		<a href="https://provo.edu/search-results/"><img src="https://sandbox.provo.edu:8443/wp-content/themes/pcsdtwentysixteen/assets/icons/dark/search-loupe.svg" width="25px"></a>
+		<a href="https://provo.edu/search-results/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/dark/search-loupe.svg" width="25px"></a>
 		<!-- <a><img src="https://sandbox.provo.edu:8443/wp-content/themes/pcsdtwentysixteen/assets/icons/light/translation-light.png" width="25px"></a>	
 			 -->
 			<!-- <form id="cludo-search-form" role="search">

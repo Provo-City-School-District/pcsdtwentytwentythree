@@ -12,7 +12,7 @@ get_header();
 			<form class="directoryFilter">
 			<label for="dsearch" class="visuallyhidden" id="directorySearch">Directory Search: </label>
 			<input aria-labelledby="directorySearch" name="dsearch" type="text" class="text-input" id="filter" value="" placeholder="Search our staff..." />
-			<img id="directorySearchIcon" src="//globalassets.provo.edu/image/icons/search-dk.svg" alt="" />
+			<!-- <img id="directorySearchIcon" src="//globalassets.provo.edu/image/icons/search-dk.svg" alt="" /> -->
 			</form>
 			
 
