@@ -498,7 +498,22 @@ Stay Connected/Stay Current
 
 .directoryGrid>* {
     padding: 1em 0;
-    width: 200px;
+    width:100%;
+}
+@media (min-width:500px){
+    .directoryGrid>* {
+        width: calc(100% / 3);
+    }
+}
+@media (min-width:1200px){
+    .directoryGrid>* {
+        width: calc(100% / 5);
+    }
+}
+@media (min-width:1400px){
+    .directoryGrid>* {
+        width: calc(100% / 7);
+    }
 }
 
 .directoryGrid>*:nth-child(even) {
