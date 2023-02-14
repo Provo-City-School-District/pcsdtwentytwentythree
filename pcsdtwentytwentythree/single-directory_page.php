@@ -76,6 +76,20 @@ if ($sidebar->have_posts()) {
 				}
 				?>
 				<?php
+				if (get_field('emp_skills')) {
+				?>
+					<li class="emp_skills"><strong>Skills:</strong> <?php echo get_field('emp_skills') ?></li>
+				<?php
+				}
+				?>
+				<?php
+				if (get_field('emp_resp')) {
+				?>
+					<li class="emp_resp"><strong>Responsibilities:</strong> <?php echo get_field('emp_resp') ?></li>
+				<?php
+				}
+				?>
+				<?php
 				if (get_field('website_address')) {
 				?>
 					<li class="website"><a href="<?php echo get_field('website_address') ?>"><?php echo get_field('website_link_label') ?></a></li>
