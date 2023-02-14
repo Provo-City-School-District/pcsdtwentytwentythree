@@ -37,7 +37,7 @@ function pcsd_assets()
 	// wp_enqueue_script('test');
 
 	if (is_front_page()) {
-		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.06', false);
+		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.07', false);
 	}
 	if (is_page_template(array('template-department_2022.php', 'template-department_2022_links.php', 'template-department_2022-tiles-news.php', 'template-department-staticmedia.php', 'template-department_fulltileimages.php'))) {
 		wp_enqueue_style('department', get_template_directory_uri() . '/assets/css/department-styles.css', '', '1.0.01', false);

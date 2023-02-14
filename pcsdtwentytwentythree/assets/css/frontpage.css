@@ -108,6 +108,7 @@ Home Page News
 
 #homeNews .stories .postDate {
 	text-align: right;
+	margin-right: 5%;
 }
 
 #homeNews .categories-6h ul {
