@@ -9,7 +9,7 @@
 	<h2>Department Pages</h2>
 	<ul class="imagelist">
 		<li>
-			<a href="https://provo.edu/business-and-finance/">
+			<a href="https://provo.edu/business-finance/">
 				<img src="//globalassets.provo.edu/image/icons/business-lt.svg" alt="" />
 				<span>Business &amp; Finance</span>
 			</a>
@@ -38,12 +38,12 @@
 				<span>Public Relations</span>
 			</a>
 		</li>
-		<li>
+		<!-- <li>
 			<a href="//provoschoolnurses.blogspot.com/">
 				<img src="//globalassets.provo.edu/image/icons/nurse-lt.svg" alt="" />
 				<span>School Nurses</span>
 			</a>
-		</li>
+		</li> -->
 		<li>
 			<a href="https://provo.edu/special-education/">
 				<img src="//globalassets.provo.edu/image/icons/special-lt.svg" alt="" />
@@ -68,26 +68,26 @@
 				<span>Teaching &amp; Learning</span>
 			</a>
 		</li>
-		<li>
+		<!-- <li>
 			<a href="https://provo.edu/transportation/">
 				<img src="//globalassets.provo.edu/image/icons/bus-lt.svg" alt="" />
 				<span>Transportation</span>
 			</a>
-		</li>
+		</li> -->
 		<li>
 			<a href="https://provo.edu/schools/">
 				<img src="//globalassets.provo.edu/image/icons/school.svg" alt="" />
 				<span>School Sites</span>
 			</a>
 		</li>
-		<li>
+		<!-- <li>
 			<a href="https://employee.provo.edu/employee-communications/">
 				<img src="//globalassets.provo.edu/image/icons/pr-lt.svg" alt="" />
 				<span>Employee Communications</span>
 			</a>
-		</li>
+		</li> -->
 		<li>
-			<a href="https://employee.provo.edu/technology/">
+			<a href="https://provo.edu/departments/technology-support/">
 				<img src="//globalassets.provo.edu/image/icons/tech-2-lt.svg" alt="" />
 				<span>Technology Support</span>
 			</a>
