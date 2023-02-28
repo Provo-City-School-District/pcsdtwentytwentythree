@@ -8,7 +8,7 @@ get_header();
 		<article id="activePost" class="activePost">
 
 			<?php
-			if (!is_page(array(0))) {
+			if (!is_page(array(12759))) {
 				do_shortcode('[modified-date]');
 			}
 			if (have_posts()) :
