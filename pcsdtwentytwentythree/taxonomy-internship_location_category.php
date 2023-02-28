@@ -114,7 +114,7 @@ get_header();
 			?>
 		</article>
 		</div>
-	<?php get_sidebar('globalsidebar'); ?>
+	<?php get_sidebar('categories'); ?>
 </main>
 <?php
 get_footer();
