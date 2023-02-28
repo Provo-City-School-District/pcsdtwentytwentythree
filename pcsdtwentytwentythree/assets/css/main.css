@@ -24,6 +24,7 @@ body {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .activePost ul li {
@@ -153,8 +154,13 @@ Utility
         /* gap: unset; */
         justify-content: space-evenly;
     }
-    #stayCurrent.grid2 {gap: 0;}
-    
+
+    #stayCurrent.grid2 {
+        gap: 0;
+    }
+
+}
+
 @media only screen and (min-width: 1600px) {
     .grid2 {
         gap: unset;
@@ -199,6 +205,7 @@ Utility
     align-items: center;
     gap: 1em;
 }
+
 #currentPage ul.grid3 li img {
     max-width: 100px;
 }
@@ -261,6 +268,7 @@ Utility
         margin-top: 130px;
         margin-bottom: 40px;
     }
+
     #mainContent.sidebar {
         margin-top: 110px;
     }
@@ -304,6 +312,7 @@ On Page Elements
 .postList.policies img {
     max-width: 50px;
 }
+
 .postList .post {
     padding: 1em;
 }
@@ -315,11 +324,13 @@ On Page Elements
 .postList .post p {
     margin-top: unset;
 }
+
 #homeNews .featured-image,
 .postList .featured-image {
-	max-height: 220px;
-	overflow: hidden;
+    max-height: 220px;
+    overflow: hidden;
 }
+
 /* post meta  */
 .postmeta ul {
     display: flex;
@@ -388,9 +399,11 @@ Stay Connected/Stay Current
     justify-content: center;
     padding-top: 20px;
 }
+
 #currentPage #stayCurrent {
-    margin-bottom:-4px!important
+    margin-bottom: -4px !important
 }
+
 #stayCurrent li {
     list-style: none;
     margin: unset;
@@ -436,7 +449,7 @@ Stay Connected/Stay Current
 }
 
 @media (min-width:700px) {
-    
+
     #stayCurrent ul:nth-child(1) {
         justify-self: start;
     }
@@ -444,8 +457,9 @@ Stay Connected/Stay Current
     #stayCurrent ul:nth-child(2) {
         justify-self: end;
     }
+
     #stayCurrent ul:nth-child(2) li {
-       margin-bottom:0em;
+        margin-bottom: 0em;
 
     }
 }
@@ -515,13 +529,13 @@ Policy styles
     margin-right: 20px;
     margin-bottom: 10px;
   } */
-  
-  #currentPage ul.policystyle {
-    margin:0 0 0 0;
+
+#currentPage ul.policystyle {
+    margin: 0 0 0 0;
     overflow-x: auto;
-  }
-  
-  #currentPage ul.policystyle li {
+}
+
+#currentPage ul.policystyle li {
     list-style-position: inside;
     width: 100%;
     padding-left: 40px;
@@ -529,46 +543,46 @@ Policy styles
     white-space: nowrap;
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-  
-  ul.policystyle li a {
+}
+
+ul.policystyle li a {
     font-size: 1.5em;
-  }
-  
-  ul.policystyle li:nth-child(even) {
+}
+
+ul.policystyle li:nth-child(even) {
     background-color: #dbe1e7;
-  }
-  
-  ul.policystyle li:nth-child(odd) {
+}
+
+ul.policystyle li:nth-child(odd) {
     background-color: #f1f5f9;
-  }
-  
-  .policystyle article:nth-child(even) {
+}
+
+.policystyle article:nth-child(even) {
     background-color: #dbe1e7;
-  }
-  
-  .policystyle article:nth-child(odd) {
+}
+
+.policystyle article:nth-child(odd) {
     background-color: #f1f5f9;
-  }
-  
-  .policystyle article {
+}
+
+.policystyle article {
     padding: 5px 25px 10px;
-  }
-  
-  .policystyle article.min-height {
+}
+
+.policystyle article.min-height {
     min-height: 300px;
-  }
-  
-  .policystyle article img {
+}
+
+.policystyle article img {
     margin-right: 50px;
     margin-bottom: 50px;
-  }
-  
-  ul.policystyle li:nth-child(odd) ul li,
-  ul.policystyle li:nth-child(even) ul li {
+}
+
+ul.policystyle li:nth-child(odd) ul li,
+ul.policystyle li:nth-child(even) ul li {
     background-color: transparent;
-  }
-  
+}
+
 /* Policy Pages */
 .policyIcon {
     max-width: 4.5em;
@@ -581,7 +595,8 @@ Policy styles
 .lastmodified {
     /* text-align: right; */
     display: inline;
-    float: right;;
+    float: right;
+    ;
 }
 
 
@@ -596,23 +611,27 @@ Policy styles
 
 .directoryGrid>* {
     padding: 1em 0;
-    width:100%;
+    width: 100%;
 }
-@media (min-width:500px){
+
+@media (min-width:500px) {
     .directoryGrid>* {
         width: calc(100% / 3);
     }
 }
-@media (min-width:1200px){
+
+@media (min-width:1200px) {
     .directoryGrid>* {
         width: calc(100% / 5);
     }
 }
-@media (min-width:1400px){
+
+@media (min-width:1400px) {
     .directoryGrid>* {
         width: calc(100% / 7);
     }
 }
+
 .directoryGrid>*:nth-child(even) {
     background-color: var(--even-color);
 }
@@ -746,7 +765,7 @@ Policy styles
 /*================================================================================================================
 form styles 
 ================================================================================================================*/
- form label {
+form label {
     padding: 15px 10px 0 0;
     /* margin: 0 0 15px 0; */
     display: inline;
@@ -758,7 +777,7 @@ form input {
     border: 1px solid #ccc;
     border-radius: 3px;
     /* margin: 0 0 15px 0; */
-    padding:10px;
+    padding: 10px;
     /* width: calc(100% - 152px); */
     width: calc(100% - 20px);
 }
@@ -768,7 +787,7 @@ form button {
     width: 150px;
     margin: 20px 0 20px 0;
     padding: 10px;
-    
+
     border: 1px solid #ccc;
 }
 
@@ -783,12 +802,15 @@ form input[type="radio"] {
 form p {
     display: inline;
 }
+
 form .columnRadio span {
     display: block;
 }
-form .columnRadio span > * {
+
+form .columnRadio span>* {
     display: inline;
 }
+
 form textarea {
     clear: both;
     width: calc(100% - 20px);
@@ -804,9 +826,10 @@ form ul li span {
     display: inline-block;
     width: 155px;
 }
+
 form input[type="search"] {
     display: inline;
-    width:calc(100% - 155px)
+    width: calc(100% - 155px)
 }
 
 
@@ -820,32 +843,35 @@ category styles
 .categories-6h ul li:before {
     background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg);
 }
+
 .categories-6h ul li.classroom:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg);
 }
 
 .categories-6h ul li.recog:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/recog.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/recog.jpg);
 }
 
 .categories-6h ul li.schools:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/schools.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/schools.jpg);
 }
 
 .categories-6h ul li.cte:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/cte.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/cte.jpg);
 }
 
 .categories-6h ul li.inno:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/innovation.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/innovation.jpg);
 }
 
 .categories-6h ul li.business:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/business.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/business.jpg);
 }
+
 .categories-6h ul li.schoolboard:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/public-news-story-board-report.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/public-news-story-board-report.jpg);
 }
+
 .categories-6h ul li.update:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/notice-updates.jpg);
+    background-image: url(https://provo.edu/wp-content/uploads/2023/01/notice-updates.jpg);
 }
