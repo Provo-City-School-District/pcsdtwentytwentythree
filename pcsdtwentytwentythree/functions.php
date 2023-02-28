@@ -20,7 +20,7 @@ function pcsd_assets()
 	wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/font.css', '', '1.0.01', false);
 	
 
-	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.0', false);
+	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.03', false);
 	wp_enqueue_style('breadcrumbs', get_template_directory_uri() . '/assets/css/breadcrumbs.css', '', '1.0.0', false);
 	wp_enqueue_style('footer', get_template_directory_uri() . '/assets/css/footer.css', '', '1.0.02', false);
 	wp_enqueue_style('sidebar', get_template_directory_uri() . '/assets/css/sidebar.css', '', '1.0.03', false);
