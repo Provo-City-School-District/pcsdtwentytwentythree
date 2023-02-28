@@ -11,10 +11,8 @@ get_header();
 	<?php custom_breadcrumbs(); ?>
 	<!-- Current Page Content -->
 	<div id="currentPage">
-
-		<!-- <h1><?php the_title(); ?></h1> -->
 		<?php
-		if (get_field('activate_calendar') == true) {
+		if (get_field('content_area_layout_select') == 'grid2') {
 		?>
 			<div class="grid2">
 
@@ -26,16 +24,25 @@ get_header();
 				</div>
 				<div>
 					<?php
-					$calSelect = get_field('select_cal');
-					echo do_shortcode('[calendar id="' . $calSelect . '"]');
-					if (get_field('fw_calendar_link_label')) {
+					if (get_field('activate_calendar') == true) {
+						$calSelect = get_field('select_cal');
+						echo do_shortcode('[calendar id="' . $calSelect . '"]');
+						if (get_field('fw_calendar_link_label')) {
 					?>
-						<a href="<?php echo get_field('fw_calendar_address'); ?>"><?php echo get_field('fw_calendar_link_label') ?></a>
+							<a href="<?php echo get_field('fw_calendar_address'); ?>"><?php echo get_field('fw_calendar_link_label') ?></a>
+						<?php
+						}
+					}
+					if (get_field('activate_video') == true) {
+						?>
+						<video controls src="<?php echo get_field('video_url'); ?>" poster="<?php echo get_field('video_poster'); ?>">
+							Sorry, your browser doesn't support embedded videos, but don't worry, you can
+							<a href="<?php echo get_field('video_url'); ?>">download it</a>
+							and watch it with your favorite video player!
+						</video>
 					<?php
 					}
 					?>
-
-
 				</div>
 			</div>
 		<?php
@@ -48,10 +55,8 @@ get_header();
 				?>
 
 			</div>
-
 		<?php
 		}
-
 		?>
 		<nav class="wpMenu">
 			<?php
@@ -108,7 +113,7 @@ get_header();
 					$postcategories = '"' . $category->name . '"' . ',';
 				}
 				//use $postcategories for category_name if you want to display category related posts only. Use actual category name if you want to only use that category
-				$my_query = new WP_Query(array('showposts' => 3, 'cat' => $newscat, 'post__not_in' => array($currentID)));
+				$my_query = new WP_Query(array('showposts' => 3, 'category_name'  => 'News', 'post__not_in' => array($currentID)));
 				while ($my_query->have_posts()) : $my_query->the_post(); ?>
 					<article class="post">
 						<div class="featured-image">

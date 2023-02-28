@@ -29,6 +29,7 @@ function pcsd_assets()
 	wp_enqueue_style('slick_css', get_template_directory_uri() . '/assets/css/slick.css', '', '1.0', false);
 	wp_enqueue_style('linkmarking', get_template_directory_uri() . '/assets/css/linkmarking.css', '', '1.0', false);
 	wp_enqueue_style('printing', get_template_directory_uri() . '/assets/css/print.css', '', '1.0', false);
+	
 	//load js files
 	wp_enqueue_script('slickScripts');
 	wp_enqueue_script('cludoScripts');
