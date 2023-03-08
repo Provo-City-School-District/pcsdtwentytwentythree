@@ -1,6 +1,7 @@
 <?php
 /*
 	Template Name: Department - Full Width with Repeat Tiles
+	Filename: template-department-tile-full-width.php
 */
 
 get_header();
@@ -26,7 +27,7 @@ get_header();
 
 
 	</section>
-	<section class="departmentTiles">
+	<section class="grid3 altColors">
 		<?php
 		$pageTiles = get_field('page_tiles');
 
@@ -45,6 +46,7 @@ get_header();
 		}
 		?>
 	</section><!-- departmentResources end -->
+	</div>
 	<?php
 	$sidebar = get_field('sidebar');
 

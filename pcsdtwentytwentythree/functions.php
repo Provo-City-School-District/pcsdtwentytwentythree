@@ -11,7 +11,7 @@ function pcsd_assets()
 	wp_register_script('linkDetection', get_template_directory_uri() . '/assets/js/linkDetection.js', '', '1.0.0', true);
 	wp_register_script('404easterEgg', get_template_directory_uri() . '/assets/js/404.js', '', '1.0.0', true);
 	wp_register_script('formfix', get_template_directory_uri() . '/assets/js/formfix.js', '', '1.0.0', true);
-	
+
 	//load CSS files
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
 	wp_enqueue_style('reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.01', false);
@@ -25,7 +25,7 @@ function pcsd_assets()
 	wp_enqueue_style('slick_css', get_template_directory_uri() . '/assets/css/slick.css', '', '1.0', false);
 	wp_enqueue_style('linkmarking', get_template_directory_uri() . '/assets/css/linkmarking.css', '', '1.0', false);
 	wp_enqueue_style('printing', get_template_directory_uri() . '/assets/css/print.css', '', '1.0', false);
-	
+
 	//load js files
 	wp_enqueue_script('slickScripts');
 	wp_enqueue_script('cludoScripts');
@@ -35,7 +35,16 @@ function pcsd_assets()
 	if (is_front_page()) {
 		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.08', false);
 	}
-	if (is_page_template(array('template-department_2022.php', 'template-department_2022_links.php', 'template-department_2022-tiles-news.php', 'template-department-staticmedia.php', 'template-department_fulltileimages.php'))) {
+	if (is_page_template(
+		array(
+			'template-department_2022.php',
+			'template-department_2022_links.php',
+			'template-department_2022-tiles-news.php',
+			'template-department-staticmedia.php',
+			'template-department_fulltileimages.php',
+			'template-department-tile-full-width.php'
+		)
+	)) {
 		wp_enqueue_style('department', get_template_directory_uri() . '/assets/css/department-styles.css', '', '1.0.01', false);
 		wp_enqueue_style('tiles', get_template_directory_uri() . '/assets/css/tiles.css', '', '1.0.0', false);
 	}
@@ -51,12 +60,12 @@ function pcsd_assets()
 			'template-department_repeater_slider.php'
 		)
 	)) {
-		wp_enqueue_style('legacy', get_template_directory_uri() . '/assets/css/legacy-styles.css', '', '1.0.0', false);
+		wp_enqueue_style('legacy', get_template_directory_uri() . '/assets/css/legacy-styles.css', '', '1.0.02', false);
 	}
 	if (is_404()) {
 		wp_enqueue_script('404easterEgg');
 	}
-	if (is_page(array(4026,18049))) {
+	if (is_page(array(4026, 18049))) {
 		wp_enqueue_script('formfix');
 	}
 	if (is_page_template(array('template-school-listing.php'))) {
@@ -81,7 +90,7 @@ function pcsd_assets()
 				'template-intern_locations.php'
 			)
 			//checks for school fee single templates
-		) || in_array(get_current_template(),array(
+		) || in_array(get_current_template(), array(
 			'single-school_fees_21-22.php',
 			'single-school_fees_22-23.php',
 			'single-school_fees_23-24.php',
@@ -89,7 +98,7 @@ function pcsd_assets()
 			'single-pagos_escolares_2223.php',
 			'single-pagos_escolares_2324.php'
 		))
-		
+
 	) {
 		wp_enqueue_style('school-fees', get_template_directory_uri() . '/assets/css/school-fees.css', '', '1.0.0', false);
 	}
@@ -992,7 +1001,7 @@ Taxonomy: School Fees Categories 21-22
 
 
 
-/*===========================================================================================
+	/*===========================================================================================
 Taxonomy: School Fees Categories Spanish 21-22.
 ===========================================================================================*/
 
@@ -1066,11 +1075,12 @@ add_action('init', 'cptui_register_my_taxes');
 
 // adds class .active to top menu item if the current active page is the page in the menu 
 // so that we can style that differently.
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
 
-function special_nav_class ($classes, $item) {
-  if (in_array('current-menu-item', $classes) ){
-    $classes[] = 'active ';
-  }
-  return $classes;
+function special_nav_class($classes, $item)
+{
+	if (in_array('current-menu-item', $classes)) {
+		$classes[] = 'active ';
+	}
+	return $classes;
 }

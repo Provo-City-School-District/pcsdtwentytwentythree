@@ -60,16 +60,19 @@
 
 .rightSidebar,
 #currentPage {
-  max-height: 1300px;
+  /* requested removal case102986
+   max-height: 1300px; */
   overflow-y: scroll;
 }
 
-#currentPage {
+/* 
+requested removal case102986
+  #currentPage {
   max-height: 1250px;
-}
+} */
 
 .rightSidebar {
-  width: 280px;
+  width: 268px;
 }
 
 
@@ -113,4 +116,29 @@
 .fwContent {
   max-width: 1500px;
   margin: 0 auto;
+}
+
+
+
+
+/* styles for Template Name: Department Tile No Slider 
+Filename: template-tile-noSlider.php  
+=========================================================================================*/
+.square2Image {
+	background-repeat: no-repeat;
+  padding:1em;
+  margin:1em;
+  /* margin-left:-1em; */
+  display: flex;
+  background-size:cover;
+  align-items: end;
+}
+.square2Image .slidertext {
+  background-color: var(--even-color);
+  opacity: 0.9;
+  margin-bottom:65px;
+  margin-left:-1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right:1em;
 }

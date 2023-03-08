@@ -1,16 +1,11 @@
 :root {
   --main-blue-color:#1c2f4a;
-  --even-color:#f1f5f9;
-  --odd-color:#dbe1e7;
+  --even-color:#e5ebf1;
+  --odd-color:#d9e2ec;
   --theme-white:#fff;
   --theme-black:#000;
-  /* 
-  Rob Requested in case101630
   --theme-grey:#ccc;
-  --light-grey:#999; 
-  */
-  --theme-grey:#f0f0f0;
-  --light-grey:#dcdcdc;
+  --light-grey:#999;
   --dark-grey:#777;
   --main-ltblue-color:#dde0e7;
   --link-color:#4f679e;
@@ -19,4 +14,13 @@
   --com-color:#1c2f4a;
   --stu-color:#C25400;
   --body-background:#8E9BAC;
+  /* 
+  Previous Settings
+  --theme-grey:#ccc;
+  --light-grey:#999;
+  --even-color:#f1f5f9;
+  --odd-color:#dbe1e7;
+  --theme-grey:#f0f0f0;
+  --light-grey:#dcdcdc;
+  */
 }

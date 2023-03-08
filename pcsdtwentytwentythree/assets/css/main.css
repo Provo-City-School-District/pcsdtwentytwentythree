@@ -141,7 +141,7 @@ Utility
     display: block;
 }
 
-.grid2 div:nth-child(2) {
+.grid2 div:nth-child(2):has(video) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,6 +305,7 @@ On Page Elements
     z-index: 10001;
     border: none;
     top: 0px;
+    position: static;
 }
 
 
