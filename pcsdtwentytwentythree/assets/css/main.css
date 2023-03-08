@@ -334,7 +334,7 @@ On Page Elements
 
 /* post meta  */
 .postmeta ul {
-    display: flex;
+    /* display: flex; */
     list-style: none;
     font-size: 0.8em;
     gap: .5em;
@@ -342,6 +342,7 @@ On Page Elements
 
 .postmeta ul li {
     padding-right: .5em;
+    display: inline;
 }
 
 .postmeta ul li img {
