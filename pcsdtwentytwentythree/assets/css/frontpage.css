@@ -143,9 +143,10 @@ Home Page News
 #homeNews .categories-6h ul li {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	/* justify-content: center; */
 	flex-direction: column;
 	flex-wrap: wrap;
+	text-align: center;
 }
 
 /* #homeNews .categories-6h ul li.classroom:before {
