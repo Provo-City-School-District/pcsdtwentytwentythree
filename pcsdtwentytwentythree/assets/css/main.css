@@ -615,7 +615,10 @@ ul.policystyle li:nth-child(even) ul li {
     padding: 1em 0;
     width: 100%;
 }
-
+.directoryGrid h2,.directoryGrid h3 {
+    flex:100%;
+    background-color: unset!important;
+}
 @media (min-width:500px) {
     .directoryGrid>* {
         width: calc(100% / 3);
