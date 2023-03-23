@@ -44,7 +44,11 @@
     width: 100%;
     max-width: 1600px;
 }
-
+@media (min-width:800px) {
+    #navbar {
+        width: 90%;
+    }
+}
 #navbar .student {
     background-color: var(--stu-color);
 }
@@ -175,7 +179,9 @@ Cludo Search
     .headerAddress {
         display: inline;
     }
-
+    body.admin-bar #trp-floater-ls.trp-top-right {
+        top:127px;
+    }
     /* #cludo-search-form .search-input {
         width: 350px;
     }
@@ -229,5 +235,8 @@ Cludo Search
     }
     #navbar ul {
         padding-right: unset;
+    }
+    body.admin-bar #trp-floater-ls.trp-top-right {
+        top:117px;
     }
 }
