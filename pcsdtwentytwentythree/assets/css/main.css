@@ -72,7 +72,10 @@ Utility
 #image404 {
     float: right;
 }
-
+.contactlist li {
+    list-style: none;
+    margin: 0 0 0 0!important;
+}
 .powered-by {
     display: none;
 }
@@ -773,12 +776,12 @@ form styles
 form label {
     padding: 15px 10px 0 0;
     /* margin: 0 0 15px 0; */
-    display: inline;
+    display: block;
     /* width: 115px; */
 }
 
 form input {
-    display: block;
+    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 3px;
     /* margin: 0 0 15px 0; */
@@ -786,7 +789,12 @@ form input {
     /* width: calc(100% - 152px); */
     width: calc(100% - 20px);
 }
-
+form select {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+}
 form input[type="submit"],
 form button {
     width: 150px;
@@ -837,8 +845,15 @@ form input[type="search"] {
     width: calc(100% - 155px)
 }
 
-
-
+.formattachments label {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    padding:unset;
+}
+form .block {
+    display: block;
+    margin-bottom:15px;
+}
 
 
 

@@ -15,7 +15,7 @@ function pcsd_assets()
 	//load CSS files
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
 	wp_enqueue_style('reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.01', false);
-	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.09', false);
+	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.15', false);
 	wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/font.css', '', '1.0.01', false);
 	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.04', false);
 	wp_enqueue_style('breadcrumbs', get_template_directory_uri() . '/assets/css/breadcrumbs.css', '', '1.0.0', false);
@@ -25,6 +25,7 @@ function pcsd_assets()
 	wp_enqueue_style('slick_css', get_template_directory_uri() . '/assets/css/slick.css', '', '1.0', false);
 	wp_enqueue_style('linkmarking', get_template_directory_uri() . '/assets/css/linkmarking.css', '', '1.0', false);
 	wp_enqueue_style('printing', get_template_directory_uri() . '/assets/css/print.css', '', '1.0', false);
+	
 
 	//load js files
 	wp_enqueue_script('slickScripts');

@@ -4,6 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$from = test_input($_POST['senderemail']);
 	//make email all lower case for validation
 	$from = strtolower($from);
+	$boundarySchool = test_input($_POST['boundarySchool']);
 	$staff_id = test_input($_POST['staff_id']);
 	$subject = test_input($_POST['subject']);
 	$submitmessage = test_input($_POST['message']);
@@ -34,9 +35,9 @@ get_header();
 ?>
 <main id="mainContent" class="sidebar">
 
-<section class="content page">
-	<?php custom_breadcrumbs(); ?>
-	<div id="currentPage">
+	<section class="content page">
+		<?php custom_breadcrumbs(); ?>
+		<div id="currentPage">
 			<?php
 			if (strpos($from, 'safffsmail') !== false) {
 				echo ('not a valid email');
@@ -53,6 +54,7 @@ get_header();
 					$headers[] = 'From: PCSD Website <donotreply@provo.edu>';
 					$headers[] = 'Reply-To: ' . $from;
 					$headers[] = 'Bcc: ' . $to;
+					$headers[] = 'Content-Type: text/html;charset=utf-8';
 					//if user requested email cc
 					if ($carbon == 'on') {
 						$headers[] = 'Bcc: ' . $from;
@@ -60,12 +62,23 @@ get_header();
 
 					//email body message
 					$newPhone = '(' . substr_replace($phone, ')', 3, 0);
-					$emailedmessage =
-						'This message was submitted through the District Website:' . "\r\n\r\n" .
-						$submitmessage . "\r\n\r\n" .
-						"Return Phone: " . $newPhone . "\r\n\r\n" .
-						'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from;
+					if ($staff_id == '68051') {
+						$emailedmessage =
+							'<strong>To: Entire Board Of Education</strong> <br><br> This message was submitted through the District Website to the entire Provo School Board:' . "<br><br>" .
+							$submitmessage . "<br><br>" .
+							"Return Phone: " . $newPhone . "<br><br>" .
+							'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from;
+					} else {
+						$emailedmessage =
+							'This message was submitted through the District Website:' . "<br><br>" .
+							$submitmessage . "<br><br>" .
+							"Return Phone: " . $newPhone . "<br><br>" .
+							'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from;
+					}
 
+					if ($staff_id == '68051') {
+						$emailedmessage = $emailedmessage . "<br><br>" . 'Boundary School: ' . $boundarySchool;
+					}
 					//send mail
 					openlog("emailFormLog", LOG_PID | LOG_PERROR, LOG_LOCAL0);
 					$emaildate = date('d.m.Y h:i:s');
@@ -93,7 +106,7 @@ get_header();
 				}
 			</script>
 			<div class="clear"></div>
-			</div>
+		</div>
 	</section>
 	<?php
 	$sidebar = get_field('sidebar');
