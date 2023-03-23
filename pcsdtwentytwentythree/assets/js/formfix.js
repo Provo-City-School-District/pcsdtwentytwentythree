@@ -2,5 +2,5 @@
 let formMessageInput = document.getElementById("textareamessage");
 
 formMessageInput.addEventListener("focus", function () {
-  formMessageInput.scrollIntoView();
+  formMessageInput.scrollIntoView({ block: "center" });
 });
