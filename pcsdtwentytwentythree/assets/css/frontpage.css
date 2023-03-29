@@ -805,6 +805,7 @@ Responsive styles
 Social Icons and Juicer near the bottom
 --------------------------------------------------------------------------------------------------------------
 */
+#socialMediaFrontPage {padding-bottom: 50px}
 #socialMediaFrontPage .sociallinks {
 	text-align: center;
 }
