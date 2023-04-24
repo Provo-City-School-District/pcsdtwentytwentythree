@@ -678,14 +678,17 @@ add_filter('wpcf7_validate_email*', 'custom_email_confirmation_validation_filter
 
 function custom_email_confirmation_validation_filter($result, $tag)
 {
-	if ('your-email' == $tag->name) {
-		$your_email = isset($_POST['your-email']) ? trim($_POST['your-email']) : '';
-		//$your_email_confirm = isset( $_POST['your-email-confirm'] ) ? trim( $_POST['your-email-confirm'] ) : '';
-
-		if (strpos($your_email, '@provo.edu')) {
-			$result->invalidate($tag, "This form is for Student and Parents only. Please refer to Technology Support to submit a work order");
-		}
+	if ( isset($_POST['_wpcf7']) && $_POST['_wpcf7'] == 51410) {
+		if ('your-email' == $tag->name) {
+			$your_email = isset($_POST['your-email']) ? trim($_POST['your-email']) : '';
+			//$your_email_confirm = isset( $_POST['your-email-confirm'] ) ? trim( $_POST['your-email-confirm'] ) : '';
+	
+			if (strpos($your_email, '@provo.edu')) {
+				$result->invalidate($tag, "This form is for Student and Parents only. Please refer to Technology Support to submit a work order");
+			}
+		}	
 	}
+	
 	return $result;
 }
 
