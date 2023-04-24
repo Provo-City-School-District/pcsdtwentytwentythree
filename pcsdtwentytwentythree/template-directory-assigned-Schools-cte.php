@@ -21,7 +21,7 @@ $directory_args = array(
 );
 $sidebar = new WP_Query($directory_args);
 ?>
-<section class="postgrid">
+<!-- <section class="postgrid"> -->
 	<?php
 	if ($sidebar->have_posts()) {
 		while ($sidebar->have_posts()) {
@@ -129,4 +129,4 @@ $sidebar = new WP_Query($directory_args);
 	}
 	wp_reset_postdata();
 	?>
-</section>
+<!-- </section> -->

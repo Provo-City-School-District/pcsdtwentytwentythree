@@ -33,7 +33,7 @@ body {
 
 @media (min-width:600px) {}
 
-@media (min-width:900px) {
+@media (min-width:1000px) {
     #mainContent.sidebar {
         display: grid;
         grid-template-columns: 1fr 300px;
@@ -268,15 +268,23 @@ Utility
 @media (min-width: 800px) {
 
     #mainContent {
-        margin-top: 130px;
+        margin-top: 140px;
         margin-bottom: 40px;
     }
 
     #mainContent.sidebar {
+        margin-top: 120px;
+    }
+}
+@media (min-width: 1100px) {
+    #mainContent {
+        margin-top: 130px;
+
+    }
+    #mainContent.sidebar {
         margin-top: 110px;
     }
 }
-
 @media (min-width: 1300px) {
     .wpMenu ul {
         grid-template-columns: repeat(6, 1fr);
@@ -895,3 +903,23 @@ category styles
 .categories-6h ul li.update:before {
     background-image: url(https://provo.edu/wp-content/uploads/2023/01/notice-updates.jpg);
 }
+
+
+
+/* Featured image Styles for Single post */
+.featured-image-full {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+@media (min-width: 1400px) {
+    .featured-image-full {
+      padding-top: 0;
+      height: 500px;
+    }
+  }

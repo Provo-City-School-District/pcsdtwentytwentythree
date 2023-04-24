@@ -7,7 +7,7 @@ get_header();
 	<section id="currentPage">
 		<article class="activePost">
 			<?php
-			$galleryArray = get_post_gallery_ids($post->ID);
+			// $galleryArray = get_post_gallery_ids($post->ID);
 			if (have_posts()) :
 				while (have_posts()) : the_post(); ?>
 					<header class="postmeta">
@@ -21,6 +21,7 @@ get_header();
 						</ul>
 					</header>
 					<?php
+					/*
 					if (get_post_gallery_ids($post->ID)) { ?>
 						<header class="featured-gallery">
 							<div class="featured-for">
@@ -38,9 +39,10 @@ get_header();
 						<header class="featured-image-full">
 							<?php the_post_thumbnail(); ?>
 						</header>
-					<?php }	?>
+					<?php }	
+					*/ ?>
 
-					<?php the_content(); 
+					<?php the_content();
 					// print_r(get_fields());
 					?>
 					<footer class="post_sig">
@@ -99,6 +101,8 @@ get_header();
 				<div class="grid3">
 					<?php
 					$currentID = get_the_ID();
+					wp_reset_query();
+					wp_reset_postdata();
 					//Removes news category from get_the_category
 					$categoryID = get_the_category($post->ID);
 					foreach ($categoryID as $category) {
@@ -109,11 +113,22 @@ get_header();
 					}
 
 					//use $postcategories for category_name if you want to display category related posts only. Use actual category name if you want to only use that category
-					$my_query = new WP_Query(array('showposts' => 3, 'category_name'  => 'News', 'post__not_in' => array($currentID)));
+					$my_query = new WP_Query(array('showposts' => 3, 'post_status' => 'publish', 'category_name'  => 'News', 'post__not_in' => array($currentID)));
 					while ($my_query->have_posts()) : $my_query->the_post(); ?>
 						<article class="post">
 							<div class="featured-image">
-								<?php the_post_thumbnail(); ?>
+								<?php
+
+								if (get_field('featured_image', $post_id)) {
+								?>
+									<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('featured_image'); ?>" alt="" class="" /></a>
+								<?php
+								} elseif (has_post_thumbnail()) {
+								?>
+									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+								<?php
+								}
+								?>
 							</div>
 							<header class="postmeta">
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

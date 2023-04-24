@@ -36,11 +36,11 @@ $get_to_know_fields = get_fields();
 			<button class="closeAlert"><img src="https://globalassets.provo.edu/image/icons/round-delete-button-white.svg" alt="Close Alerts" /></button>
 		<?php endwhile;
 		?>
-		
+
 	</section>
 	<div class="notgrid2">
-			280 West 940 North Provo, Utah 801-374-4800
-		</div>
+		280 West 940 North Provo, Utah 801-374-4800
+	</div>
 	<?php
 	wp_reset_query();
 	?>
@@ -102,12 +102,12 @@ $get_to_know_fields = get_fields();
 				<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-facebook.svg" alt="link to Facebook" /></a></li>
 			</ul>
 			<ul>
-			<li><a href="<?php echo get_field('hero_link_address'); ?>"><?php echo get_field('hero_link_label'); ?></a></li>
+				<li><a href="<?php echo get_field('hero_link_address'); ?>"><?php echo get_field('hero_link_label'); ?></a></li>
 			</ul>
 		</section>
 
 		<section class="wpMenu">
-		<?php
+			<?php
 			wp_reset_query();
 			$topMenu = get_field('select_a_menu');
 			// $menu_args = array('menu' => '1009');
@@ -121,18 +121,29 @@ $get_to_know_fields = get_fields();
 			<p>The latest news from Provo City School District</p>
 			<div class="stories">
 				<?php
-				
+
 				// excluding ID 1012. which is the Board Schedule.
 				$the_query = new WP_Query(array('posts_per_page' => 3, 'category_name'  => 'news'));
 				if ($the_query->have_posts()) :
 					while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<article>
+							<a href="<?php the_permalink(); ?>">
+								<div class="featured-image">
 
-							<div class="featured-image">
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-							</div>
+									<?php
+									if (get_field('featured_image', $post_id)) {
+									?>
+										<img src="<?php echo get_field('featured_image'); ?>" alt="" class="" />
+									<?php
+									} elseif (has_post_thumbnail()) {
+										the_post_thumbnail();
+									} else { ?>
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/building-image.jpg'; ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" width="217" height="175">
+									<?php } ?>
 
-							<h2><?php the_title(); ?></h2>
+								</div>
+								<h2><?php the_title(); ?></h2>
+							</a>
 							<div class="articleContent">
 								<?php
 								echo get_excerpt();
@@ -152,8 +163,8 @@ $get_to_know_fields = get_fields();
 			<p class="moreNews"><a href="https://provo.edu/news/">Read More District News <span class="rightarrow"></span></a></p>
 			<h2>News Categories</h2>
 			<div class="categories-6h">
-			
-			<?php wp_nav_menu(array('menu' => 'frontpage-categories')); ?>
+
+				<?php wp_nav_menu(array('menu' => 'frontpage-categories')); ?>
 			</div>
 		</section> <!-- News Home Page End -->
 
