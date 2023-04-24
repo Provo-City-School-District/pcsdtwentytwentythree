@@ -16,7 +16,18 @@ get_header();
 						<article class="post">
 							<a href="<?php the_permalink(); ?>">
 								<div class="featured-image">
-									<?php the_post_thumbnail('large'); ?>
+
+									<?php
+									if (get_field('featured_image', $post_id)) {
+									?>
+										<img src="<?php echo get_field('featured_image'); ?>" alt="" class="" />
+									<?php
+									} elseif (has_post_thumbnail()) {
+										the_post_thumbnail();
+									} else { ?>
+										<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/building-image.jpg'; ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" width="217" height="175">
+									<?php } ?>
+
 								</div>
 								<h2><?php the_title(); ?></h2>
 							</a>
