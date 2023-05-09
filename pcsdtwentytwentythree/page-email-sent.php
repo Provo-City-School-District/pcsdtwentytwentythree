@@ -23,12 +23,20 @@ if (!$_POST['senderemail'] || isset($_POST['sanity'])) {
 	echo '<script>setTimeout(function(){window.location.href="https://provo.edu"},100);</script>';
 	die();
 }
-$email_blacklist = array('vetus_republic_iii_percent@protonmail.com', 'bademail@gmail.com', 'bayville@gmail.com', 'chrisfuhriman9@gmail.com', 'kindnessbeginswithme@gmail.com');
+$email_blacklist = array(
+	'vetus_republic_iii_percent@protonmail.com', 
+	'bademail@gmail.com', 
+	'bayville@gmail.com', 
+	'chrisfuhriman9@gmail.com', 
+	'kindnessbeginswithme@gmail.com',
+	'iuri@schoolpulse.org'
+);
 if (array_search($from, $email_blacklist) !== false) {
 ?>
 	<p>Message delivery failed...error h!fbcak</p>
 	<p><a href="https://provo.edu/district-office-directory/email-form/?staff=<?php echo $_POST['staff_id'] . '&subject=' . $_POST['subject'] . '&from=' . $_POST['senderemail'] . '&carbon=' . $_POST['carbon'] . '&senderphone=' . $_POST['senderphone'] . '&message=' . $_POST['message']; ?>">Go back to the previous email form to try and send again</a></p>
 <?php
+	echo '<script>setTimeout(function(){window.location.href="https://provo.edu"},100);</script>';
 	die();
 }
 get_header();

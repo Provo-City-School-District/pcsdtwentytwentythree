@@ -664,7 +664,10 @@ ul.policystyle li:nth-child(even) ul li {
 }
 
 .directoryGrid .personalvCard ul {
+    margin: 1em 0 1em 0!important;
     list-style: none;
+    text-align: center;
+    margin-left: unset;
 }
 
 .directoryGrid .personalvCard ul li {
@@ -672,10 +675,12 @@ ul.policystyle li:nth-child(even) ul li {
     margin: 0 !important;
 }
 
-.directoryGrid .personalvCard ul li.name {
+.directoryGrid .personalvCard ul li.name,.directoryGrid .personalvCard ul li.assignedSchool {
     font-size: 1em;
 }
-
+.directoryGrid .personalvCard ul li.cteName {
+    font-size:0.8em;
+}
 
 
 
