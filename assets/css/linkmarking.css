@@ -21,6 +21,7 @@ link marking
     position: absolute;
     left: -9999px;
 }
+
 .fwContent ul li a[href*="pdf"]:after,
 .currentContent ul li a[href*="pdf"]:after,
 .departmentTiles ul li a[href*="pdf"]:after,
@@ -30,6 +31,7 @@ link marking
     position: absolute;
     left: -9999px;
 }
+
 .fwContent ul li a[href*="xls"]:after,
 .currentContent ul li a[href*="xls"]:after,
 .departmentTiles ul li a[href*="xls"]:after,
@@ -50,6 +52,7 @@ link marking
     position: absolute;
     left: -9999px;
 }
+
 .fwContent p a[href*="provo.edu"]:before,
 .currentContent p a[href*="provo.edu"]:before,
 .departmentTiles p a[href*="provo.edu"]:before,
@@ -59,6 +62,7 @@ link marking
     position: absolute;
     left: -9999px;
 }
+
 .fwContent p a[href*="pdf"]:before,
 .currentContent p a[href*="pdf"]:before,
 .departmentTiles p a[href*="pdf"]:before,
@@ -68,6 +72,7 @@ link marking
     position: absolute;
     left: -9999px;
 }
+
 .fwContent p a[href*="xls"]:before,
 .currentContent p a[href*="xls"]:before,
 .departmentTiles p a[href*="xls"]:before,
@@ -92,6 +97,7 @@ link marking
     background-size: contain;
     background-image: url(//globalassets.provo.edu/image/icons/external-link-gray.svg);
 }
+
 .fwContent p a:after img,
 .currentContent p a:after img,
 .departmentTiles p a:after img,
@@ -99,6 +105,7 @@ link marking
 .grid3 p a:after img {
     background-image: none;
 }
+
 .fwContent p a[href*="provo.edu"]:after,
 .currentContent p a[href*="provo.edu"]:after,
 .departmentTiles p a[href*="provo.edu"]:after,
@@ -107,6 +114,7 @@ link marking
     display: inline-block;
     background-image: url(//globalassets.provo.edu/image/icons/file-blue.png);
 }
+
 .fwContent p a[href*="provo.edu"]:after img,
 .currentContent p a[href*="provo.edu"]:after img,
 .departmentTiles p a[href*="provo.edu"]:after img,
@@ -114,6 +122,7 @@ link marking
 .grid3 p a[href*="provo.edu"]:after img {
     background-image: none;
 }
+
 .fwContent p a[href*="pdf"]:after,
 .currentContent p a[href*="pdf"]:after,
 .departmentTiles p a[href*="pdf"]:after,
@@ -123,6 +132,7 @@ link marking
     display: inline;
     background-image: none;
 }
+
 .fwContent p a[href*="xls"]:after,
 .currentContent p a[href*="xls"]:after,
 .departmentTiles p a[href*="xls"]:after,
@@ -143,6 +153,7 @@ link marking
     list-style-position: inside !important;
     margin-left: -4px;
 }
+
 .fwContent ul:not(.sub-nav-group, .subMenu, .menu) li.pdf,
 .currentContent ul:not(.sub-nav-group, .subMenu, .menu) li.pdf,
 .departmentTiles ul:not(.sub-nav-group, .subMenu, .menu) li.pdf,
@@ -152,6 +163,7 @@ link marking
     list-style-position: inside !important;
     margin-left: -4px;
 }
+
 .fwContent ul:not(.sub-nav-group, .subMenu, .menu) li.xls,
 .currentContent ul:not(.sub-nav-group, .subMenu, .menu) li.xls,
 .departmentTiles ul:not(.sub-nav-group, .subMenu, .menu) li.xls,
@@ -161,6 +173,7 @@ link marking
     list-style-position: inside !important;
     margin-left: -4px;
 }
+
 .fwContent ul:not(.sub-nav-group, .subMenu, .menu) li.ext,
 .currentContent ul:not(.sub-nav-group, .subMenu, .menu) li.ext,
 .departmentTiles ul:not(.sub-nav-group, .subMenu, .menu) li.ext,
@@ -177,4 +190,10 @@ ul li.pdf ul,
 ul li.xls ul,
 ul li.ext ul {
     list-style-image: none;
+}
+
+/* Removes link marking from button */
+/* a:has(button)::before,*/
+a:has(button)::after {
+    visibility: hidden !important;
 }

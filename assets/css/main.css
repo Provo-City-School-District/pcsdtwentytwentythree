@@ -45,6 +45,13 @@ body {
 Post Signature
 --------------------------------------------------------------------------------------------------------------
 */
+button {
+    background-color: var(--main-blue-color);
+    color:var(--theme-white);
+    padding:1em;
+    border-radius: 40px;
+}
+button:hover{color: var(--link-hover-color);}
 .post_sig {
     width: 400px;
     background-color: #f1f5f9;
