@@ -6,44 +6,52 @@
 get_header();
 ?>
 <main id="mainContent" class="sidebar">
-	
-		<?php custom_breadcrumbs(); ?>
-		<div id="currentPage">
-			
+
+	<?php custom_breadcrumbs(); ?>
+	<div id="currentPage">
+
 		<div class="legacyTop">
-		<article class="currentContent">
+			<article class="currentContent">
 
-<h1><?php the_title(); ?></h1>
-<?php the_content(); ?>
+				<h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
 
-</article>
-<article id="slider">
+			</article>
+			<article id="slider">
 
-<?php
-$slidercat = get_field('slider_category');
-$args = array('posts_per_page' => 3, 'category_name'  => $slidercat);
-// Variable to call WP_Query.
-$the_query = new WP_Query($args);
-if ($the_query->have_posts()) :
-	while ($the_query->have_posts()) : $the_query->the_post(); ?>
-		<a href="<?php the_permalink(); ?>">
-			<div class="slide" style="background-image: url('<?php the_post_thumbnail_url(); ?>')">
-				<span>
-					<h2><?php the_title(); ?></h2>
-					<p><?php echo get_excerpt(); ?></p>
-				</span>
-			</div>
-		</a>
+				<?php
+				$slidercat = get_field('slider_category');
+				$args = array('posts_per_page' => 3, 'category_name'  => $slidercat);
+				// Variable to call WP_Query.
+				$the_query = new WP_Query($args);
+				if ($the_query->have_posts()) :
+					while ($the_query->have_posts()) : $the_query->the_post(); ?>
+						<a href="<?php the_permalink(); ?>">
+							<div class="slide" style="background-image: url('<?php
+																				if (get_field('featured_image', $post_id)) {
+																					echo get_field('featured_image');
+																				} elseif (has_post_thumbnail()) {
+																					the_post_thumbnail_url();
+																				} else {
+																					echo get_stylesheet_directory_uri() . '/assets/images/building-image.jpg';
+																				}
+																				?>')">
+								<span>
+									<h2><?php the_title(); ?></h2>
+									<p><?php echo get_excerpt(); ?></p>
+								</span>
+							</div>
+						</a>
 
-<?php endwhile;
-else :
-	echo '<p>No Content Found</p>';
+				<?php endwhile;
+				else :
+					echo '<p>No Content Found</p>';
 
-endif;
-wp_reset_query();
-?>
+				endif;
+				wp_reset_query();
+				?>
 
-</article>
+			</article>
 		</div>
 
 
@@ -147,7 +155,7 @@ wp_reset_query();
 				</aside>
 			<?php }	?>
 		</section>
-			</div>
+	</div>
 	<?php
 	$sidebar = get_field('sidebar');
 	get_sidebar($sidebar);
