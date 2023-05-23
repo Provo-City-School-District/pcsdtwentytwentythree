@@ -37,8 +37,8 @@ $district7 = '(District 7: Gina Hales)';
 					if ($staff_member == '68051') {
 					?>
 						<label for="boundarySchool">Which School Do you Live in the Boundary of:</label>
-
-						<select name="boundarySchool" id="boundarySchool">
+						<select name="boundarySchool" id="boundarySchool" required>
+							<option value="" disabled selected>Select an option</option>
 							<option value="Amelia Earhart <?php echo $district5; ?>">Amelia Earhart</option>
 							<option value="Canyon Crest <?php echo $district7; ?>">Canyon Crest</option>
 							<option value="Edgemont <?php echo $district2; ?>">Edgemont</option>
