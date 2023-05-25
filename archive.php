@@ -22,7 +22,16 @@ get_header();
 						<article class="post">
 							<a href="<?php the_permalink(); ?>">
 								<div class="featured-image">
-									<?php the_post_thumbnail(); ?>
+									<?php
+									if (get_field('featured_image', $post_id)) {
+									?>
+										<img src="<?php echo get_field('featured_image'); ?>" alt="" class="" />
+									<?php
+									} elseif (has_post_thumbnail()) {
+										the_post_thumbnail();
+									} else { ?>
+										<img src="https://provo.edu/wp-content/uploads/2018/03/provo-school-district-logo.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" width="217" height="175">
+									<?php } ?>
 								</div>
 							</a>
 							<header class="postmeta">
