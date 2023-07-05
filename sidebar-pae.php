@@ -1,31 +1,18 @@
 <aside id="rightSidebar" class="rightSidebar">
-	
-
-	<h2>English Classes</h2>
-	<ul>
-		<li>750 West 200 North<br />Provo, UT 84601<br /><a class="ext" href="https://www.google.com/maps/dir//750+West+200+North,+Provo,+UT+84601/@40.2373459,-111.7069607,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x874d9a01592724e5:0x394ea20b27c62498!2m2!1d-111.6719415!2d40.2373512!3e1">Get Directions to English Classes</a><br />801-374-4904</li>
-	</ul>
 	<ul class="imagelist">
 		<li>
-			<a href="https://provo.edu/provo-adult-education/adult-english-language-acquisition-program/">
-				<img src="//globalassets.provo.edu/image/icons/evaluation-esp-lt.svg" alt="" />
-				Adult English Language Acquisition Program
+			<a href="https://provo.edu/provo-adult-education/provo-adult-education-calendar/">
+				<img src="//globalassets.provo.edu/image/icons/calendar-lt.svg" alt="" />
+				<span>Adult Ed Calendar</span>
 			</a>
 		</li>
-	</ul>
-	<h2>Adult High School Diploma and GED Preparation</h2>
-	<ul>
-		<li>636 North Independence Ave.<br />Provo, Utah 84601<br /><a class="ext" href="https://www.google.com/maps/dir//636+Independence+Ave,+Provo,+UT+84601/@40.2423912,-111.6892565,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x874d9a1656b47399:0x52b92f1d411f3292!2m2!1d-111.6870678!2d40.2423912!3e1">Get Directions to PAE</a><br />801-374-4840</li>
-
-	</ul>
-	<ul class="imagelist">
 		<li>
-			<a href="https://provo.edu/provo-adult-education/adult-high-school-program/">
-				<img src="//globalassets.provo.edu/image/icons/female-professor-reading-a-book.svg" alt="" />
-				Adult High School Program
+			<a href="https://provo.edu/provo-adult-education/english-language-acquisition-calendar/">
+				<img src="//globalassets.provo.edu/image/icons/calendar-lt.svg" alt="" />
+				<span>ELA Calendar</span>
 			</a>
 		</li>
-	</ul>
+	</ul>	
 	<h2>Contact Provo Adult Education</h2>
 	<?php
 	echo file_get_contents('https://provo.edu/directory_page/provo-adult-education/');
