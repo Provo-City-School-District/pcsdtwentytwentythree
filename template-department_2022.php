@@ -67,7 +67,9 @@ get_header();
 		</nav>
 		<?php
 		$newscat = get_field('select_news_cat');
-		$the_query = new WP_Query(array('posts_per_page' => 1, 'cat' => $newscat));
+		// print_r($newscat."adfadfasdfasdfaf");
+		if($newscat){
+			$the_query = new WP_Query(array('posts_per_page' => 1, 'cat' => $newscat));
 		if ($the_query->have_posts()) :
 			while ($the_query->have_posts()) : $the_query->the_post();
 		?>
@@ -91,16 +93,17 @@ get_header();
 		<?php else :
 			echo '<p>No Content Found</p>';
 		endif;
-		//reset wp_query to current page
-		wp_reset_query();
-		?>
-
-
-
-
-
-
-		<section class="postList">
+		
+	
+	//reset wp_query to current page
+	wp_reset_query();
+	
+	
+	
+	?>
+	
+	
+	<section class="postList">
 			<div class="grid3">
 				<?php
 				$currentID = get_the_ID();
@@ -130,6 +133,21 @@ get_header();
 				<?php endwhile; ?>
 			</div>
 		</section>
+	
+	
+	<?php
+	
+	
+	}
+		
+		?>
+
+
+
+
+
+
+		
 
 
 
