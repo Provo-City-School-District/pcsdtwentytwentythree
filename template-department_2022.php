@@ -68,58 +68,58 @@ get_header();
 		<?php
 		$newscat = get_field('select_news_cat');
 		// print_r($newscat."adfadfasdfasdfaf");
-		if($newscat){
+		if ($newscat) {
 			$the_query = new WP_Query(array('posts_per_page' => 1, 'cat' => $newscat));
-		if ($the_query->have_posts()) :
-			while ($the_query->have_posts()) : $the_query->the_post();
+			if ($the_query->have_posts()) :
+				while ($the_query->have_posts()) : $the_query->the_post();
 		?>
-				<article class="activePost">
-					<a href="<?php the_permalink(); ?>">
-						<h2><?php the_title(); ?></h2>
-					</a>
-					<header class="postmeta">
-						<ul>
-							<li><img src="//globalassets.provo.edu/image/icons/calendar-ltblue.svg" alt="" /><?php the_time(' F jS, Y') ?></li>
+					<article class="activePost">
+						<a href="<?php the_permalink(); ?>">
+							<h2><?php the_title(); ?></h2>
+						</a>
+						<header class="postmeta">
+							<ul>
+								<li><img src="//globalassets.provo.edu/image/icons/calendar-ltblue.svg" alt="" /><?php the_time(' F jS, Y') ?></li>
 
-						</ul>
-					</header>
+							</ul>
+						</header>
+						<?php
+						the_content();
+						?>
+					</article>
+
+				<?php endwhile; ?>
+
+			<?php else :
+				echo '<p>No Content Found</p>';
+			endif;
+
+
+			//reset wp_query to current page
+			wp_reset_query();
+
+
+
+			?>
+
+
+			<section class="postList">
+				<div class="grid3">
 					<?php
-					the_content();
-					?>
-				</article>
-
-			<?php endwhile; ?>
-
-		<?php else :
-			echo '<p>No Content Found</p>';
-		endif;
-		
-	
-	//reset wp_query to current page
-	wp_reset_query();
-	
-	
-	
-	?>
-	
-	
-	<section class="postList">
-			<div class="grid3">
-				<?php
-				$currentID = get_the_ID();
-				//Removes news category from get_the_category
-				$categoryID = get_the_category($post->ID);
-				foreach ($categoryID as $category) {
-					if ($category->term_id == 192) {
-						continue;
+					$currentID = get_the_ID();
+					//Removes news category from get_the_category
+					$categoryID = get_the_category($post->ID);
+					foreach ($categoryID as $category) {
+						if ($category->term_id == 192) {
+							continue;
+						}
+						$postcategories = '"' . $category->name . '"' . ',';
 					}
-					$postcategories = '"' . $category->name . '"' . ',';
-				}
-				//use $postcategories for category_name if you want to display category related posts only. Use actual category name if you want to only use that category
-				$my_query = new WP_Query(array('showposts' => 3, 'category_name'  => 'News', 'post__not_in' => array($currentID)));
-				while ($my_query->have_posts()) : $my_query->the_post(); ?>
-					<article class="post">
-					<div class="featured-image">
+					//use $postcategories for category_name if you want to display category related posts only. Use actual category name if you want to only use that category
+					$my_query = new WP_Query(array('showposts' => 3, 'category_name'  => 'News', 'post__not_in' => array($currentID)));
+					while ($my_query->have_posts()) : $my_query->the_post(); ?>
+						<article class="post">
+							<div class="featured-image">
 								<?php
 
 								if (get_field('featured_image', $post_id)) {
@@ -133,24 +133,24 @@ get_header();
 								}
 								?>
 							</div>
-						<header class="postmeta">
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<ul>
-								<li><img src="//globalassets.provo.edu/image/icons/calendar-ltblue.svg" alt="" /><?php the_time(' F jS, Y') ?></li>
-							</ul>
-						</header>
-						<?php echo get_excerpt(); ?>
-					</article>
-				<?php endwhile; ?>
-			</div>
-		</section>
-	
-	
-	<?php
-	
-	
-	}
-		
+							<header class="postmeta">
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<ul>
+									<li><img src="//globalassets.provo.edu/image/icons/calendar-ltblue.svg" alt="" /><?php the_time(' F jS, Y') ?></li>
+								</ul>
+							</header>
+							<?php echo get_excerpt(); ?>
+						</article>
+					<?php endwhile; ?>
+				</div>
+			</section>
+
+
+		<?php
+
+
+		}
+
 		?>
 
 
@@ -158,7 +158,7 @@ get_header();
 
 
 
-		
+
 
 
 

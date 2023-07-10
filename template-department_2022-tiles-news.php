@@ -34,7 +34,7 @@ get_header();
 				?>
 			</section><!-- departmentResources end -->
 		<?php
-		} 
+		}
 		?>
 
 		<nav class="wpMenu">
@@ -95,20 +95,20 @@ get_header();
 				$my_query = new WP_Query(array('showposts' => 3, 'category_name'  => 'News', 'post__not_in' => array($currentID)));
 				while ($my_query->have_posts()) : $my_query->the_post(); ?>
 					<article class="post">
-					<div class="featured-image">
-								<?php
+						<div class="featured-image">
+							<?php
 
-								if (get_field('featured_image', $post_id)) {
-								?>
-									<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('featured_image'); ?>" alt="" class="" /></a>
-								<?php
-								} elseif (has_post_thumbnail()) {
-								?>
-									<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-								<?php
-								}
-								?>
-							</div>
+							if (get_field('featured_image', $post_id)) {
+							?>
+								<a href="<?php the_permalink(); ?>"><img src="<?php echo get_field('featured_image'); ?>" alt="" class="" /></a>
+							<?php
+							} elseif (has_post_thumbnail()) {
+							?>
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+							<?php
+							}
+							?>
+						</div>
 						<header class="postmeta">
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<ul>
