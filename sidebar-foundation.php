@@ -1,7 +1,7 @@
 <aside id="rightSidebar" class="rightSidebar">
 	
 	<ul>
-		<li class="buttonlink"><a href="https://provo-city-school-district-foundation.square.site/">Donate to Foundation</a></li>
+		<li class="buttonlink"><a href="https://www.successfund.com/foundation">Donate to Foundation</a></li>
 		<li class="buttonlink"><a href="https://provo.edu/wp-content/uploads/2020/01/1-13-2020-outstanding-educator-nomination-form.pdf">Outstanding Educator <span>Nomination Form (PDF)</span></a></li>
 	</ul>
 	<h2>Board of Governors</h2>
