@@ -97,7 +97,7 @@ $sidebar = new WP_Query($directory_args);
 						$scount = count(get_field('assigned_schools'), COUNT_RECURSIVE);
 						$assigned_schools = get_field('assigned_schools');
 						//echo $scount;
-						
+
 					?>
 						<li><strong>Assigned Schools</strong>:
 							<?php
@@ -116,6 +116,11 @@ $sidebar = new WP_Query($directory_args);
 							?>
 						</li>
 					<?php
+					if (get_field('term_began') && get_field('term_end')) {
+						?>
+							<li><strong>Term</strong>: <?php echo get_field('term_began') ?> - <?php echo get_field('term_end') ?></li>
+						<?php
+							}
 					}
 					?>
 				</ul>

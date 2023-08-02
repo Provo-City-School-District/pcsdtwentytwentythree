@@ -51,7 +51,7 @@
   justify-content: space-evenly;
 }
 
-.imagelist li a {
+.imagelist li:not(.email) a {
   display: grid;
   /* max-height: 35px; */
   grid-template-columns: 35px 1fr;
