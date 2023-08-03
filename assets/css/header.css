@@ -115,49 +115,6 @@
     place-self: center;
 
 }
-/*
---------------------------------------------------------------------
-Cludo Search
---------------------------------------------------------------------
-*/
-/* #cludo-search-form {
-    display: grid;
-    max-height: 35px;
-    place-self: center;
-
-}
-
-#cludo-search-form .search-input {
-    width: 200px;
-    max-height: 35px;
-    position: absolute;
-    right: -9999px;
-    text-align: center;
-    border: 1px solid var(--main-blue-color);
-    transition-delay: 4s;
-}
-
-#cludo-search-form:hover .search-input {
-    right: 115px;
-    transition: 0.1s !important;
-}
-
-#cludo-search-form .search-button {
-    background-position: 0 0;
-    color: transparent;
-    place-self: center;
-    background-image: url(../icons/dark/search-loupe.svg);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: contain;
-}
-
-#cludo-search-form .search_autocomplete {
-    position: absolute;
-    right: 115px;
-    top: 100px;
-    max-width: 350px;
-} */
 
 @media (min-width: 800px) {
     #mainHeader {
@@ -182,14 +139,7 @@ Cludo Search
     body.admin-bar #trp-floater-ls.trp-top-right {
         top:127px;
     }
-    /* #cludo-search-form .search-input {
-        width: 350px;
-    }
 
-    #cludo-search-form .search_autocomplete {
-        top: 50px;
-
-    } */
     #navbar .homeLink {
         /* background-color: var(--body-background); */
         /* background: url(../icons/icons8-home-page-32.png) 0 0 no-repeat var(--body-background); */
