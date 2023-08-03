@@ -851,22 +851,3 @@ Social Icons and Juicer near the bottom
 	max-width: 1500px;
 	margin: 0 auto;
 }
-
-
-@media (min-width:800px) {
-    #trp-floater-ls.trp-top-right {
-        bottom: auto;
-        top: 95px;
-        right: 10px;
-        border-radius: 5px 5px 0 0;
-    }
-}
-
-@media (min-width: 1100px) {
-    #trp-floater-ls.trp-top-right {
-        /* bottom: auto; */
-        top: 86px;
-        right: 25px;
-        /* border-radius: 5px 5px 0 0; */
-    }
-}

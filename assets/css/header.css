@@ -239,4 +239,24 @@ Cludo Search
     body.admin-bar #trp-floater-ls.trp-top-right {
         top:117px;
     }
+    #trp-floater-ls.trp-top-right {
+        /* bottom: auto; */
+        top: 72px;
+        right: 25px;
+        /* border-radius: 5px 5px 0 0; */
+    }
+}
+@media (min-width:800px) {
+    #trp-floater-ls.trp-top-right {
+        bottom: auto;
+        top: 72px;
+        right: 10px;
+        border-radius: 5px 5px 0 0;
+    }
+}
+@media (min-width:600px) {
+    #trp-floater-ls.trp-color-dark {
+        margin-bottom: 57px;
+  }
+    
 }

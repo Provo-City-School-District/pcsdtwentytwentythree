@@ -20,13 +20,6 @@
 #mainFooter ul a:hover {
     color: var( --link-hover-color);
 }
-
-
-
-#trp-floater-ls.trp-color-dark {
-    right: calc(100px + 25px);
-    left: unset;
-}
 @media (min-width:600px) {
     #mainFooter {
         position: fixed;
@@ -38,23 +31,6 @@
     #mainFooter ul {
         display: flex;
     }
-    #trp-floater-ls.trp-color-dark {
-          margin-bottom: 57px;
-    }
+
 }
-@media (min-width:800px) {
-    #trp-floater-ls.trp-top-right {
-        bottom: auto;
-        top: 78px;
-        right: 10px;
-        border-radius: 5px 5px 0 0;
-    }
-}
-@media (min-width: 1100px) {
-    #trp-floater-ls.trp-top-right {
-        /* bottom: auto; */
-        top: 69px;
-        right: 25px;
-        /* border-radius: 5px 5px 0 0; */
-    }
-}
+
