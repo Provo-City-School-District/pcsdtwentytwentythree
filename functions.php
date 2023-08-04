@@ -15,7 +15,7 @@ function pcsd_assets()
 	//load CSS files
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
 	wp_enqueue_style('reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.01', false);
-	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.19', false);
+	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.20', false);
 	wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/font.css', '', '1.0.02', false);
 	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.05', false);
 	wp_enqueue_style('breadcrumbs', get_template_directory_uri() . '/assets/css/breadcrumbs.css', '', '1.0.0', false);
@@ -528,50 +528,6 @@ function cptui_register_my_cpts()
 
 	register_post_type("directory", $args);
 
-
-
-
-
-
-
-
-
-
-	/**
-	 * Post Type: Tech FAQs.
-	 */
-
-	// $labels = [
-	// 	"name" => __("Tech FAQs", "custom-post-type-ui"),
-	// 	"singular_name" => __("Tech FAQ", "custom-post-type-ui"),
-	// ];
-
-	// $args = [
-	// 	"label" => __("Tech FAQs", "custom-post-type-ui"),
-	// 	"labels" => $labels,
-	// 	"description" => "",
-	// 	"public" => true,
-	// 	"publicly_queryable" => true,
-	// 	"show_ui" => true,
-	// 	"show_in_rest" => true,
-	// 	"rest_base" => "",
-	// 	"rest_controller_class" => "WP_REST_Posts_Controller",
-	// 	"has_archive" => false,
-	// 	"show_in_menu" => true,
-	// 	"show_in_nav_menus" => true,
-	// 	"delete_with_user" => false,
-	// 	"exclude_from_search" => false,
-	// 	"capability_type" => "post",
-	// 	"map_meta_cap" => true,
-	// 	"hierarchical" => true,
-	// 	"rewrite" => ["slug" => "tech_faq", "with_front" => true],
-	// 	"query_var" => true,
-	// 	"menu_icon" => "https://employee.provo.edu/wp-content/themes/employeepcsdtwentysixteen/assets/icons/pcsd-icon-16x16.png",
-	// 	"supports" => ["title", "editor", "thumbnail"],
-	// ];
-
-	//register_post_type("tech_faq", $args);
-
 	/**
 	 * Post Type: Internship Locations
 	 */
@@ -834,81 +790,6 @@ $schools_args = [
 register_post_type("schools", $schools_args);
 
 
-/*===========================================================================================
-Post Type: School Fees 21-22
-===========================================================================================*/
-
-// $school_fees_2122_labels = [
-// 	"name" => __("School Fees 2021-2022", "custom-post-type-ui"),
-// 	"singular_name" => __("School Fee 2021-2022", "custom-post-type-ui"),
-// ];
-
-// $school_fees_2122_args = [
-// 	"label" => __("School Fees 2021-2022", "custom-post-type-ui"),
-// 	"labels" => $school_fees_2122_labels,
-// 	"description" => "",
-// 	"public" => true,
-// 	"publicly_queryable" => true,
-// 	"show_ui" => true,
-// 	"show_in_rest" => true,
-// 	"rest_base" => "",
-// 	"rest_controller_class" => "WP_REST_Posts_Controller",
-// 	"has_archive" => false,
-// 	"show_in_menu" => true,
-// 	"show_in_nav_menus" => true,
-// 	"delete_with_user" => false,
-// 	"exclude_from_search" => false,
-// 	"capability_type" => "post",
-// 	"map_meta_cap" => true,
-// 	"hierarchical" => false,
-// 	"rewrite" => ["slug" => "school_fees_21-22", "with_front" => true],
-// 	"query_var" => true,
-// 	"menu_icon" => $pcsd_custom_post_type_icon,
-// 	"supports" => ["title", "thumbnail"],
-// 	"taxonomies" => ["school_fees_categories"],
-// ];
-
-// register_post_type("school_fees_21-22", $school_fees_2122_args);
-
-
-
-
-/*===========================================================================================
-Post Type: School Fees 2021-2022 (Spanish) Pagos escolares
-===========================================================================================*/
-// $cuotas_escolares_2122_labels = [
-// 	"name" => __("Pagos escolares 2021-2022", "custom-post-type-ui"),
-// 	"singular_name" => __("Cuotas escolares 2021-2022", "custom-post-type-ui"),
-// ];
-
-// $cuotas_escolares_2122_args = [
-// 	"label" => __("Pagos escolares 21-22", "custom-post-type-ui"),
-// 	"labels" => $cuotas_escolares_2122_labels,
-// 	"description" => "",
-// 	"public" => true,
-// 	"publicly_queryable" => true,
-// 	"show_ui" => true,
-// 	"show_in_rest" => true,
-// 	"rest_base" => "",
-// 	"rest_controller_class" => "WP_REST_Posts_Controller",
-// 	"has_archive" => false,
-// 	"show_in_menu" => true,
-// 	"show_in_nav_menus" => true,
-// 	"delete_with_user" => false,
-// 	"exclude_from_search" => false,
-// 	"capability_type" => "post",
-// 	"map_meta_cap" => true,
-// 	"hierarchical" => false,
-// 	"rewrite" => ["slug" => "pagos_escolares_2122", "with_front" => true],
-// 	"query_var" => true,
-// 	"menu_icon" => $pcsd_custom_post_type_icon,
-// 	"supports" => ["title", "thumbnail"],
-// 	"taxonomies" => ["school_fees_cate_spanish_2122"],
-// ];
-
-// register_post_type("pagos_escolares_2122", $cuotas_escolares_2122_args);
-
-
 /*======================================================================================================================================================================================
 Custom Post Type Taxonomies
 ======================================================================================================================================================================================*/
@@ -971,73 +852,7 @@ Taxonomy: Directory Categories.
 	register_taxonomy("directory_category", ["directory"], $directory_categories_args);
 
 
-
-
-	/*===========================================================================================
-Taxonomy: School Fees Categories 21-22
-===========================================================================================*/
-
-	// $school_fees_categories_2122_labels = [
-	// 	"name" => __("School Fees Categories 21-22", "custom-post-type-ui"),
-	// 	"singular_name" => __("School Fee Category 21-22", "custom-post-type-ui"),
-	// ];
-
-	// $school_fees_categories_2122_args = [
-	// 	"label" => __("School Fees Categories 21-22", "custom-post-type-ui"),
-	// 	"labels" => $school_fees_categories_2122_labels,
-	// 	"public" => true,
-	// 	"publicly_queryable" => true,
-	// 	"hierarchical" => true,
-	// 	"show_ui" => true,
-	// 	"show_in_menu" => true,
-	// 	"show_in_nav_menus" => true,
-	// 	"query_var" => true,
-	// 	"rewrite" => ['slug' => 'school_fees_categories_2122', 'with_front' => true,],
-	// 	"show_admin_column" => false,
-	// 	"show_in_rest" => true,
-	// 	"rest_base" => "school_fees_categories_2122",
-	// 	"rest_controller_class" => "WP_REST_Terms_Controller",
-	// 	"show_in_quick_edit" => false,
-	// ];
-	// register_taxonomy("school_fees_categories_2122", ["school_fees_21-22"], $school_fees_categories_2122_args);
-
-
-
-
-
-	/*===========================================================================================
-Taxonomy: School Fees Categories Spanish 21-22.
-===========================================================================================*/
-
-	// $school_fees_categories_spanish_2122_labels = [
-	// 	"name" => __("School Fees Categories Spanish 21-22", "custom-post-type-ui"),
-	// 	"singular_name" => __("School Fee Category Spanish 21-22", "custom-post-type-ui"),
-	// ];
-
-	// $school_fees_categories_spanish_2122_args = [
-	// 	"label" => __("School Fees Categories Spanish 21-22", "custom-post-type-ui"),
-	// 	"labels" => $school_fees_categories_spanish_2122_labels,
-	// 	"public" => true,
-	// 	"publicly_queryable" => true,
-	// 	"hierarchical" => true,
-	// 	"show_ui" => true,
-	// 	"show_in_menu" => true,
-	// 	"show_in_nav_menus" => true,
-	// 	"query_var" => true,
-	// 	"rewrite" => ['slug' => 'school_fees_cate_spanish_2122', 'with_front' => true,],
-	// 	"show_admin_column" => false,
-	// 	"show_in_rest" => true,
-	// 	"rest_base" => "school_fees_categories_spanish_2122",
-	// 	"rest_controller_class" => "WP_REST_Terms_Controller",
-	// 	"show_in_quick_edit" => false,
-	// ];
-	// register_taxonomy("school_fees_cate_spanish_2122", ["pagos_escolares_2122"], $school_fees_categories_spanish_2122_args);
-
-
-
-
-
-	/*===========================================================================================
+/*===========================================================================================
 Taxonomy: Internship Location Categories
 ===========================================================================================*/
 
@@ -1067,16 +882,6 @@ Taxonomy: Internship Location Categories
 }
 add_action('init', 'cptui_register_my_taxes');
 
-
-
-
-
-
-
-
-
-
-
 // adds class .active to top menu item if the current active page is the page in the menu 
 // so that we can style that differently.
 add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
@@ -1088,3 +893,4 @@ function special_nav_class($classes, $item)
 	}
 	return $classes;
 }
+

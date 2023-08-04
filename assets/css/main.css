@@ -917,7 +917,9 @@ category styles
 .categories-6h ul li.update:before {
     background-image: url(https://provo.edu/wp-content/uploads/2023/01/notice-updates.jpg);
 }
-
+.categories-6h ul li.podcast:before {
+    background-image: url(https://provo.edu/wp-content/uploads/2023/08/sup-with-the-sup-category.jpg);
+}
 
 
 /* Featured image Styles for Single post */
