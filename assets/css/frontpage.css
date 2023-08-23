@@ -105,7 +105,9 @@ Home Page News
 	margin-top: 0;
 
 }
-
+#homeNews .moreNews {
+	margin-top:35px;
+}
 #homeNews .stories .postDate {
 	text-align: right;
 	margin-right: 5%;
@@ -131,12 +133,18 @@ Home Page News
 		grid-template-columns: repeat(3, 1fr);
 
 	}
+	#homeNews .moreNews {
+		margin-top:20px;
+	}
 }
 
 @media (min-width:1000px) {
 	#homeNews .categories-6h ul {
 		grid-template-columns: repeat(6, 1fr);
 
+	}
+	#homeNews .moreNews {
+		margin-top:10px;
 	}
 }
 
