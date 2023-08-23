@@ -24,10 +24,9 @@ get_header();
 							<li><img src="//globalassets.provo.edu/image/icons/hamburger-ltblue.svg" alt="" /><?php the_category(', ') ?></li>
 						</ul>
 					</header>
-					<?php
-					?>
-
-					<?php the_content();
+					<?php 
+					// echo ssp_player();
+					the_content();
 
 					?>
 					<footer class="post_sig">

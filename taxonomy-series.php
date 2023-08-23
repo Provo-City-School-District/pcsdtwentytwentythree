@@ -11,7 +11,7 @@ get_header();
 	<div id="currentPage">
 		<article class="activePost">
 			<h1>Podcasts: <?php single_cat_title(); ?></h1>
-			<img src="https://provo.edu/wp-content/uploads/2023/08/sup-with-the-sup-banner-1.png" alt="Sup With the Sup" />
+			<img src="https://provo.edu/wp-content/uploads/2023/08/podcast-banner-4.jpeg" alt="Sup With the Sup" />
 			<?php
 			if (have_posts()) :
 			?>
@@ -21,7 +21,10 @@ get_header();
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<?php if (function_exists('ssp_player')) : ?>
 								<div class="episode-player">
-									<?php echo ssp_player(); ?>
+									<?php //echo ssp_player(); 
+									// echo do_shortcode('[ss_player]');
+									the_excerpt(  );
+									?>
 								</div>
 							<?php endif; ?>
 							
