@@ -121,9 +121,8 @@ $get_to_know_fields = get_fields();
 			<p>The latest news from Provo City School District</p>
 			<div class="stories">
 				<?php
-
 				// excluding ID 1012. which is the Board Schedule.
-				$the_query = new WP_Query(array('posts_per_page' => 3, 'category_name'  => 'news'));
+				$the_query = new WP_Query(array('posts_per_page' => 3, 'category_name'  => array('news', 'sup-with-the-sup'), 'post_type'  => array('post', 'podcast')));
 				if ($the_query->have_posts()) :
 					while ($the_query->have_posts()) : $the_query->the_post(); ?>
 						<article>
