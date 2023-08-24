@@ -17,7 +17,9 @@ Breadcrumbs
     grid-column: 1 / span 2
     /*  background-image: url(../img/background/contentarea-texture-dk.jpeg); */
   }
-  
+.admin-bar #breadcrumbs {
+    padding-top: 22px;
+  }
   #breadcrumbs li {
     display: inline-block;
     margin: 0 5px 0 0;
