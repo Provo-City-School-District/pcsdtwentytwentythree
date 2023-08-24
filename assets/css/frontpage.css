@@ -149,7 +149,7 @@ Home Page News
 }
 
 #homeNews .categories-6h ul li {
-	display: flex;
+	/* display: flex; */
 	align-items: center;
 	/* justify-content: center; */
 	flex-direction: column;
@@ -183,6 +183,16 @@ Home Page News
 
 #homeNews .categories-6h ul li:before {
 	/* background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg); */
+	/* content: '';
+	width: 100%;
+	padding-bottom: 50%;
+	background-repeat: no-repeat;
+	background-attachment: local;
+	background-position: center center;
+	background-size: cover; */
+}
+#homeNews .categories-6h ul li a::before {
+	/* background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg); */
 	content: '';
 	width: 100%;
 	padding-bottom: 50%;
@@ -190,8 +200,8 @@ Home Page News
 	background-attachment: local;
 	background-position: center center;
 	background-size: cover;
+	display: block;
 }
-
 /*
 ----------------------------------------------------------------
 Responsive styles
