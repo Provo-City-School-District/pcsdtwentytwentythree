@@ -110,49 +110,21 @@
 	justify-content: center;
 	flex-direction: column;
 	flex-wrap: wrap;
-  /* max-width: 225px; */
 }
-/* #rightSidebar.categories .categories-6h ul li.classroom:before {
-  background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg);
+#rightSidebar.categories .categories-6h ul li a {
+  width:100%;
+  text-align: center;
 }
-
-#rightSidebar.categories .categories-6h ul li.recog:before {
-  background-image: url(https://provo.edu/wp-content/uploads/2023/01/recog.jpg);
-}
-
-#rightSidebar.categories .categories-6h ul li.schools:before {
-  background-image: url(https://provo.edu/wp-content/uploads/2023/01/schools.jpg);
-}
-
-#rightSidebar.categories .categories-6h ul li.cte:before {
-  background-image: url(https://provo.edu/wp-content/uploads/2023/01/cte.jpg);
-}
-
-#rightSidebar.categories .categories-6h ul li.inno:before {
-  background-image: url(https://provo.edu/wp-content/uploads/2023/01/innovation.jpg);
-}
-
-#rightSidebar.categories .categories-6h ul li.business:before {
-  background-image: url(https://provo.edu/wp-content/uploads/2023/01/business.jpg);
-} */
-
-#rightSidebar.categories .categories-6h ul li:before {
-	/* content: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg); */
+#rightSidebar.categories .categories-6h ul li a::before {
   content: '';
-  /* background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg); */
-  /* background-size: contain; */
   width: 100%;
   padding-bottom: 50%;
-  /* height: 200px; */
   background-repeat: no-repeat;
   background-attachment: local;
   background-position: center center;
   background-size: cover;
+  display: block;
 }
-
-
-
-
 #rightSidebar .buttonlink {
   background: #dce2e8;
   border: 1px solid rgba(0, 0, 0, 0.1);

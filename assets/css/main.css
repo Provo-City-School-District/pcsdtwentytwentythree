@@ -882,7 +882,7 @@ form .block {
 /*================================================================================================================
 category styles
 ================================================================================================================*/
-.categories-6h ul li:before {
+.categories-6h ul li a::before {
     background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg);
 }
 
@@ -917,13 +917,8 @@ category styles
 .categories-6h ul li.update a::before {
     background-image: url(https://provo.edu/wp-content/uploads/2023/01/notice-updates.jpg);
 }
-/* .categories-6h ul li.podcast:before {
-    background-image: url(https://provo.edu/wp-content/uploads/2023/08/podcast-banner-with-image-226.jpg);
-} */
 .categories-6h ul li.podcast a::before {
-    /* content: ''; */
     background-image: url(https://provo.edu/wp-content/uploads/2023/08/podcast-banner-with-image-226.jpg);
-
 }
 
 /* Featured image Styles for Single post */
