@@ -157,42 +157,7 @@ Home Page News
 	text-align: center;
 }
 
-/* #homeNews .categories-6h ul li.classroom:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/classroom.jpg);
-}
-
-#homeNews .categories-6h ul li.recog:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/recog.jpg);
-}
-
-#homeNews .categories-6h ul li.schools:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/schools.jpg);
-}
-
-#homeNews .categories-6h ul li.cte:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/cte.jpg);
-}
-
-#homeNews .categories-6h ul li.inno:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/innovation.jpg);
-}
-
-#homeNews .categories-6h ul li.business:before {
-	background-image: url(https://provo.edu/wp-content/uploads/2023/01/business.jpg);
-} */
-
-#homeNews .categories-6h ul li:before {
-	/* background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg); */
-	/* content: '';
-	width: 100%;
-	padding-bottom: 50%;
-	background-repeat: no-repeat;
-	background-attachment: local;
-	background-position: center center;
-	background-size: cover; */
-}
 #homeNews .categories-6h ul li a::before {
-	/* background-image: url(https://provo.edu/wp-content/uploads/2023/01/category-fallback.jpg); */
 	content: '';
 	width: 100%;
 	padding-bottom: 50%;
