@@ -3,9 +3,9 @@
 
 	<ul class="imagelist">
 		<li>
-			<a href="https://provo.edu/category/news/provo-way-learning-initiative/">
+			<a href="https://provo.edu/category/news/innovative-learning/">
 				<img src="//globalassets.provo.edu/image/icons/policies-lt.svg" alt="" />
-				<span>Learning Initiative News</span>
+				<span>Innovative Learning News</span>
 			</a>
 		</li>
 	</ul>
