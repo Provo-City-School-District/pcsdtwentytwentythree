@@ -15,7 +15,7 @@ function pcsd_assets()
 	//load CSS files
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
 	wp_enqueue_style('reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.01', false);
-	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.22', false);
+	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.23', false);
 	wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/font.css', '', '1.0.02', false);
 	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.05', false);
 	wp_enqueue_style('breadcrumbs', get_template_directory_uri() . '/assets/css/breadcrumbs.css', '', '1.0.01', false);
@@ -43,7 +43,8 @@ function pcsd_assets()
 			'template-department_2022-tiles-news.php',
 			'template-department-staticmedia.php',
 			'template-department_fulltileimages.php',
-			'template-department-tile-full-width.php'
+			'template-department-tile-full-width.php',
+			'template-department_2022_no_top_menu.php',
 		)
 	)) {
 		wp_enqueue_style('department', get_template_directory_uri() . '/assets/css/department-styles.css', '', '1.0.01', false);
@@ -58,7 +59,8 @@ function pcsd_assets()
 			'template-tile-noSlider.php',
 			'template-department-staticmedia.php',
 			'template-department_fulltileimages.php',
-			'template-department_repeater_slider.php'
+			'template-department_repeater_slider.php',
+			
 		)
 	)) {
 		wp_enqueue_style('legacy', get_template_directory_uri() . '/assets/css/legacy-styles.css', '', '1.0.02', false);
