@@ -11,8 +11,8 @@ get_header();
 	<div id="currentPage">
 
 		<h1><?php the_title(); ?></h1>
-
-
+		<?php the_content(); ?>
+		
 		<section class="teasers">
 
 			<?php
