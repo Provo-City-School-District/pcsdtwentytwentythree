@@ -11,6 +11,7 @@
         "logo . search"
         "nav nav nav";
     z-index: 100;
+    min-height: 128px;
 }
 
 .siteLogo {
@@ -97,6 +98,7 @@
 
 #navbar ul li a {
     align-self: center;
+
 }
 
 #navbar .active {
@@ -106,7 +108,9 @@
     /* height: 44px; */
     min-height: 40px;
 }
-
+#navbar ul li:not(.active) {
+    margin-bottom:-18px;
+}
 
 
 .siteSearch {
