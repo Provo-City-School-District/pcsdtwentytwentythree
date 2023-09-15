@@ -21,13 +21,13 @@ $directory_args = array(
 );
 $sidebar = new WP_Query($directory_args);
 ?>
-<section class="postgrid">
+<section class="directoryGrid">
 	<?php
 	if ($sidebar->have_posts()) {
 		while ($sidebar->have_posts()) {
 			$sidebar->the_post();
 	?>
-
+			
 			<article class="post personalvCard">
 				<?php
 				if (get_the_post_thumbnail_url()) {
