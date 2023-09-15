@@ -1,9 +1,9 @@
 <aside id="rightSidebar" class="rightSidebar">
 	
-	<ul>
+	<!-- <ul>
 		<li class="buttonlink"><a href="https://www.successfund.com/foundation">Donate to Foundation</a></li>
 		<li class="buttonlink"><a href="https://provo.edu/wp-content/uploads/2020/01/1-13-2020-outstanding-educator-nomination-form.pdf">Outstanding Educator <span>Nomination Form (PDF)</span></a></li>
-	</ul>
+	</ul> -->
 	<h2>Board of Governors</h2>
 	<ul>
 		<li>Brent Brown</li>
@@ -18,19 +18,19 @@
 	</ul>
 	<h2>Board of Directors</h2>
 	<ul>
-		<li>Julia Doxey</li>
-		<li>Jenae Thomas</li>
-		<li>Carolyn Wright</li>
-		<li>Colleen Christensen</li>
-		<li>Greg Christofferson</li>
-		<li>Susie Bramble</li>
-		<li>Andrea Clarke</li>
-		<li>Robyn Pulham</li>
-		<li>Nick Whiting</li>
+		<li>Joelle Andersen</li>
+		<li>Katherine Barrus</li>
 		<li>Marissa Bernards</li>
+		<li>Lisa Boyce</li>
+		<li>Susie Bramble</li>
+		<li>Greg Christofferson</li>
+		<li>Andrea Clarke</li>
 		<li>Ali Conger</li>
-		<li>Jennifer Partridge</li>
-		<li>Nate Bryson</li>
+		<li>Julia Doxey</li>
+		<li>Terri McCabe</li>
+		<li>Robyn Pulham</li>
+		<li>Ashley Rayback</li>
+		<li>Michelle Wages</li>
 	</ul>
 
 	<h2>District Advisors</h2>
