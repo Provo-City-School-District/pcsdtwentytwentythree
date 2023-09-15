@@ -1,6 +1,4 @@
 <aside id="rightSidebar" class="rightSidebar">
-	
-
 	<ul class="imagelist">
 		<li>
 			<a href="https://provo.edu/nurses/medicalhealth-forms/">
@@ -9,9 +7,9 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://provo.edu/category/news/nurse/">
+			<a href="https://provo.edu/category/news/programsopportunities/health-services/">
 				<img src="//globalassets.provo.edu/image/icons/news-white.svg" alt="" />
-				<span>Nurses News</span>
+				<span>Health Services News</span>
 			</a>
 		</li>
 	</ul>
