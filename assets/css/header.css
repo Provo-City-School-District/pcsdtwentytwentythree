@@ -98,21 +98,15 @@
 
 #navbar ul li a {
     align-self: center;
-
 }
-
-#navbar .active {
-    /* padding: 1em 1em; */
-    /* padding: 1em; */
-    /* flex: 0 0 80%; */
-    /* height: 44px; */
-    min-height: 40px;
-}
-#navbar ul li:not(.active) {
+#navbar ul li {
     margin-bottom:-18px;
 }
+#navbar li.active {
+    min-height: 40px;
+    margin-top:-15px;
 
-
+}
 .siteSearch {
     display: grid;
     max-height: 35px;
