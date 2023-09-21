@@ -26,7 +26,9 @@ $directory_args = array(
 );
 wp_reset_query();
 $sidebar = new WP_Query($directory_args);
-
+?>
+	<div class="staff-member-listing teacher directoryGrid">
+<?php
 if ($sidebar->have_posts()) {
 	while ($sidebar->have_posts()) {
 		$sidebar->the_post();
@@ -105,4 +107,4 @@ if ($sidebar->have_posts()) {
 	//echo 'no content';
 }
 wp_reset_postdata();
-?>
+?></div>
