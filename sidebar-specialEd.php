@@ -16,9 +16,9 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://provo.edu/wp-content/uploads/2021/08/pcsd-sped-policy-and-procedures-manual-august-2021.pdf">
+			<a href="https://provo.edu/policies-procedures-forms/4000-curriculum-instruction-assessment/policy-4160-special-education-and-related-services-for-eligible-students-2/">
 				<img src="//globalassets.provo.edu/image/icons/policies-lt.svg" alt="" />
-				<span>Special Education Local Policy (2021)</span>
+				<span>PCSD Special Ed Policies and Procedures (9/2023)</span>
 			</a>
 		</li>
 		<li>
