@@ -14,12 +14,6 @@
 			</li>
 			-->
 		<li>
-			<a href="https://docs.google.com/forms/d/e/1FAIpQLScxAhg6X4sFgnANbpCW1o5JyV_gfyEKjHBAvnrkaITdqmh65Q/viewform">
-				<img src="//globalassets.provo.edu/image/icons/form-lt.svg" alt="" />
-				<span>School Meals Order Form</span>
-			</a>
-		</li>
-		<li>
 			<a href="https://provo.edu/wp-content/uploads/2020/08/Policy-3401-Wellness.pdf">
 				<img src="//globalassets.provo.edu/image/icons/policies-lt.svg" alt="" />
 				<span>3401 Wellness</span>
@@ -38,7 +32,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://provo.edu/wp-content/uploads/2019/05/05-21-2019-wellness-policy-triennial-assessment.pdf">
+			<a href="https://provo.edu/wp-content/uploads/2023/11/child-nutrition-triennial-assessment-110123023.pdf">
 				<img src="https://globalassets.provo.edu/image/icons/policies-lt.svg" alt="" />
 				<span>Wellness Policy Triennial Assessment</span>
 			</a>
