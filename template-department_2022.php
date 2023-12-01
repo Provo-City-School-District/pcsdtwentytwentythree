@@ -116,7 +116,7 @@ get_header();
 						$postcategories = '"' . $category->name . '"' . ',';
 					}
 					//use $postcategories for category_name if you want to display category related posts only. Use actual category name if you want to only use that category
-					$my_query = new WP_Query(array('showposts' => 3, 'category_name'  => 'News', 'post__not_in' => array($currentID)));
+					$my_query = new WP_Query(array('showposts' => 3, 'cat' => $newscat, 'post__not_in' => array($currentID)));
 					while ($my_query->have_posts()) : $my_query->the_post(); ?>
 						<article class="post">
 							<div class="featured-image">
