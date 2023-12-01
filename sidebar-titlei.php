@@ -8,6 +8,12 @@
 				<span>Title I News</span>
 			</a>
 		</li>
+		<li>
+			<a href="https://reportcard.schools.utah.gov/District/Profile?DistrictID=1222&schoolyearendyear=2023">
+				<img src="//globalassets.provo.edu/image/icons/policy.svg" alt="" />
+				<span>LEA Report Card</span>
+			</a>
+		</li>
 	</ul>
 	<ul class="address">
 		<li><strong>Title I Office</strong></li>
