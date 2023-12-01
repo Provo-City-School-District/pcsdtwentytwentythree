@@ -75,7 +75,7 @@ get_header();
 		?>
 					<article class="activePost">
 						<a href="<?php the_permalink(); ?>">
-							<h2><?php the_title(); ?></h2>
+							<h1><?php the_title(); ?></h1>
 						</a>
 						<header class="postmeta">
 							<ul>
