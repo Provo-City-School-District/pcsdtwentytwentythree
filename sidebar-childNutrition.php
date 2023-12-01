@@ -2,8 +2,10 @@
 	
 
 	<ul class="cn-bos">
-		<li><img src="https://provo.edu/wp-content/uploads/2017/01/best-in-state.png" alt="" /><span><em>Multiple winner of Best of State</em></span></li>
+		<li><img src="https://provo.edu/wp-content/uploads/2017/01/best-in-state.png" alt="" /><li>
+		<li><em>Multiple Winner of Best of State</em></li>
 	</ul>
+	<p><strong>If you are interested in giving input on the PCSD Student Wellness Policy, please email your input to: thorger@provo.edu.</strong></p>
 	<ul class="imagelist">
 		<!--
 			<li>
