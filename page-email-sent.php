@@ -56,7 +56,12 @@ get_header();
 				} else {
 					//fetch destination email from database
 					$to = get_post_field('email', $staff_id);
-
+					
+					// HR requested: temporarily any emails sent to post ID erinh to HR instead
+					// added 11-06-2023 - request came through JP from HR
+					if($to == 'erinh@provo.edu'){
+						$to = 'rebeccar@provo.edu';
+					}
 					//build email headers
 					$subject = 'From: ' . $from . ' - ' . $subject;
 					$headers[] = 'From: PCSD Website <donotreply@provo.edu>';
