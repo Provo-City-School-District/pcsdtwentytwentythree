@@ -97,9 +97,9 @@ $get_to_know_fields = get_fields();
 	<div id="belowSlider">
 		<section id="stayCurrent" class="grid2 calendar">
 			<ul>
-				<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-insta.svg" alt="link to Instagram" /></a></li>
-				<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li>
-				<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-facebook.svg" alt="link to Facebook" /></a></li>
+				<li><a href="https://www.instagram.com/provocityschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-insta.svg" alt="link to Instagram" /></a></li>
+				<li><a href="https://twitter.com/ProvoSchoolDist"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li>
+				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-facebook.svg" alt="link to Facebook" /></a></li>
 			</ul>
 			<ul>
 				<li><a href="<?php echo get_field('hero_link_address'); ?>"><?php echo get_field('hero_link_label'); ?></a></li>
@@ -150,7 +150,7 @@ $get_to_know_fields = get_fields();
 								<!-- <a href="<?php the_permalink(); ?>">Read More <span class="rightarrow"></span></a> -->
 							</div>
 							<p class="readMore"><a href="<?php the_permalink(); ?>">Read More <span class="rightarrow"></span></a></p>
-							<p class="postDate"><?php the_date(); ?></p>
+							<p class="postDate"><?php echo get_the_date(); ?></p>
 
 						</article>
 				<?php endwhile;
