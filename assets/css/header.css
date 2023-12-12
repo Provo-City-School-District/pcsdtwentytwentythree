@@ -132,7 +132,9 @@
     body.admin-bar #trp-floater-ls.trp-top-right {
         top:112px;
     }
-
+    #navbar {
+        width: 75%;
+    } 
     #navbar .homeLink {
         /* background-color: var(--body-background); */
         /* background: url(../icons/icons8-home-page-32.png) 0 0 no-repeat var(--body-background); */

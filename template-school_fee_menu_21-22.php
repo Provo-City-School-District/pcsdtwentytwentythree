@@ -135,10 +135,7 @@ get_header();
 			<div class="clear"></div>
 		</article>
 		</div>
-	<?php
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
-	?>
+		<?php get_sidebar('school-fees'); ?>
 </main>
 <?php
 get_footer();

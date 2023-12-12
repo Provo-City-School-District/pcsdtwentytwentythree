@@ -5,7 +5,7 @@ get_header();
 
 	<ol class="breadcrumbs" id="breadcrumbs">
 		<li><a href="https://provo.edu/">Home</a> / </li>
-		<li><a href="https://provo.edu/pagos-escolares-21-22/">Pagos Escolares 21-22</a> / </li>
+		<li><a href="https://provo.edu/pagos-escolares-24-25/">Pagos Escolares 24-25</a> / </li>
 		<li><?php single_cat_title(); ?></li>
 	</ol>
 	<div id="currentPage">
@@ -16,11 +16,11 @@ get_header();
 			echo '<p>Fees listed are maximum fees and may not reflect actual fess paid.</p>';
 			$cat = single_cat_title('', false);
 			$args = array(
-				'post_type' => 'pagos_escolares_2122',
+				'post_type' => 'pagos_escolares_2425',
 				'orderby' => 'title',
 				'order' => 'ASC',
 				'posts_per_page' => -1,
-				'tax_query' => array(array('taxonomy' => 'school_fees_cate_spanish_2122', 'field' => 'name', 'terms' => $cat))
+				'tax_query' => array(array('taxonomy' => 'school_fees_cate_spanish_2425', 'field' => 'name', 'terms' => $cat))
 			);
 			$query = new WP_query($args);
 			if ($query->have_posts()) :

@@ -1,14 +1,15 @@
 <?php
 get_header();
 ?>
-<main id="mainContent">
-	<section class="content singlePost">
-		<ol class="breadcrumbs" id="breadcrumbs">
-			<li><a href="https://provo.edu/">Home</a> / </li>
-			<li><a href="https://provo.edu/pagos-escolares-22-23/">Pagos Escolares 22-23</a> / </li>
-			<li><?php single_cat_title(); ?></li>
-		</ol>
-		<article class="activePost">
+<main id="mainContent" class="sidebar">
+
+	<ol class="breadcrumbs" id="breadcrumbs">
+		<li><a href="https://provo.edu/">Home</a> / </li>
+		<li><a href="https://provo.edu/pagos-escolares-22-23/">Pagos Escolares 22-23</a> / </li>
+		<li><?php single_cat_title(); ?></li>
+	</ol>
+	<div id="currentPage">
+		<article id="activePost" class="activePost">
 			<h1>Fees For Activity Category : <?php single_cat_title(); ?></h1>
 
 			<?php
@@ -34,7 +35,7 @@ get_header();
 			endif;
 			?>
 		</article>
-	</section>
+	</div>
 	<?php get_sidebar('school-fees'); ?>
 </main>
 <?php
