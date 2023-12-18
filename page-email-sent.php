@@ -29,7 +29,8 @@ $email_blacklist = array(
 	'bayville@gmail.com', 
 	'chrisfuhriman9@gmail.com', 
 	'kindnessbeginswithme@gmail.com',
-	'iuri@schoolpulse.org'
+	'iuri@schoolpulse.org',
+	'emailoffice359@gmail.com'
 );
 if (array_search($from, $email_blacklist) !== false) {
 ?>
