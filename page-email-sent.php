@@ -87,7 +87,9 @@ get_header();
 							'This message was submitted through the District Website:' . "<br><br>" .
 							$submitmessage . "<br><br>" .
 							"Return Phone: " . $newPhone . "<br><br>" .
-							'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from;
+							'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from . "<br><br>" .
+							'<strong>Warning: This email originated from outside of Provo City School District.</strong><br>' . 
+							'Be cautious about sharing sensitive information. Do not click links or reply unless you know the content is safe.';
 					}
 
 					if ($staff_id == '68051') {
