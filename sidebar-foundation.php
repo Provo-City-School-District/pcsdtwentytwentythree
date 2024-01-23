@@ -32,6 +32,7 @@
 		<li>Ashley Rayback</li>
 		<li>Michelle Wages</li>
 	</ul>
+	<img src="https://provo.edu/wp-content/uploads/2024/01/foundation-board.jpg" alt="Picture of the Board of Directors" />
 
 	<h2>District Advisors</h2>
 	<ul>
