@@ -230,7 +230,7 @@ $get_to_know_fields = get_fields();
 
 			<h2>Instagram Feed</h2>
 			<ul class="juicer-feed" data-feed-id="pcsd_webteam">
-				<h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1>
+				<!-- <h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1> -->
 			</ul>
 		</section> <!-- End Social Media -->
 	</div><!-- End of post slider content -->
