@@ -213,8 +213,7 @@ $get_to_know_fields = get_fields();
 			<!-- Start Social Media -->
 			<h1>Social Media</h1>
 			See what's being discussed & shared
-			<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
-			<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+			
 
 			<ul class="sociallinks">
 				<li>
@@ -229,9 +228,13 @@ $get_to_know_fields = get_fields();
 			</ul>
 
 			<h2>Instagram Feed</h2>
+
+			<!-- start Juicer stuff -->
+			<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+			<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
 			<ul class="juicer-feed" data-feed-id="pcsd_webteam">
-				<!-- <h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1> -->
 			</ul>
+			<!-- end Juicer stuff -->
 		</section> <!-- End Social Media -->
 	</div><!-- End of post slider content -->
 </main><!-- End of #mainContent -->
