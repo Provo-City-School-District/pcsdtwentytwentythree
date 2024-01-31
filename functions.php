@@ -5,20 +5,20 @@ Theme Setup
 function pcsd_assets()
 {
 	//register different script files
-	wp_register_script('mainScripts', get_template_directory_uri() . '/assets/js/main_scripts.js', array('jquery', 'slickScripts'), '1.0.04', true);
+	wp_register_script('mainScripts', get_template_directory_uri() . '/assets/js/main_scripts.js', array('jquery', 'slickScripts'), '1.11.0', true);
 	wp_register_script('cludoScripts', 'https://customer.cludo.com/scripts/bundles/search-script.min.js', '', '1.0.1', true);
 	wp_register_script('slickScripts', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), '1.0.1', true);
 	wp_register_script('linkDetection', get_template_directory_uri() . '/assets/js/linkDetection.js', '', '1.0.0', true);
 	wp_register_script('404easterEgg', get_template_directory_uri() . '/assets/js/404.js', '', '1.0.0', true);
 	wp_register_script('formfix', get_template_directory_uri() . '/assets/js/formfix.js', '', '1.0.01', true);
-	wp_register_script('frontpage_scripts', get_template_directory_uri() . '/assets/js/frontpage.js', '', '1.0.01', true);
+	wp_register_script('frontpage_scripts', get_template_directory_uri() . '/assets/js/frontpage.js', '', '0.1.0', true);
 
 	//load CSS files
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
 	wp_enqueue_style('reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.01', false);
-	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.25', false);
+	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.0.26', false);
 	wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/font.css', '', '1.0.02', false);
-	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.09', false);
+	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.1', false);
 	wp_enqueue_style('breadcrumbs', get_template_directory_uri() . '/assets/css/breadcrumbs.css', '', '1.0.01', false);
 	wp_enqueue_style('footer', get_template_directory_uri() . '/assets/css/footer.css', '', '1.0.06', false);
 	wp_enqueue_style('sidebar', get_template_directory_uri() . '/assets/css/sidebar.css', '', '1.0.04', false);

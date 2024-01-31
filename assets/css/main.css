@@ -954,3 +954,16 @@ category styles
       height: 500px;
     }
   }
+
+
+
+/*================================================================================================================
+Translate Press Fixing
+================================================================================================================*/
+.trp-language-switcher-container.trp-floater-ls-names.trp-top-right.trp-color-dark {
+    min-width: 25px;
+}
+#trp-floater-ls-current-language .trp-ls-disabled-language img {
+    max-width: 25px;
+    max-width: 25px;
+}

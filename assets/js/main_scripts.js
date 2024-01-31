@@ -6,8 +6,6 @@ jQuery(document).ready(function () {
   });
 });
 
-
-
 jQuery(document).ready(function () {
   jQuery("#slider").slick({
     autoplay: true,
@@ -16,10 +14,6 @@ jQuery(document).ready(function () {
     autoplaySpeed: 10000,
   });
 });
-
-
-
-
 
 //Menu reveal;
 // jQuery("#navbar > a").click(function () {
@@ -46,11 +40,9 @@ jQuery(document).ready(function () {
 // });
 
 // jQuery("#cludo-search-form #search-button").on("click", function () {
-  // event.preventDefault();
-  // jQuery("#cludo-search-form").toggleClass("active");
+// event.preventDefault();
+// jQuery("#cludo-search-form").toggleClass("active");
 // });
-
-
 
 //Clicking the X on the alert will close the alert section. it will also set a cookie with the name "alert"
 jQuery(".closeAlert").click(function () {
@@ -73,7 +65,6 @@ if (getCookie("alert")) {
   // Re-direct to this page
   jQuery(".alerts").css("display", "none");
 }
-
 
 /*
 =============================================================================================================
@@ -100,9 +91,6 @@ function setcookie(cname, cvalue) {
   var expires = "expires=" + expire.toString();
   document.cookie = cname + "=" + cvalue + "; " + expires + "; path=/";
 }
-
-
-
 
 /*
 =============================================================================================================
@@ -152,6 +140,31 @@ jQuery(document).ready(function () {
   });
 });
 
+//inserts a link to the translation request form in the language switcher
+window.onload = function () {
+  var wrapper = document.querySelector(".trp-language-wrap");
+  if (wrapper) {
+    var newAnchor = document.createElement("a"); // create new anchor element
+    newAnchor.href = "https://provo.edu/translations/"; // set href attribute
+    newAnchor.textContent = "Request Translation"; // set link text
+    wrapper.insertBefore(newAnchor, wrapper.children[1]); //insert new anchor before first child
+
+    var targetElement = wrapper.querySelector(".trp-floater-ls-disabled-language.trp-ls-disabled-language"); // find the target element
+    if (targetElement) {
+      targetElement.textContent += " - Selected"; // append "current lang" to the existing text
+    }
+  }
+  var parentElement = document.getElementById('trp-floater-ls-current-language'); // get the parent element by ID
+  if (parentElement) {
+    var targetElement = parentElement.querySelector('.trp-floater-ls-disabled-language.trp-ls-disabled-language'); // find the target element inside the parent
+    if (targetElement) {
+      var img = document.createElement('img'); // create new img element
+      img.src = 'https://provo.edu/wp-content/uploads/2024/01/translate.png'; // set src attribute
+      targetElement.innerHTML = ''; // clear the current content
+      targetElement.appendChild(img); // append the new image
+    }
+  }
+};
 
 
 /*
