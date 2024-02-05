@@ -47,11 +47,15 @@ Post Signature
 */
 button {
     background-color: var(--main-blue-color);
-    color:var(--theme-white);
-    padding:1em;
+    color: var(--theme-white);
+    padding: 1em;
     border-radius: 40px;
 }
-button:hover{color: var(--link-hover-color);}
+
+button:hover {
+    color: var(--link-hover-color);
+}
+
 .post_sig {
     width: 400px;
     background-color: #f1f5f9;
@@ -79,10 +83,12 @@ Utility
 #image404 {
     float: right;
 }
+
 .contactlist li {
     list-style: none;
-    margin: 0 0 0 0!important;
+    margin: 0 0 0 0 !important;
 }
+
 .powered-by {
     display: none;
 }
@@ -107,12 +113,19 @@ Utility
 .alignright {
     float: right;
     margin: 0 0 1em 1em;
+    text-align: right;
 }
 
 .left,
 .alignleft {
     float: left;
     margin: 0 1em 1em 0;
+    text-align: left;
+}
+
+table .left,
+table.right {
+    float: unset;
 }
 
 .downarrow:after {
@@ -200,7 +213,7 @@ Utility
 
 #currentPage ul.grid3 li {
     margin: unset;
-    display:flex;
+    display: flex;
     align-items: center;
     gap: 1em;
     min-width: 200px;
@@ -274,26 +287,32 @@ Utility
         margin-top: 130px;
     }
 }
+
 @media (min-width: 1100px) {
     #mainContent {
         margin-top: 130px;
 
     }
+
     #mainContent.fullwidth {
         margin-top: 128px;
 
     }
+
     .admin-bar #mainContent.fullwidth {
         margin-top: 90px;
 
     }
+
     .admin-bar #mainContent.sidebar {
         margin-top: 107px;
     }
+
     #mainContent.sidebar {
         margin-top: 128px;
     }
 }
+
 @media (min-width: 1300px) {
     .wpMenu ul {
         grid-template-columns: repeat(6, 1fr);
@@ -630,17 +649,22 @@ ul.policystyle li:nth-child(even) ul li {
     max-width: 1500px;
     margin: 0 auto;
 }
+
 .rightSidebar .directoryGrid {
     display: unset;
 }
+
 .directoryGrid>* {
     padding: 1em 0;
     width: 100%;
 }
-.directoryGrid h2,.directoryGrid h3 {
-    flex:100%;
-    background-color: unset!important;
+
+.directoryGrid h2,
+.directoryGrid h3 {
+    flex: 100%;
+    background-color: unset !important;
 }
+
 @media (min-width:500px) {
     .directoryGrid>* {
         width: calc(100% / 3);
@@ -666,10 +690,12 @@ ul.policystyle li:nth-child(even) ul li {
 .directoryGrid>*:nth-child(odd) {
     background-color: var(--odd-color);
 }
+
 .rightSidebar .directoryGrid>* {
     width: 100%;
     background-color: unset;
 }
+
 .directoryGrid .personalvCard img {
     display: block;
     margin: 0 auto;
@@ -678,7 +704,7 @@ ul.policystyle li:nth-child(even) ul li {
 }
 
 .directoryGrid .personalvCard ul {
-    margin: 1em 0 1em 0!important;
+    margin: 1em 0 1em 0 !important;
     list-style: none;
     text-align: center;
     margin-left: unset;
@@ -689,11 +715,13 @@ ul.policystyle li:nth-child(even) ul li {
     margin: 0 !important;
 }
 
-.directoryGrid .personalvCard ul li.name,.directoryGrid .personalvCard ul li.assignedSchool {
+.directoryGrid .personalvCard ul li.name,
+.directoryGrid .personalvCard ul li.assignedSchool {
     font-size: 1em;
 }
+
 .directoryGrid .personalvCard ul li.cteName {
-    font-size:0.8em;
+    font-size: 0.8em;
 }
 
 
@@ -816,12 +844,14 @@ form input {
     /* width: calc(100% - 152px); */
     width: calc(100% - 20px);
 }
+
 form select {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 10px;
 }
+
 form input[type="submit"],
 form button {
     width: 150px;
@@ -875,11 +905,12 @@ form input[type="search"] {
 .formattachments label {
     display: grid;
     grid-template-columns: 25% 1fr;
-    padding:unset;
+    padding: unset;
 }
+
 form .block {
     display: block;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
 
@@ -922,6 +953,7 @@ category styles
 .categories-6h ul li.update a::before {
     background-image: url(https://provo.edu/wp-content/uploads/2023/01/notice-updates.jpg);
 }
+
 .categories-6h ul li.podcast a::before {
     background-image: url(https://provo.edu/wp-content/uploads/2023/08/podcast-banner-with-image-226.jpg);
 }
@@ -935,14 +967,14 @@ category styles
     padding-top: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
 @media (min-width: 1400px) {
     .featured-image-full {
-      padding-top: 0;
-      height: 500px;
+        padding-top: 0;
+        height: 500px;
     }
-  }
+}
 
 
 
@@ -952,6 +984,7 @@ Translate Press Fixing
 .trp-language-switcher-container.trp-floater-ls-names.trp-top-right.trp-color-dark {
     min-width: 25px;
 }
+
 #trp-floater-ls-current-language .trp-ls-disabled-language img {
     max-width: 25px;
     max-height: 25px;
