@@ -25,4 +25,14 @@
 	<?php
 	echo file_get_contents('https://provo.edu/directory_page/title-i/');
 	?>
+	<h2>Title I Schools</h2>
+	<ul>
+		<li><a href="https://amelia.provo.edu">Amelia Earhart Elementary</a></li>
+		<li><a href="https://franklin.provo.edu">Franklin Elementary</a></li>
+		<li><a href="https://peaks.provo.edu">Provo Peaks Elementary</a></li>
+		<li><a href="https://provost.provo.edu">Provost Elementary</a></li>
+		<li><a href="https://springcreek.provo.edu">Spring Creek Elementary</a></li>
+		<li><a href="https://sunset.provo.edu">Sunset View Elementary</a></li>
+		<li><a href="https://timpanogos.provo.edu">Timpanogos Elementary</a></li>
+	</ul>
 </aside>
