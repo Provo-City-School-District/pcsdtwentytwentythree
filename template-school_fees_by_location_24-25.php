@@ -33,7 +33,7 @@ get_header();
 				//print_r($location_of_fees_to_display);
 			?>
 				<ul>
-					<li><a href="https://globalassets.provo.edu/fee-summary/23-24/fee_summary_<?php echo $location_of_fees_to_display['value']; ?>.pdf"><?php echo $location_of_fees_to_display['label']; ?> Fee Summary</a></li>
+					<li><a href="https://globalassets.provo.edu/fee-summary/24-25/fee_summary_<?php echo $location_of_fees_to_display['value']; ?>.pdf"><?php echo $location_of_fees_to_display['label']; ?> Fee Summary</a></li>
 					</li>
 				</ul>
 			<?php
@@ -171,7 +171,7 @@ get_header();
 			//create array to be used
 			$post_ids_array = array();
 			//query for arrays that include a specific location in the post
-			$get_id_sql =  "SELECT post_id,meta_key,meta_value FROM psd_posts,psd_postmeta WHERE post_type = 'school_fees_23-24' AND psd_posts.ID = psd_postmeta.post_id AND meta_value = '" . $location_of_fees_to_display['value'] . "' ORDER BY post_title";
+			$get_id_sql =  "SELECT post_id,meta_key,meta_value FROM psd_posts,psd_postmeta WHERE post_type = 'school_fees_24-25' AND psd_posts.ID = psd_postmeta.post_id AND meta_value = '" . $location_of_fees_to_display['value'] . "' ORDER BY post_title";
 			$query_post_ids = $wpdb->get_results($get_id_sql);
 			//create an array of just the ID of each activity that includes the specified location
 			//print_r($query_post_ids);
