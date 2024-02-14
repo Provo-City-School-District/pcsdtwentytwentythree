@@ -98,7 +98,7 @@ $get_to_know_fields = get_fields();
 		<section id="stayCurrent" class="grid2 calendar">
 			<ul>
 				<li><a href="https://www.instagram.com/provocityschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-insta.svg" alt="link to Instagram" /></a></li>
-				<li><a href="https://twitter.com/ProvoSchoolDist"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li>
+				<!-- <li><a href="https://twitter.com/ProvoSchoolDist"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li> -->
 				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-facebook.svg" alt="link to Facebook" /></a></li>
 			</ul>
 			<ul>
@@ -219,9 +219,9 @@ $get_to_know_fields = get_fields();
 				<li>
 					<a href="https://www.instagram.com/provocityschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/instagram-social-network-logo-of-photo-camera.svg" alt="Link to Instagram" /></span></a>
 				</li>
-				<li><a href="https://twitter.com/ProvoSchoolDist"><img src="https://globalassets.provo.edu/image/icons/twitter-logo-on-black-background.svg" alt="Link to Twitter" /></span>
+				<!-- <li><a href="https://twitter.com/ProvoSchoolDist"><img src="https://globalassets.provo.edu/image/icons/twitter-logo-on-black-background.svg" alt="Link to Twitter" /></span>
 					</a>
-				</li>
+				</li> -->
 				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/facebook-app-logo.svg" alt="Link to Facebook" /></span>
 					</a>
 				</li>
