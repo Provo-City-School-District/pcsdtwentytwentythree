@@ -71,7 +71,7 @@ $get_to_know_fields = get_fields();
 							<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')">
 							<?php
 								if (get_field('announcement_text')) {
-									?>
+							?>
 										<div class="slide-text">
 											<h2><?php the_title(); ?></h2>
 											<p><?php
@@ -84,10 +84,10 @@ $get_to_know_fields = get_fields();
 												?>
 											</p>
 										</div>
-									<?php
-								}
+						<?php
+							}
 
-								?>
+						?>
 							</article>
 							
 				<?php endwhile;
@@ -240,7 +240,7 @@ $get_to_know_fields = get_fields();
 			<!-- start Juicer stuff -->
 			<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
 			<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-			<ul class="juicer-feed" data-feed-id="pcsd_webteam">
+			<ul class="juicer-feed" data-feed-id="provocityschooldistrict" data-per="3">
 			</ul>
 			<!-- end Juicer stuff -->
 		</section> <!-- End Social Media -->
