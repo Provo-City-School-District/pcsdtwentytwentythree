@@ -18,13 +18,16 @@ Front page Slider
 */
 #announcments {
 	background-image: url(../img/background/slider-background.png);
+	max-height: 600px;
 }
+
 #announcments video {
 	max-width: 100%;
 	max-height: 600px;
 	display: block;
-	margin:0 auto;
+	margin: 0 auto;
 }
+
 #announcments h2 {
 	position: absolute;
 	left: -9999px
@@ -35,7 +38,6 @@ Front page Slider
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: cover;
-
 }
 
 .slide {
@@ -43,20 +45,27 @@ Front page Slider
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	min-height: 30vh;
+	position: relative;
+}
+
+.slide .slide-text {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	background-color: rgba(255, 233, 244, 0.9);
+	padding: 5px 1em 10px 1em;
 }
 
 #announcments .slick-arrow {
 	display: none !important;
 }
 
-
 @media (min-width:700px) {
 	.slide {
 		min-height: 50vh;
 	}
 }
-
-
 
 /*
 ------------------------------------------------------------------------------------------------------------------------------------------
@@ -105,9 +114,11 @@ Home Page News
 	margin-top: 0;
 
 }
+
 #homeNews .moreNews {
-	margin-top:35px;
+	margin-top: 35px;
 }
+
 #homeNews .stories .postDate {
 	text-align: right;
 	margin-right: 5%;
@@ -133,8 +144,9 @@ Home Page News
 		grid-template-columns: repeat(3, 1fr);
 
 	}
+
 	#homeNews .moreNews {
-		margin-top:20px;
+		margin-top: 20px;
 	}
 }
 
@@ -143,8 +155,9 @@ Home Page News
 		grid-template-columns: repeat(6, 1fr);
 
 	}
+
 	#homeNews .moreNews {
-		margin-top:10px;
+		margin-top: 10px;
 	}
 }
 
@@ -167,6 +180,7 @@ Home Page News
 	background-size: cover;
 	display: block;
 }
+
 /*
 ----------------------------------------------------------------
 Responsive styles
@@ -788,7 +802,10 @@ Responsive styles
 Social Icons and Juicer near the bottom
 --------------------------------------------------------------------------------------------------------------
 */
-#socialMediaFrontPage {padding-bottom: 50px}
+#socialMediaFrontPage {
+	padding-bottom: 50px
+}
+
 #socialMediaFrontPage .sociallinks {
 	text-align: center;
 }

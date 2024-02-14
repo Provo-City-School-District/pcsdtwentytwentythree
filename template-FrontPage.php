@@ -67,21 +67,29 @@ $get_to_know_fields = get_fields();
 				$the_query = new WP_Query($args);
 				if ($the_query->have_posts()) :
 					while ($the_query->have_posts()) : $the_query->the_post(); ?>
-						<?php
-						if (get_field('announcement_link')) {
-						?>
-							<a href="<?php echo get_field('announcement_link')  ?>">
+					
+							<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')">
 							<?php
-						}
-							?>
-							<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')"></article>
-							<?php
-							if (get_field('announcement_link')) {
-							?>
-							</a>
-						<?php
-							}
-						?>
+								if (get_field('announcement_text')) {
+									?>
+										<div class="slide-text">
+											<h2><?php the_title(); ?></h2>
+											<p><?php
+												the_field('announcement_text');
+												$slideLink = get_field('announcement_link');
+												$slideLinkLabel = get_field('announcement_link_label');
+												if ($slideLink) { ?>
+													<a href="<?php echo $slideLink ?>"><?php echo $slideLinkLabel ?></a>
+												<?php }
+												?>
+											</p>
+										</div>
+									<?php
+								}
+
+								?>
+							</article>
+							
 				<?php endwhile;
 				else :
 					echo '<p>No Content Found</p>';
@@ -232,7 +240,7 @@ $get_to_know_fields = get_fields();
 			<!-- start Juicer stuff -->
 			<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
 			<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-			<ul class="juicer-feed" data-feed-id="provocityschooldistrict" data-per="3">
+			<ul class="juicer-feed" data-feed-id="pcsd_webteam">
 			</ul>
 			<!-- end Juicer stuff -->
 		</section> <!-- End Social Media -->
