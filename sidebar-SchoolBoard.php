@@ -7,7 +7,7 @@
 		</a>
 	</li>	
 		<li>
-			<a href="https://provo.edu/district-office-directory/email-form/?staff=68051">
+			<a href="https://provo.edu/district-office-directory/email-form/?staff=76000">
 				<img src="//globalassets.provo.edu/image/icons/email.svg" alt="logo" />
 				<span>Email All Board Members</span>
 			</a>
