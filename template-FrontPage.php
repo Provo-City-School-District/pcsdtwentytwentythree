@@ -70,7 +70,7 @@ $get_to_know_fields = get_fields();
 					
 							<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')">
 							<?php
-								if (get_field('announcement_text')) {
+								if (get_field('announcement_text') != null || get_field('announcement_link_label') != null || get_field('announcement_link') != null) {
 							?>
 										<div class="slide-text">
 											<h2><?php the_title(); ?></h2>
@@ -106,12 +106,31 @@ $get_to_know_fields = get_fields();
 		<section id="stayCurrent" class="grid2 calendar">
 			<ul>
 				<li><a href="https://www.instagram.com/provocityschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-insta.svg" alt="link to Instagram" /></a></li>
-				<li><a href="https://twitter.com/ProvoSchoolDist"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li>
+				<!-- <li><a href="https://twitter.com/ProvoSchoolDist"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li> -->
 				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-facebook.svg" alt="link to Facebook" /></a></li>
 			</ul>
-			<ul>
-				<li><a href="<?php echo get_field('hero_link_address'); ?>"><?php echo get_field('hero_link_label'); ?></a></li>
-			</ul>
+			<?php
+				if(get_field('hero_link_address') || get_field('hero_link_2_address')) {
+					?>
+					<ul>
+						<?php
+							if(get_field('hero_link_label')) {
+								?>
+								<li class="calendar"><a href="<?php echo get_field('hero_link_address'); ?>"><?php echo get_field('hero_link_label'); ?></a></li>
+								<?php
+							}
+						?>
+						<?php
+							if(get_field('hero_link_2_label')) {
+								?>
+								<li class="newsletter"><a href="<?php echo get_field('hero_link_2_address'); ?>"><?php echo get_field('hero_link_2_label'); ?></a></li>
+								<?php
+							}
+						?>
+					</ul>
+					<?php
+				}
+			?>
 		</section>
 
 		<section class="wpMenu">
@@ -227,9 +246,9 @@ $get_to_know_fields = get_fields();
 				<li>
 					<a href="https://www.instagram.com/provocityschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/instagram-social-network-logo-of-photo-camera.svg" alt="Link to Instagram" /></span></a>
 				</li>
-				<li><a href="https://twitter.com/ProvoSchoolDist"><img src="https://globalassets.provo.edu/image/icons/twitter-logo-on-black-background.svg" alt="Link to Twitter" /></span>
+				<!-- <li><a href="https://twitter.com/ProvoSchoolDist"><img src="https://globalassets.provo.edu/image/icons/twitter-logo-on-black-background.svg" alt="Link to Twitter" /></span>
 					</a>
-				</li>
+				</li> -->
 				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/facebook-app-logo.svg" alt="Link to Facebook" /></span>
 					</a>
 				</li>

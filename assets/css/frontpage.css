@@ -28,9 +28,14 @@ Front page Slider
 	margin: 0 auto;
 }
 
-#announcments h2 {
+#announcments h2:first-of-type {
 	position: absolute;
 	left: -9999px
+}
+
+#announcments .slide-text h2 {
+	position: unset;
+	left: unset;
 }
 
 .slick-wrapper {
@@ -63,7 +68,7 @@ Front page Slider
 
 @media (min-width:700px) {
 	.slide {
-		min-height: 50vh;
+		min-height: 47vh;
 	}
 }
 

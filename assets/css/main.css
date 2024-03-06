@@ -113,19 +113,12 @@ Utility
 .alignright {
     float: right;
     margin: 0 0 1em 1em;
-    text-align: right;
 }
 
 .left,
 .alignleft {
     float: left;
     margin: 0 1em 1em 0;
-    text-align: left;
-}
-
-table .left,
-table .right {
-    float: unset;
 }
 
 .downarrow:after {
@@ -184,6 +177,17 @@ table .right {
 
 }
 
+@media only screen and (min-width: 1600px) {
+    /* .grid2 {
+        gap: unset;
+    } */
+}
+
+/* grid3 styling */
+.grid3 {
+    display: grid;
+}
+
 /* Grid coloring */
 #currentPage .postList .grid3 .post:nth-child(even) {
     background-color: var(--even-color);
@@ -224,10 +228,10 @@ table .right {
     max-width: 100px;
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     .grid3 {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        /* gap: 1em; */
         justify-content: space-evenly;
     }
 
@@ -454,6 +458,8 @@ Stay Connected/Stay Current
     display: grid;
     margin: unset;
     justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 1em;
 }
 
 #stayCurrent ul:nth-child(1) {
@@ -481,15 +487,30 @@ Stay Connected/Stay Current
     height: 19px;
 }
 
+#stayCurrent ul:nth-child(2) li:nth-child(2) a {
+    background-color: var(--emp-color);
+}
+
 #stayCurrent.register ul:nth-child(2) a:after {
     background-image: url(../icons/light/register.png);
 }
 
-#stayCurrent.calendar ul:nth-child(2) a:after {
+#stayCurrent ul:nth-child(2) li.calendar a:after {
     background-image: url(../icons/light/calendar.svg);
 }
 
+#stayCurrent ul:nth-child(2) li.newsletter a:after {
+    background-image: url(../icons/light/newsletter-icon.png);
+}
+
 @media (min-width:700px) {
+    #stayCurrent ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #stayCurrent ul:nth-child(2) {
+        display: flex;
+    }
 
     #stayCurrent ul:nth-child(1) {
         justify-self: start;
@@ -987,5 +1008,5 @@ Translate Press Fixing
 
 #trp-floater-ls-current-language .trp-ls-disabled-language img {
     max-width: 25px;
-    max-height: 25px;
+    max-width: 25px;
 }
