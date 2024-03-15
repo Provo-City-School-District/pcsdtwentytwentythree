@@ -77,25 +77,58 @@ get_header();
 
 					//email body message
 					$newPhone = '(' . substr_replace($phone, ')', 3, 0);
-					if ($staff_id == '68051') {
-						$emailedmessage =
-							'<strong>To: Entire Board Of Education</strong> <br><br> This message was submitted through the District Website to the entire Provo School Board:' . "<br><br>" .
-							$submitmessage . "<br><br>" .
-							"Return Phone: " . $newPhone . "<br><br>" .
-							'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from;
-					} else {
-						$emailedmessage =
-							'This message was submitted through the District Website:' . "<br><br>" .
-							$submitmessage . "<br><br>" .
-							"Return Phone: " . $newPhone . "<br><br>" .
-							'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from . "<br><br>" .
-							'<strong>Warning: This email originated from outside of Provo City School District.</strong><br>' . 
-							'Be cautious about sharing sensitive information. Do not click links or reply unless you know the content is safe.';
+
+					
+					// if ($staff_id == '76000') {
+					// 	$emailedmessage =
+					// 		'<strong>To: Entire Board Of Education</strong> <br><br> This message was submitted through the District Website to the entire Provo School Board:' . "<br><br>" .
+					// 		$submitmessage . "<br><br>" .
+					// 		"Return Phone: " . $newPhone . "<br><br>" .
+					// 		'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from;
+					// } else {
+					// 	$emailedmessage =
+					// 		'This message was submitted through the District Website:' . "<br><br>" .
+					// 		$submitmessage . "<br><br>" .
+					// 		"Return Phone: " . $newPhone . "<br><br>" .
+					// 		'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from . "<br><br>" .
+					// 		'<strong>Warning: This email originated from outside of Provo City School District.</strong><br>' . 
+					// 		'Be cautious about sharing sensitive information. Do not click links or reply unless you know the content is safe.';
+					// }
+
+					// if ($staff_id == '76000') {
+					// 	$emailedmessage = $emailedmessage . "<br><br>" . 'Boundary School: ' . $boundarySchool;
+					// }
+
+						// Initialize the emailed message
+					$emailedmessage = '';
+
+					// Check if the staff ID is for the entire Board of Education
+					if ($staff_id == '76000') {
+						$emailedmessage .= '<strong>To: Entire Board Of Education</strong><br><br>';
 					}
 
-					if ($staff_id == '68051') {
-						$emailedmessage = $emailedmessage . "<br><br>" . 'Boundary School: ' . $boundarySchool;
+					// Add the main submitted message
+					$emailedmessage .= 'This message was submitted through the District Website:<br><br>';
+					$emailedmessage .= $submitmessage . "<br><br>";
+					$emailedmessage .= "Return Phone: $newPhone<br><br>";
+					$emailedmessage .= "The Sender claimed they are a $role<br><br>";
+					$emailedmessage .= 'Please DO NOT respond to this email. This account is designated for incoming messages only! You can contact the person who sent this message at: ' . $from . '<br><br>';
+
+					// Add a warning for emails originating from outside the district
+					if ($staff_id != '76000') {
+						$emailedmessage .= '<strong>Warning: This email originated from outside of Provo City School District.</strong><br>';
+						$emailedmessage .= 'Be cautious about sharing sensitive information. Do not click links or reply unless you know the content is safe.<br><br>';
 					}
+
+					// Add boundary school information if applicable
+					if ($staff_id == '76000') {
+						$emailedmessage .= 'Boundary School: ' . $boundarySchool . '<br><br>';
+					}
+
+					// Output the final emailed message
+					// echo $emailedmessage;
+
+
 					//send mail
 					openlog("emailFormLog", LOG_PID | LOG_PERROR, LOG_LOCAL0);
 					$emaildate = date('d.m.Y h:i:s');
