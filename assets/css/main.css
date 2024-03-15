@@ -934,7 +934,14 @@ form .block {
     margin-bottom: 15px;
 }
 
+.emailForm input,
+.emailForm label {
+    display: inline-block;
+}
 
+.emailForm input[type=submit] {
+    display: block;
+}
 
 /*================================================================================================================
 category styles
