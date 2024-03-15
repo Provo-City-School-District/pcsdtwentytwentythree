@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$submitmessage = test_input($_POST['message']);
 	$carbon = test_input($_POST['carbon']);
 	$phone = test_input($_POST['senderphone']);
+	$role = test_input($_POST['role']);
 }
 //input validation function
 function test_input($data)

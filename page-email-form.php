@@ -66,6 +66,22 @@ $district7 = '(District 7: Gina Hales)';
 					}
 
 					?>
+
+					<p><strong>I am a...</strong></p><br>
+					<label>
+						<input type="radio" name="role" value="community_member"> Community Member
+					</label>
+					<br>
+					<label>
+						<input type="radio" name="role" value="parent"> Parent
+					</label>
+					<br>
+					<label>
+						<input type="radio" name="role" value="vendor"> Vendor
+					</label> 
+
+
+					<br>
 					<label for="to_staff">To: </label>
 					<input type="text" name="to_staff" value="<?php echo get_the_title($staff_member); ?>" readonly>
 					<label for="subject">Subject: </label>
