@@ -73,13 +73,16 @@ $district7 = '(District 7: Gina Hales)';
 					</label>
 					<br>
 					<label>
-						<input type="radio" name="role" value="Parent"> Parent
+						<input type="radio" name="role" value="Parent" id="parentRadio"> Parent
 					</label>
 					<br>
 					<label>
 						<input type="radio" name="role" value="Vendor"> Vendor
-					</label> 
-
+					</label>
+					<div id="studentNameField" style="display: none;">
+						<label for="studentName">Student Full Name:</label>
+						<input type="text" id="studentName" name="studentName">
+					</div>
 
 					<br>
 					<label for="to_staff">To: </label>
@@ -110,6 +113,33 @@ $district7 = '(District 7: Gina Hales)';
 	get_sidebar($sidebar);
 	?>
 </main>
+<script>
+	// Get all the radio buttons
+	var radioButtons = document.querySelectorAll('input[type="radio"]');
+
+	// Function to show or hide the student name input field
+	function toggleStudentNameField() {
+		// Get the parent radio button
+		parentRadio = document.getElementById('parentRadio');
+		// Get the student name input field
+		studentNameInput = document.getElementById('studentNameField');
+		// If parent radio button is checked, show the student name input field
+		if (parentRadio.checked) {
+			studentNameInput.style.display = 'block';
+		} else {
+			// If not checked, hide the input field
+			studentNameInput.style.display = 'none';
+		}
+	}
+
+	// Call the function initially to set the field based on the default selection
+	toggleStudentNameField();
+
+	// Add event listener to all radio buttons
+	for (var i = 0; i < radioButtons.length; i++) {
+		radioButtons[i].addEventListener('change', toggleStudentNameField);
+	}
+</script>
 <?php
 get_footer();
 ?>

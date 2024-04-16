@@ -6,24 +6,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$from = strtolower($from);
 	$boundarySchool = test_input($_POST['boundarySchool']);
 	$staff_id = test_input($_POST['staff_id']);
-	$subject = test_input($_POST['subject']);
+	$submitsubject = test_input($_POST['subject']);
 	$submitmessage = test_input($_POST['message']);
 	$carbon = test_input($_POST['carbon']);
 	$phone = test_input($_POST['senderphone']);
 	$role = test_input($_POST['role']);
+	$studentName = test_input($_POST['studentName']);
 }
 //Switch Role for sending
 switch ($role) {
-    case "Community Member":
-    case "Parent":
-        $role = "Provo " . $role;
-        break;
-    case "Vendor":
-        // do nothing, leave it unchanged
-        break;
-    default:
-        break;
+	case "Community Member":
+	case "Parent":
+		$role = "Provo " . $role;
+		break;
+	case "Vendor":
+		// do nothing, leave it unchanged
+		break;
+	default:
+		break;
 }
+
 
 
 //input validation function
@@ -39,10 +41,10 @@ if (!$_POST['senderemail'] || isset($_POST['sanity'])) {
 	die();
 }
 $email_blacklist = array(
-	'vetus_republic_iii_percent@protonmail.com', 
-	'bademail@gmail.com', 
-	'bayville@gmail.com', 
-	'chrisfuhriman9@gmail.com', 
+	'vetus_republic_iii_percent@protonmail.com',
+	'bademail@gmail.com',
+	'bayville@gmail.com',
+	'chrisfuhriman9@gmail.com',
 	'kindnessbeginswithme@gmail.com',
 	'iuri@schoolpulse.org',
 	'emailoffice359@gmail.com'
@@ -72,14 +74,20 @@ get_header();
 				} else {
 					//fetch destination email from database
 					$to = get_post_field('email', $staff_id);
-					
+
 					// HR requested: temporarily any emails sent to post ID erinh to HR instead
 					// added 11-06-2023 - request came through JP from HR
-					if($to == 'erinh@provo.edu'){
+					if ($to == 'erinh@provo.edu') {
 						$to = 'rebeccar@provo.edu';
 					}
 					//build email headers
-					$subject = 'A ' . $role . ' Has Contacted You';
+					$subject = 'A ' . $role . ' Has Contacted You ';
+					// Check if $studentName is not empty
+					if (!empty($studentName) && $role == 'Provo Parent') {
+						// Add $studentName to the subject string
+						$subject .= ' | Student Name: ' . $studentName;
+					}
+					$subject .= ' |  From: ' . $from;
 					$headers[] = 'From: PCSD Website <donotreply@provo.edu>';
 					$headers[] = 'Reply-To: ' . $from;
 					$headers[] = 'Bcc: ' . $to;
@@ -91,30 +99,21 @@ get_header();
 
 					//email body message
 					$newPhone = '(' . substr_replace($phone, ')', 3, 0);
-
-					
-					// if ($staff_id == '76000') {
-					// 	$emailedmessage =
-					// 		'<strong>To: Entire Board Of Education</strong> <br><br> This message was submitted through the District Website to the entire Provo School Board:' . "<br><br>" .
-					// 		$submitmessage . "<br><br>" .
-					// 		"Return Phone: " . $newPhone . "<br><br>" .
-					// 		'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from;
-					// } else {
-					// 	$emailedmessage =
-					// 		'This message was submitted through the District Website:' . "<br><br>" .
-					// 		$submitmessage . "<br><br>" .
-					// 		"Return Phone: " . $newPhone . "<br><br>" .
-					// 		'Please DO NOT respond to this email.  This account is for incoming messages only! You can contact the person who sent this message at: ' . $from . "<br><br>" .
-					// 		'<strong>Warning: This email originated from outside of Provo City School District.</strong><br>' . 
-					// 		'Be cautious about sharing sensitive information. Do not click links or reply unless you know the content is safe.';
-					// }
-
-					// if ($staff_id == '76000') {
-					// 	$emailedmessage = $emailedmessage . "<br><br>" . 'Boundary School: ' . $boundarySchool;
-					// }
-
-						// Initialize the emailed message
-					$emailedmessage = '';
+					$emailedmessage = '<html><head><style>
+                    img {
+                        float: right;
+                        margin: 0 0 10px 10px;
+                    }
+					p.message {
+						padding: 1em 2em;
+						border: 2px dashed #eee;
+					}
+                    strong {
+                        font-weight: bold;
+                    }
+                </style></head><body>';
+					// Initialize the emailed message
+					$emailedmessage .= '<img src="https://provo.edu/wp-content/uploads/2024/04/pcsd-logo-website-header-x2.png" /><br>';
 
 					// Check if the staff ID is for the entire Board of Education
 					if ($staff_id == '76000') {
@@ -122,25 +121,31 @@ get_header();
 					}
 
 					// Add the main submitted message
-					$emailedmessage .= 'This message was submitted through the District Website:<br><br>';
-					$emailedmessage .= $submitmessage . "<br><br>";
-					$emailedmessage .= "Return Phone: $newPhone<br><br>";
-					$emailedmessage .= "The Sender claimed they are a $role<br><br>";
-					$emailedmessage .= 'Please DO NOT respond to this email. This account is designated for incoming messages only! You can contact the person who sent this message at: ' . $from . '<br><br>';
+					$emailedmessage .= "<p>The Sender claimed they are a $role</p>";
+					$emailedmessage .= '<strong>Subject Received</strong>: <p class="subject">' . $submitsubject . '</p>';
+					if (!empty($studentName) && $role == 'Provo Parent') {
+						$emailedmessage .= '<strong>Student\'s Name</strong>: ' . $studentName . '<br><br>';
+					}
+					$emailedmessage .= '<strong>Message Received</strong>: <p class="message">' . $submitmessage . "</p><br>";
+					if (isset($newPhone) && $newPhone == null) {
+						$emailedmessage .= "<strong>Return Phone</strong>: $newPhone<br><br>";
+					}
+
+					// $emailedmessage .= 'Please DO NOT respond to this email. This account is designated for incoming messages only! You can contact the person who sent this message at: ' . $from . '<br><br>';
 
 					// Add a warning for emails originating from outside the district
 					if ($staff_id != '76000') {
 						$emailedmessage .= '<strong>Warning: This email originated from outside of Provo City School District.</strong><br>';
 						$emailedmessage .= 'Be cautious about sharing sensitive information. Do not click links or reply unless you know the content is safe.<br><br>';
+						$emailedmessage .= 'If you have any questions or concerns regarding the origin of this email, please contact the PCSD Helpdesk (801-374-4878)';
 					}
 
 					// Add boundary school information if applicable
 					if ($staff_id == '76000') {
 						$emailedmessage .= 'Boundary School: ' . $boundarySchool . '<br><br>';
 					}
+					$emailedmessage .= '</body></html>';
 
-					// Output the final emailed message
-					// echo $emailedmessage;
 
 
 					//send mail
