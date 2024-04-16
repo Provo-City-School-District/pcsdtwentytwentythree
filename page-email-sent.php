@@ -12,6 +12,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$phone = test_input($_POST['senderphone']);
 	$role = test_input($_POST['role']);
 }
+//Switch Role for sending
+switch ($role) {
+    case "Community Member":
+    case "Parent":
+        $role = "Provo " . $role;
+        break;
+    case "Vendor":
+        // do nothing, leave it unchanged
+        break;
+    default:
+        break;
+}
+
+
 //input validation function
 function test_input($data)
 {
@@ -65,7 +79,7 @@ get_header();
 						$to = 'rebeccar@provo.edu';
 					}
 					//build email headers
-					$subject = 'From: ' . $from . ' - ' . $subject;
+					$subject = 'A ' . $role . ' Has Contacted You';
 					$headers[] = 'From: PCSD Website <donotreply@provo.edu>';
 					$headers[] = 'Reply-To: ' . $from;
 					$headers[] = 'Bcc: ' . $to;
