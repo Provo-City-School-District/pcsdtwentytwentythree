@@ -47,7 +47,8 @@ $email_blacklist = array(
 	'chrisfuhriman9@gmail.com',
 	'kindnessbeginswithme@gmail.com',
 	'iuri@schoolpulse.org',
-	'emailoffice359@gmail.com'
+	'emailoffice359@gmail.com',
+	'mathforrealsv@gmail.com'
 );
 if (array_search($from, $email_blacklist) !== false) {
 ?>
