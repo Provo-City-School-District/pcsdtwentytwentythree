@@ -6,10 +6,7 @@ get_header();
 
 //fetch all stored variables from the control post
 $get_to_know_fields = get_fields();
-//print_r($get_to_know_fields);
 ?>
-
-
 <main id="mainContent" class="homeMainContent">
 
 	<?php
@@ -67,29 +64,30 @@ $get_to_know_fields = get_fields();
 				$the_query = new WP_Query($args);
 				if ($the_query->have_posts()) :
 					while ($the_query->have_posts()) : $the_query->the_post(); ?>
-					
-							<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')">
+
+						<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')">
 							<?php
-								if (get_field('announcement_text') != null || get_field('announcement_link_label') != null || get_field('announcement_link') != null) {
+							if (get_field('announcement_text')) {
 							?>
-										<div class="slide-text">
-											<h2><?php the_title(); ?></h2>
-											<p><?php
-												the_field('announcement_text');
-												$slideLink = get_field('announcement_link');
-												$slideLinkLabel = get_field('announcement_link_label');
-												if ($slideLink) { ?>
-													<a href="<?php echo $slideLink ?>"><?php echo $slideLinkLabel ?></a>
-												<?php }
-												?>
-											</p>
-										</div>
-						<?php
+								<div class="slide-text">
+									<h2><?php the_title(); ?></h2>
+									<p><?php
+										the_field('announcement_text');
+										$slideLink = get_field('announcement_link');
+										$slideLinkLabel = get_field('announcement_link_label');
+										if ($slideLink) { ?>
+											<a href="<?php echo $slideLink ?>"><?php echo $slideLinkLabel ?></a>
+										<?php }
+										?>
+									</p>
+								</div>
+							<?php
 							}
 
-						?>
-							</article>
-							
+							?>
+
+						</article>
+
 				<?php endwhile;
 				else :
 					echo '<p>No Content Found</p>';
@@ -103,34 +101,23 @@ $get_to_know_fields = get_fields();
 		?>
 	</section>
 	<div id="belowSlider">
-		<section id="stayCurrent" class="grid2 calendar">
-			<ul>
-				<li><a href="https://www.instagram.com/provocityschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-insta.svg" alt="link to Instagram" /></a></li>
-				<!-- <li><a href="https://twitter.com/ProvoSchoolDist"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li> -->
-				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-facebook.svg" alt="link to Facebook" /></a></li>
-			</ul>
+		<section id="stayCurrent">
+
 			<?php
-				if(get_field('hero_link_address') || get_field('hero_link_2_address')) {
-					?>
-					<ul>
-						<?php
-							if(get_field('hero_link_label')) {
-								?>
-								<li class="calendar"><a href="<?php echo get_field('hero_link_address'); ?>"><?php echo get_field('hero_link_label'); ?></a></li>
-								<?php
-							}
-						?>
-						<?php
-							if(get_field('hero_link_2_label')) {
-								?>
-								<li class="newsletter"><a href="<?php echo get_field('hero_link_2_address'); ?>"><?php echo get_field('hero_link_2_label'); ?></a></li>
-								<?php
-							}
-						?>
-					</ul>
-					<?php
-				}
+			//get repeater field 'hero_link_group'
+			// Check rows exists.
+			if (have_rows('hero_link_group')) {
+				// Loop through rows.
+				echo '<ul>';
+				while (have_rows('hero_link_group')) : the_row();
+					//display row
+					echo '<li class="' . get_sub_field('hero_link_icon') . '"><a href="' . get_sub_field('hero_link_address') . '">' . get_sub_field('hero_link_label') . '</a></li>';
+				// End loop.
+				endwhile;
+				echo '</ul>';
+			}
 			?>
+
 		</section>
 
 		<section class="wpMenu">
@@ -193,7 +180,19 @@ $get_to_know_fields = get_fields();
 				<?php wp_nav_menu(array('menu' => 'frontpage-categories')); ?>
 			</div>
 		</section> <!-- News Home Page End -->
-
+		<section class="sociallinks">
+			<!-- Start Social Media -->
+			<h1>Social Media</h1>
+			See what's being discussed & shared
+			<ul>
+				<li>
+					<a href="https://www.instagram.com/provocityschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/instagram-social-network-logo-of-photo-camera.svg" alt="Link to Instagram" /></span></a>
+				</li>
+				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/facebook-app-logo.svg" alt="Link to Facebook" /></span>
+					</a>
+				</li>
+			</ul>
+		</section>
 		<section id="getToKnow">
 			<!-- Start Get to Know the District -->
 			<h1>Get to Know the District</h1>
@@ -236,30 +235,12 @@ $get_to_know_fields = get_fields();
 			</div>
 			<p class="demoLink"><a href="https://provo.edu/school-demographics/">Learn more about our schools & their demographics <span class="rightarrow"></span></a></p>
 		</section> <!-- End Get to Know the District -->
-		<section id="socialMediaFrontPage">
-			<!-- Start Social Media -->
-			<h1>Social Media</h1>
-			See what's being discussed & shared
-			
-
-			<ul class="sociallinks">
-				<li>
-					<a href="https://www.instagram.com/provocityschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/instagram-social-network-logo-of-photo-camera.svg" alt="Link to Instagram" /></span></a>
-				</li>
-				<!-- <li><a href="https://twitter.com/ProvoSchoolDist"><img src="https://globalassets.provo.edu/image/icons/twitter-logo-on-black-background.svg" alt="Link to Twitter" /></span>
-					</a>
-				</li> -->
-				<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="https://globalassets.provo.edu/image/icons/facebook-app-logo.svg" alt="Link to Facebook" /></span>
-					</a>
-				</li>
-			</ul>
-
+		<section id="juicer-area">
 			<h2>Instagram Feed</h2>
-
 			<!-- start Juicer stuff -->
 			<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
 			<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-			<ul class="juicer-feed" data-feed-id="provocityschooldistrict" data-per="3">
+			<ul class="juicer-feed" data-feed-id="provocityschooldistrict" data-per="3"></ul>
 			</ul>
 			<!-- end Juicer stuff -->
 		</section> <!-- End Social Media -->

@@ -15,8 +15,8 @@ function pcsd_assets()
 
 	//load CSS files
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
-	wp_enqueue_style('reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.01', false);
-	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.1.03', false);
+	wp_enqueue_style('reset', get_template_directory_uri() . '/assets/css/reset.css', '', '1.0.02', false);
+	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', '', '1.1.04', false);
 	wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/css/font.css', '', '1.0.02', false);
 	wp_enqueue_style('header', get_template_directory_uri() . '/assets/css/header.css', '', '1.0.1', false);
 	wp_enqueue_style('breadcrumbs', get_template_directory_uri() . '/assets/css/breadcrumbs.css', '', '1.0.01', false);
@@ -26,7 +26,7 @@ function pcsd_assets()
 	wp_enqueue_style('slick_css', get_template_directory_uri() . '/assets/css/slick.css', '', '1.0', false);
 	wp_enqueue_style('linkmarking', get_template_directory_uri() . '/assets/css/linkmarking.css', '', '1.0.01', false);
 	wp_enqueue_style('printing', get_template_directory_uri() . '/assets/css/print.css', '', '1.0', false);
-	
+
 
 	//load js files
 	wp_enqueue_script('slickScripts');
@@ -35,7 +35,7 @@ function pcsd_assets()
 	wp_enqueue_script('mainScripts');
 
 	if (is_front_page()) {
-		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.15', false);
+		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.16', false);
 		wp_enqueue_script('frontpage_scripts');
 	}
 	if (is_page_template(
@@ -62,7 +62,7 @@ function pcsd_assets()
 			'template-department-staticmedia.php',
 			'template-department_fulltileimages.php',
 			'template-department_repeater_slider.php',
-			
+
 		)
 	)) {
 		wp_enqueue_style('legacy', get_template_directory_uri() . '/assets/css/legacy-styles.css', '', '1.0.02', false);
@@ -644,17 +644,17 @@ add_filter('wpcf7_validate_email*', 'custom_email_confirmation_validation_filter
 
 function custom_email_confirmation_validation_filter($result, $tag)
 {
-	if ( isset($_POST['_wpcf7']) && $_POST['_wpcf7'] == 51410) {
+	if (isset($_POST['_wpcf7']) && $_POST['_wpcf7'] == 51410) {
 		if ('your-email' == $tag->name) {
 			$your_email = isset($_POST['your-email']) ? trim($_POST['your-email']) : '';
 			//$your_email_confirm = isset( $_POST['your-email-confirm'] ) ? trim( $_POST['your-email-confirm'] ) : '';
-	
+
 			if (strpos($your_email, '@provo.edu')) {
 				$result->invalidate($tag, "This form is for Student and Parents only. Please refer to Technology Support to submit a work order");
 			}
-		}	
+		}
 	}
-	
+
 	return $result;
 }
 
@@ -862,7 +862,7 @@ Taxonomy: Directory Categories.
 	register_taxonomy("directory_category", ["directory"], $directory_categories_args);
 
 
-/*===========================================================================================
+	/*===========================================================================================
 Taxonomy: Internship Location Categories
 ===========================================================================================*/
 
@@ -903,4 +903,3 @@ function special_nav_class($classes, $item)
 	}
 	return $classes;
 }
-

@@ -28,14 +28,9 @@ Front page Slider
 	margin: 0 auto;
 }
 
-#announcments h2:first-of-type {
+#announcments h2 {
 	position: absolute;
 	left: -9999px
-}
-
-#announcments .slide-text h2 {
-	position: unset;
-	left: unset;
 }
 
 .slick-wrapper {
@@ -68,7 +63,7 @@ Front page Slider
 
 @media (min-width:700px) {
 	.slide {
-		min-height: 47vh;
+		min-height: 45vh;
 	}
 }
 
@@ -212,10 +207,6 @@ Responsive styles
 		grid-column-end: unset;
 	}
 }
-
-
-
-
 
 /*
 --------------------------------------------------------------------
@@ -679,11 +670,6 @@ Bargraph display
 	width: 100%
 }
 
-
-
-
-
-
 /*
 --------------------------------------------------------------------
 Get to Know
@@ -800,56 +786,40 @@ Responsive styles
 }
 
 
-
-
 /*
 --------------------------------------------------------------------------------------------------------------
-Social Icons and Juicer near the bottom
+Social Media Icons
 --------------------------------------------------------------------------------------------------------------
 */
-#socialMediaFrontPage {
-	padding-bottom: 50px
-}
-
-#socialMediaFrontPage .sociallinks {
+.sociallinks {
 	text-align: center;
 }
 
-#socialMediaFrontPage .sociallinks li {
+.sociallinks li {
 	display: inline;
 	margin: 0 10px 0 0;
 }
 
-#socialMediaFrontPage .sociallinks li a {
+.sociallinks li a {
 	text-decoration: none;
 }
 
-#socialMediaFrontPage .sociallinks li img {
+.sociallinks li img {
 	width: 45px;
 }
 
+/*
+--------------------------------------------------------------------------------------------------------------
+Juicer near the bottom
+--------------------------------------------------------------------------------------------------------------
+*/
+#juicer-area {
+	padding-bottom: 50px;
+}
 
 .juicer-feed {
 	border: 5px solid #ccc;
 }
-
-.juicer-feed .referral {
-	display: none !important;
-}
-
-.juicer-feed.loaded {
-	overflow: hidden;
-}
-
-/* }
-#socialMediaFrontPage {
-	margin-bottom: 50px;
-} */
-/* .sociallinks {
-	margin: 20px 0;
-} */
-
-
 
 .homeMainContent .notgrid2 {
 	width: 100%;

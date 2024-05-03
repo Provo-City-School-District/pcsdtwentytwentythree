@@ -11,15 +11,21 @@ get_header();
 	<div id="currentPage">
 
 		<h1><?php the_title(); ?></h1>
-		<section id="stayCurrent" class="grid2 register">
-			<ul>
-				<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-insta.svg" alt="link to Instagram" /></a></li>
-				<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-twitter.svg" alt="link to Twitter" /></a></li>
-				<li><a href=""><img src="<?php echo get_template_directory_uri() ?>/assets/icons/dark/socialmedia-facebook.svg" alt="link to Facebook" /></a></li>
-			</ul>
-			<ul>
-				<li><a href="<?php echo get_field('hero_link_address'); ?>"><?php echo get_field('hero_link_label'); ?></a></li>
-			</ul>
+		<section id="stayCurrent">
+			<?php
+			//get repeater field 'hero_link_group'
+			// Check rows exists.
+			if (have_rows('hero_link_group')) {
+				// Loop through rows.
+				echo '<ul>';
+				while (have_rows('hero_link_group')) : the_row();
+					//display row
+					echo '<li class="' . get_sub_field('hero_link_icon') . '"><a href="' . get_sub_field('hero_link_address') . '">' . get_sub_field('hero_link_label') . '</a></li>';
+				// End loop.
+				endwhile;
+				echo '</ul>';
+			}
+			?>
 		</section>
 		<nav class="wpMenu">
 			<?php

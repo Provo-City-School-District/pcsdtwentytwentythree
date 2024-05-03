@@ -161,7 +161,6 @@ Utility
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 @media only screen and (min-width: 700px) {
@@ -170,17 +169,6 @@ Utility
         gap: 2em;
         justify-content: space-evenly;
     }
-
-    #stayCurrent.grid2 {
-        gap: 0;
-    }
-
-}
-
-@media only screen and (min-width: 1600px) {
-    /* .grid2 {
-        gap: unset;
-    } */
 }
 
 /* grid3 styling */
@@ -204,7 +192,6 @@ Utility
 .grid3.altColors>*:nth-child(even) {
     background-color: var(--even-color);
 }
-
 
 .grid3.altColors>*:nth-child(odd) {
     background-color: var(--odd-color);
@@ -304,7 +291,7 @@ Utility
     }
 
     .admin-bar #mainContent.fullwidth {
-        margin-top: 90px;
+        margin-top: 110px;
 
     }
 
@@ -323,10 +310,6 @@ Utility
         gap: 14px
     }
 }
-
-
-
-
 
 /* 
 ---------------------------------------------------------------------------------
@@ -436,17 +419,13 @@ On Page Elements
 
 /*
 ---------------------------------------------------------------------------------
-Stay Connected/Stay Current
----------------------------------------------------------------------------------d
+Stay Current
+---------------------------------------------------------------------------------
 */
 #stayCurrent {
     display: grid;
     justify-content: center;
     padding-top: 20px;
-}
-
-#currentPage #stayCurrent {
-    margin-bottom: -4px !important
 }
 
 #stayCurrent li {
@@ -462,11 +441,7 @@ Stay Connected/Stay Current
     gap: 1em;
 }
 
-#stayCurrent ul:nth-child(1) {
-    grid-template-columns: repeat(3, 50px);
-}
-
-#stayCurrent ul:nth-child(2) a {
+#stayCurrent ul a {
     background-color: var(--stu-color);
     color: #fff;
     padding: 1em;
@@ -477,7 +452,7 @@ Stay Connected/Stay Current
     gap: .5em;
 }
 
-#stayCurrent ul:nth-child(2) a:after {
+#stayCurrent ul a:after {
     content: '';
     background-image: url(../icons/light/register.png);
     background-size: cover;
@@ -487,49 +462,42 @@ Stay Connected/Stay Current
     height: 19px;
 }
 
-#stayCurrent ul:nth-child(2) li:nth-child(2) a {
+#stayCurrent ul li:nth-child(odd) a {
+    background-color: var(--stu-color);
+}
+
+/*---------------------------------------------------------------------------------
+Stay Current - Colors
+---------------------------------------------------------------------------------*/
+#stayCurrent ul li:nth-child(even) a {
     background-color: var(--emp-color);
 }
 
-#stayCurrent.register ul:nth-child(2) a:after {
+/*---------------------------------------------------------------------------------
+Stay Current - Icons
+---------------------------------------------------------------------------------*/
+#stayCurrent ul li.register a:after {
     background-image: url(../icons/light/register.png);
 }
 
-#stayCurrent ul:nth-child(2) li.calendar a:after {
+#stayCurrent ul li.calendar a:after {
     background-image: url(../icons/light/calendar.svg);
 }
 
-#stayCurrent ul:nth-child(2) li.newsletter a:after {
+#stayCurrent ul li.newsletter a:after {
     background-image: url(../icons/light/newsletter-icon.png);
 }
 
 @media (min-width:700px) {
+    #stayCurrent {
+        justify-content: end;
+    }
+
     #stayCurrent ul {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #stayCurrent ul:nth-child(2) {
         display: flex;
-    }
-
-    #stayCurrent ul:nth-child(1) {
-        justify-self: start;
-    }
-
-    #stayCurrent ul:nth-child(2) {
-        justify-self: end;
-    }
-
-    #stayCurrent ul:nth-child(2) li {
-        margin-bottom: 0em;
-
+        align-items: flex-end;
     }
 }
-
-
-
-
-
 
 /* Full width Styling */
 .fwtop,
@@ -544,19 +512,6 @@ Stay Connected/Stay Current
     max-width: 1500px;
     margin: 0 auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* alerts */
 #mainContent .alerts h1 a {
@@ -584,13 +539,6 @@ Stay Connected/Stay Current
 Policy styles
 --------------------------------------------------------------------
 */
-/* .postgrid .post img.svg {
-    width: 75px;
-    height: 75px;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 10px;
-  } */
 
 #currentPage ul.policystyle {
     margin: 0 0 0 0;
@@ -655,13 +603,10 @@ ul.policystyle li:nth-child(even) ul li {
 
 /* Last Modified  */
 .lastmodified {
-    /* text-align: right; */
     display: inline;
     float: right;
     ;
 }
-
-
 
 /* Directory Grid  */
 .directoryGrid {
@@ -764,10 +709,7 @@ ul.policystyle li:nth-child(even) ul li {
     background-color: purple;
 }
 
-
-
 /* Image Lists Grid */
-
 .imageListGrid {
     display: grid;
     list-style: none;
@@ -800,15 +742,10 @@ ul.policystyle li:nth-child(even) ul li {
     }
 }
 
-
-
 /* weglot fix  */
-
 .weglot-default {
     z-index: 1001;
 }
-
-
 
 /* directory search/filter  */
 #directorySearchIcon {
@@ -841,10 +778,6 @@ ul.policystyle li:nth-child(even) ul li {
         display: none;
     }
 }
-
-
-
-
 
 /*================================================================================================================
 form styles 
@@ -934,15 +867,6 @@ form .block {
     margin-bottom: 15px;
 }
 
-.emailForm input,
-.emailForm label {
-    display: inline-block;
-}
-
-.emailForm input[type=submit] {
-    display: block;
-}
-
 /*================================================================================================================
 category styles
 ================================================================================================================*/
@@ -1003,8 +927,6 @@ category styles
         height: 500px;
     }
 }
-
-
 
 /*================================================================================================================
 Translate Press Fixing
