@@ -113,6 +113,13 @@ get_header();
                         font-weight: bold;
                     }
                 </style></head><body>';
+
+					if ($role == 'Vendor') {
+						$emailedmessage .= '<p><strong>The sender of this email identified themselves as a vendor. Their message has not been vetted or approved by Provo City School District beforehand.</strong></p>';
+					} else {
+						// Add the main submitted message
+						$emailedmessage .= "<p>The Sender claimed they are a $role</p>";
+					}
 					// Initialize the emailed message
 					$emailedmessage .= '<img src="https://provo.edu/wp-content/uploads/2024/04/pcsd-logo-website-header-x2.png" /><br>';
 
@@ -121,8 +128,7 @@ get_header();
 						$emailedmessage .= '<strong>To: Entire Board Of Education</strong><br><br>';
 					}
 
-					// Add the main submitted message
-					$emailedmessage .= "<p>The Sender claimed they are a $role</p>";
+
 					$emailedmessage .= '<strong>Subject Received</strong>: <p class="subject">' . $submitsubject . '</p>';
 					if (!empty($studentName) && $role == 'Provo Parent') {
 						$emailedmessage .= '<strong>Student\'s Name</strong>: ' . $studentName . '<br><br>';

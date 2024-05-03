@@ -69,7 +69,7 @@ $district7 = '(District 7: Gina Hales)';
 
 					<p><strong>I am a...</strong></p><br>
 					<label>
-						<input type="radio" name="role" value="Community Member"> Community Member
+						<input type="radio" name="role" value="Community Member" id="commRadio"> Community Member
 					</label>
 					<br>
 					<label>
@@ -77,12 +77,13 @@ $district7 = '(District 7: Gina Hales)';
 					</label>
 					<br>
 					<label>
-						<input type="radio" name="role" value="Vendor"> Vendor
+						<input type="radio" name="role" value="Vendor" id="vendorRadio"> Vendor
 					</label>
 					<div id="studentNameField" style="display: none;">
 						<label for="studentName">Student Full Name:</label>
 						<input type="text" id="studentName" name="studentName">
 					</div>
+					<p id="vendorBlurb">Current affiliates should contact their designated district contacts directly. Please note that cold solicitations submitted through this form will not receive a response.</p>
 
 					<br>
 					<label for="to_staff">To: </label>
@@ -119,18 +120,28 @@ $district7 = '(District 7: Gina Hales)';
 
 	// Function to show or hide the student name input field
 	function toggleStudentNameField() {
-		// Get the parent radio button
-		parentRadio = document.getElementById('parentRadio');
-		// Get the student name input field
-		studentNameInput = document.getElementById('studentNameField');
-		// If parent radio button is checked, show the student name input field
+		// Get the radio buttons
+		var parentRadio = document.getElementById('parentRadio');
+		var vendorRadio = document.getElementById('vendorRadio');
+		// Get fields used as triggers
+		var studentNameInput = document.getElementById('studentNameField');
+		var vendorBlurb = document.getElementById('vendorBlurb');
+
 		if (parentRadio.checked) {
+			// if parent radio button is checked, show student name field. 
 			studentNameInput.style.display = 'block';
-		} else {
-			// If not checked, hide the input field
+			vendorBlurb.style.display = 'none';
+		} else if (vendorRadio.checked) {
+			// If vendor radio button is checked, show the vendor blurb
+			vendorBlurb.style.display = 'block';
 			studentNameInput.style.display = 'none';
+		} else {
+			// If neither radio button is checked, hide both
+			studentNameInput.style.display = 'none';
+			vendorBlurb.style.display = 'none';
 		}
 	}
+
 
 	// Call the function initially to set the field based on the default selection
 	toggleStudentNameField();
