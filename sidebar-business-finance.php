@@ -22,7 +22,7 @@
 		</li>
 		<li>
 			<a class="int" href="https://provo.edu/school-fees/">
-				<img src="https://provo.edu/wp-content/themes/pcsdtwentysixteen/assets/icons/light/fee.svg" alt="" />
+				<img src="//globalassets.provo.edu/image/icons/fee-lt.svg" alt="" />
 				View School Fees
 			</a>
 		</li>
