@@ -60,7 +60,7 @@ if (array_search($from, $email_blacklist) !== false) {
 }
 get_header();
 ?>
-<main id="mainContent" class="sidebar">
+<main id="mainContent" class="">
 
 	<section class="content page">
 		<?php custom_breadcrumbs(); ?>
@@ -185,8 +185,8 @@ get_header();
 		</div>
 	</section>
 	<?php
-	$sidebar = get_field('sidebar');
-	get_sidebar($sidebar);
+	// $sidebar = get_field('sidebar');
+	// get_sidebar($sidebar);
 	?>
 </main>
 <?php
