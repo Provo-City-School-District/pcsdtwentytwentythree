@@ -11,13 +11,13 @@
 		<li>
 			<a href="https://provo.edu/eschool/eschool-calendar/">
 				<img src="//globalassets.provo.edu/image/icons/calendar-lt.svg" alt="" />
-				<span class="ext">View eSchool Calendar</span>
+				<span class="ext">eSchool Calendar</span>
 			</a>
 		</li>
 		<li>
 			<a href="https://provo.edu/eschool/meet-your-staff/">
 				<img src="//globalassets.provo.edu/image/icons/teaching-lt.svg" alt="" />
-				<span class="ext">View eSchool Directory</span>
+				<span class="ext">eSchool Staff Directory</span>
 			</a>
 		</li>
 	</ul>
