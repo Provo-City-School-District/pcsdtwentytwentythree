@@ -78,9 +78,10 @@ get_header();
 
 					// HR requested: temporarily any emails sent to post ID erinh to HR instead
 					// added 11-06-2023 - request came through JP from HR
-					if ($to == 'erinh@provo.edu') {
-						$to = 'rebeccar@provo.edu';
-					}
+					// if ($to == 'erinh@provo.edu') {
+					// 	$to = 'rebeccar@provo.edu';
+					// }
+					// removed on 05-14-2024 at the request of Rebecca through JP.
 					//build email headers
 					$subject = 'A ' . $role . ' Has Contacted You ';
 					// Check if $studentName is not empty
