@@ -5,11 +5,14 @@
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTPJPV04N2"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-FTPJPV04N2');
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-FTPJPV04N2');
 	</script>
 	<meta charset="utf-8" />
 	<title><?php if (is_home()) { ?>News | <?php } ?><?php if (is_page()) {
@@ -28,8 +31,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<a href="#mainContent" class="skip-nav-link">
-		skip navigation
+	<a href="#mainContent" tabindex="5" class="skip-nav-link">
+		Skip To Content
+	</a>
+	<a href="#trp-floater-ls" tabindex="10" class="skip-nav-link">
+		Skip to Translation Menu
 	</a>
 	<header id="mainHeader">
 
@@ -56,8 +62,8 @@
 
 		</nav>
 		<div class="siteSearch griditem">
-		<a href="https://provo.edu/search-results/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/dark/search-loupe.svg" width="25px"></a>
-		<!-- <a><img src="https://sandbox.provo.edu:8443/wp-content/themes/pcsdtwentysixteen/assets/icons/light/translation-light.png" width="25px"></a>	
+			<a href="https://provo.edu/search-results/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/icons/dark/search-loupe.svg" width="25px"></a>
+			<!-- <a><img src="https://sandbox.provo.edu:8443/wp-content/themes/pcsdtwentysixteen/assets/icons/light/translation-light.png" width="25px"></a>	
 			 -->
 			<!-- <form id="cludo-search-form" role="search">
 				<input type="search" class="search-input" aria-label="Search" placeholder="Search This Website...">
@@ -66,4 +72,3 @@
 		</div>
 
 	</header><!-- end mainHeader -->
-	

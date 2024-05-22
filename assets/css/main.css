@@ -317,21 +317,32 @@ On Page Elements
 ---------------------------------------------------------------------------------
 */
 
-/* Skip nav link */
+/* 
+-----------------------------------
+Skip nav link
+-----------------------------------
+*/
 .skip-nav-link {
     position: absolute;
-    transform: translateY(-300%);
-    padding: 1em;
-    top: -200px;
-    transition: transform 300ms ease-in;
+    top: -1000em;
+    left: 6px;
+    height: auto;
+    width: auto;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 23px 14px;
+    background: #f0f0f1;
+    color: #2271b1;
+    z-index: 100000;
+    line-height: normal;
+    text-decoration: none;
 }
 
 .skip-nav-link:focus {
-    transform: translateY(-165%);
-    z-index: 10001;
-    border: none;
-    top: 0px;
-    position: static;
+    top: 7px;
+    background: #f0f0f1;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
 }
 
 
