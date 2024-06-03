@@ -5,13 +5,13 @@ Theme Setup
 function pcsd_assets()
 {
 	//register different script files
-	wp_register_script('mainScripts', get_template_directory_uri() . '/assets/js/main_scripts.js', array('jquery', 'slickScripts'), '1.11.0', true);
+	wp_register_script('mainScripts', get_template_directory_uri() . '/assets/js/main_scripts.js', array('jquery', 'slickScripts'), '1.11.01', true);
 	wp_register_script('cludoScripts', 'https://customer.cludo.com/scripts/bundles/search-script.min.js', '', '1.0.1', true);
 	wp_register_script('slickScripts', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), '1.0.1', true);
 	wp_register_script('linkDetection', get_template_directory_uri() . '/assets/js/linkDetection.js', '', '1.0.0', true);
 	wp_register_script('404easterEgg', get_template_directory_uri() . '/assets/js/404.js', '', '1.0.0', true);
 	wp_register_script('formfix', get_template_directory_uri() . '/assets/js/formfix.js', '', '1.0.01', true);
-	wp_register_script('frontpage_scripts', get_template_directory_uri() . '/assets/js/frontpage.js', '', '0.1.0', true);
+	wp_register_script('frontpage_scripts', get_template_directory_uri() . '/assets/js/frontpage.js', '', '0.1.01', true);
 
 	//load CSS files
 	wp_enqueue_style('variables', get_template_directory_uri() . '/assets/css/variables.css', '', '1.0.0', false);
@@ -34,7 +34,7 @@ function pcsd_assets()
 	wp_enqueue_script('mainScripts');
 
 	if (is_front_page()) {
-		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.16', false);
+		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.17', false);
 		wp_enqueue_script('frontpage_scripts');
 	}
 
