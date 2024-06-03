@@ -23,7 +23,6 @@
 		<li>Marissa Bernards</li>
 		<li>Lisa Boyce</li>
 		<li>Susie Bramble</li>
-		<li>Greg Christofferson</li>
 		<li>Andrea Clarke</li>
 		<li>Ali Conger</li>
 		<li>Julia Doxey</li>
