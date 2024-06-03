@@ -3,6 +3,12 @@ jQuery(document).ready(function () {
   jQuery("#announcments .slick-wrapper").slick({
     autoplay: true,
     autoplaySpeed: 10000,
+    responsive: [
+      {
+        breakpoint:700,
+        settings:"unslick"
+      }
+    ]
   });
 });
 
