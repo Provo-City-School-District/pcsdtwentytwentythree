@@ -70,7 +70,7 @@ $get_to_know_fields = get_fields();
 							if (get_field('announcement_text')) {
 							?>
 								<div class="slide-text">
-									<h2><?php the_title(); ?></h2>
+									<h3><?php the_title(); ?></h3>
 									<p><?php
 										the_field('announcement_text');
 										$slideLink = get_field('announcement_link');
