@@ -16,10 +16,6 @@
 Front page Slider
 ================================================================================================================
 */
-#announcments {
-	background-image: url(../img/background/slider-background.png);
-	max-height: 600px;
-}
 
 #announcments video {
 	max-width: 100%;
@@ -33,35 +29,44 @@ Front page Slider
 	left: -9999px
 }
 
-.slick-wrapper {
-	/* background-image: url(../img/background/slider-background.png); */
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: cover;
-}
-
-.slide {
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	min-height: 30vh;
-	position: relative;
-}
-
-.slide .slide-text {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 0;
-	background-color: rgba(255, 233, 244, 0.9);
-	padding: 5px 1em 10px 1em;
-}
-
-#announcments .slick-arrow {
-	display: none !important;
-}
 
 @media (min-width:700px) {
+	.mobile-slide {
+		display: none !important;
+	}
+
+	#announcments {
+		background-image: url(../img/background/slider-background.png);
+	}
+
+	.slick-wrapper {
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	.slide {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		min-height: 30vh;
+		position: relative;
+
+	}
+
+	.slide .slide-text {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		background-color: rgba(255, 233, 244, 0.9);
+		padding: 5px 1em 10px 1em;
+	}
+
+	#announcments .slick-arrow {
+		display: none !important;
+	}
+
 	.slide {
 		min-height: 45vh;
 	}

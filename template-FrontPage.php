@@ -66,6 +66,7 @@ $get_to_know_fields = get_fields();
 					while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
 						<article class="slide" style="background-image: url('<?php the_field('announcement_image'); ?>')">
+							<img src="<?php the_field('announcement_image'); ?>" alt="<?php the_field('announcement_text'); ?>" class="mobile-slide" />
 							<?php
 							if (get_field('announcement_text')) {
 							?>
