@@ -22,6 +22,7 @@
 <ul>
 	<li><a href="https://provo.edu/category/schools/secondary-schools/centennial-middle/">Centennial Middle</a></li>
 	<li><a href="https://provo.edu/category/schools/secondary-schools/dixon-middle/">Dixon Middle</a></li>
+	<li><a href="https://provo.edu/category/schools/secondary-schools/shoreline-middle/">Shoreline Middle</a></li>
 	<li><a href="https://provo.edu/category/schools/secondary-schools/independence-high/">Independence High</a></li>
 	<li><a href="https://provo.edu/category/schools/secondary-schools/provo-high-school/">Provo High</a></li>
 	<li><a href="https://provo.edu/category/schools/secondary-schools/timpview-high/">Timpview High</a></li>
