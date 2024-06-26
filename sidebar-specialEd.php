@@ -37,6 +37,7 @@
 	</ul>
 	<h2>Special Education Contacts</h2>
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/special-education/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/special-education/']");
+	//echo file_get_contents('https://provo.edu/directory_page/special-education/');
 	?>
 </aside>

@@ -11,7 +11,8 @@
 	<h2>Maintenance & Facilities Contacts</h2>
 
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/facilities-and-maintenance/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/facilities-and-maintenance/']");	
+	//echo file_get_contents('https://provo.edu/directory_page/facilities-and-maintenance/');
 	?>
 	<!-- <?php dynamic_sidebar('globalsidebar'); ?> -->
 </aside>

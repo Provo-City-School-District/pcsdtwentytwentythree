@@ -10,6 +10,6 @@
 	</ul>
 	<h2>Superintendent Contacts</h2>
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/superintendent/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/superintendent/']");
 	?>
 </aside>

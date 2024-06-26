@@ -17,6 +17,7 @@
 	<h2>Teaching & Learning Contacts</h2>
 
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/teaching-and-learning/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/teaching-and-learning/']");
+	//echo file_get_contents('https://provo.edu/directory_page/teaching-and-learning/');
 	?>
 </aside>

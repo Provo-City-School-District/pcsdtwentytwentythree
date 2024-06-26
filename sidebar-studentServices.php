@@ -29,6 +29,7 @@
 	</ul>
 	<h2>Student Services Contacts</h2>
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/student-services/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/student-services/']");
+	//echo file_get_contents('https://provo.edu/directory_page/student-services/');
 	?>
 </aside>

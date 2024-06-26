@@ -53,6 +53,7 @@
 	</ul>
 	<h2>Child Nutrition Contacts</h2>
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/child-nutrition/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/child-nutrition/']");
+	//echo file_get_contents('https://provo.edu/directory_page/child-nutrition/');
 	?>
 </aside>

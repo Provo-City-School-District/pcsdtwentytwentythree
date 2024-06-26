@@ -23,7 +23,7 @@
 	</ul>
 	<h2>Public Relations Contacts</h2>
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/administrative-building-communications-admin/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/administrative-building-communications-admin/']");
 	?>
 	<ul class="sociallinks">
 		<li><a href="https://www.facebook.com/provoschooldistrict/"><img src="//globalassets.provo.edu/image/icons/facebook.svg" alt="Link to Facebook" /></a></li>

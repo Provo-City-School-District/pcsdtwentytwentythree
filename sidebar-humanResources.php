@@ -17,6 +17,6 @@
 	<h2>Human Resource Contacts</h2>
 
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/human-resources/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/human-resources/']");
 	?>
 </aside>

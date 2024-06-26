@@ -23,7 +23,8 @@
 	</ul>
 	<h2>Title I Contacts</h2>
 	<?php
-	echo file_get_contents('https://provo.edu/directory_page/title-i/');
+	echo do_shortcode("[directory url='https://provo.edu/directory_page/title-i/']");
+	//echo file_get_contents('https://provo.edu/directory_page/title-i/');
 	?>
 	<h2>Title I Schools</h2>
 	<ul>
