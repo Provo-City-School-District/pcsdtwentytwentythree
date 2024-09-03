@@ -27,9 +27,15 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://provo.edu/wp-content/uploads/2020/02/6160-F2-Fee-Waiver-Decision-And-Appeal.pdf">
+			<a href="https://provo.edu/wp-content/uploads/2024/08/6160-F2-Fee-Waiver-Decision-And-Appeal.pdf">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/light/register.svg" alt="" />
-				<span>6160 Form 2 Fee Waiver Decision And Appeal</span>
+				<span>6160 F2 Fee Waiver Decision And Appeal</span>
+			</a>
+		</li>
+		<li>
+			<a href="https://provo.edu/wp-content/uploads/2024/08/6160-F2-Decision-De-Exencion-De-Tarifas-Y-Apelacion.pdf">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/light/register.svg" alt="" />
+				<span>6160 F2 Decisión De Exención De Tarifas Y Apelación</span>
 			</a>
 		</li>
 	</ul>
@@ -43,7 +49,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://provo.edu/wp-content/uploads/2022/06/march22-FeeWaiverApplicationK6.pdf">
+			<a href="https://provo.edu/wp-content/uploads/2024/08/Fee-Waiver-Application-2024-25-ADA.pdf">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/light/register.svg" alt="" />
 				<span>School Fee Waiver Application</span>
 			</a>
@@ -75,7 +81,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://provo.edu/wp-content/uploads/2022/06/march22-FeeWaiverApplication712.pdf">
+			<a href="https://provo.edu/wp-content/uploads/2024/08/Fee-Waiver-Application-2024-25-ADA.pdf">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/light/register.svg" alt="" />
 				<span>School Fee Waiver Application</span>
 			</a>
