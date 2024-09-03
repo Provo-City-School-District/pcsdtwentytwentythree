@@ -34,7 +34,7 @@ function pcsd_assets()
 	wp_enqueue_script('mainScripts');
 
 	if (is_front_page()) {
-		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.17', false);
+		wp_enqueue_style('front_page', get_template_directory_uri() . '/assets/css/frontpage.css', array(), '1.0.18', false);
 		wp_enqueue_script('frontpage_scripts');
 	}
 
