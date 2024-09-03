@@ -5,8 +5,8 @@
 get_header();
 ?>
 <main id="mainContent" class="sidebar">
-		<?php custom_breadcrumbs(); ?>
-		<div id="currentPage">
+	<?php custom_breadcrumbs(); ?>
+	<div id="currentPage">
 		<article id="activePost" class="activePost feePost noprior">
 
 			<h1><?php the_title(); ?></h1>
@@ -16,7 +16,7 @@ get_header();
 			$location_of_fees_to_display = get_field('location_of_fees_to_display');
 			//make arrays with location options - this might be able to be queried, but its one list
 			//$elementary_locations = array('amelia_earhart', 'canyon_crest', 'edgemont', 'franklin', 'lakeview', 'provost', 'provo_peaks', 'rock_canyon', 'spring_creek', 'sunset_view', 'timpanogos', 'wasatch', 'westridge');
-			$middle_locations = array('centennial_middle', 'dixon_middle');
+			$middle_locations = array('centennial_middle', 'dixon_middle', 'shoreline_middle');
 			$high_locations = array('independence_high', 'provo_high', 'timpview_high');
 			//$aux_locations = array('ebph', 'eschool', 'provo_adult_education', 'preschools');
 			/* hiding elementary pull since there isn't a general elementary fee as of yet.
@@ -330,7 +330,7 @@ I changed the code so that the search would happen before the if statement and t
 			?>
 			<div class="clear"></div>
 		</article>
-		</div>
+	</div>
 	<?php get_sidebar('school-fees'); ?>
 </main>
 <?php

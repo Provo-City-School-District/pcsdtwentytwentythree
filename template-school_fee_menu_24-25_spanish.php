@@ -6,11 +6,11 @@ get_header();
 ?>
 <main id="mainContent" class="sidebar">
 	<ol class="breadcrumbs" id="breadcrumbs">
-			<li><a href="https://provo.edu/">Home</a> / </li>
-			<li><a href="https://provo.edu/pagos-escolares/">Pagos Escolares</a> / </li>
-			<li>Pagos Escolares 24-25</li>
-		</ol>
-		<div id="currentPage">
+		<li><a href="https://provo.edu/">Home</a> / </li>
+		<li><a href="https://provo.edu/pagos-escolares/">Pagos Escolares</a> / </li>
+		<li>Pagos Escolares 24-25</li>
+	</ol>
+	<div id="currentPage">
 		<article class="activePost schoolFeesMenu">
 			<?php
 			if (have_posts()) :
@@ -98,7 +98,7 @@ get_header();
 								<a href="https://provo.edu/pagos-escolares-24-25/centennial-middle/">Centennial Middle</a>
 							</article>
 							<article class="post">
-								<a href="https://provo.edu/pagos-escolares-24-25/dixon-middle/">Dixon Middle</a>
+								<a href="https://provo.edu/pagos-escolares-24-25/shoreline-middle/">Shoreline Middle</a>
 							</article>
 							<article class="post">
 								<a href="https://provo.edu/pagos-escolares-24-25/independence-high/">Independence High</a>
@@ -133,7 +133,7 @@ get_header();
 			?>
 			<div class="clear"></div>
 		</article>
-		</div>
+	</div>
 	<?php get_sidebar('school-fees'); ?>
 </main>
 <?php
