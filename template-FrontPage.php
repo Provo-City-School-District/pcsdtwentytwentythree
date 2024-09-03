@@ -194,48 +194,7 @@ $get_to_know_fields = get_fields();
 				</li>
 			</ul>
 		</section>
-		<section id="getToKnow">
-			<!-- Start Get to Know the District -->
-			<h1>Get to Know the District</h1>
-			Quick facts about Provo City School District
-			<section class="gradRate">
-				<dl>
-					<dt><strong>
-							<?php echo $get_to_know_fields['graduation_percentage']; ?>% Graduation Rate
-						</strong></dt>
-					<dd class="percentage percentage-<?php echo $get_to_know_fields['graduation_percentage']; ?>"></dd>
-				</dl>
-			</section>
-			<div class="flexcontainer">
-				<?php
-				foreach ($get_to_know_fields['districtinfo'] as $gettoknowtile) {
 
-				?>
-
-					<article>
-						<a href="<?php echo $gettoknowtile['tile_link']; ?>">
-							<h2><?php echo ($gettoknowtile['tile_title']); ?></h2>
-							<?php if ($gettoknowtile['modifcation_date']) {
-							?>
-								<p class="modDate"><em>*as of <?php echo ($gettoknowtile['modifcation_date']); ?></em></p>
-							<?php
-							}
-							?>
-
-							<img class="getToKnowIcon" src="<?php echo $gettoknowtile['tile_icon']; ?>" alt="" />
-							<span class="getToKnowContent">
-								<?php echo $gettoknowtile['tile_content']; ?>
-							</span>
-						</a>
-					</article>
-
-				<?php
-				}
-				?>
-
-			</div>
-			<p class="demoLink"><a href="https://provo.edu/school-demographics/">Learn more about our schools & their demographics <span class="rightarrow"></span></a></p>
-		</section> <!-- End Get to Know the District -->
 
 	</div><!-- End of post slider content -->
 </main><!-- End of #mainContent -->
