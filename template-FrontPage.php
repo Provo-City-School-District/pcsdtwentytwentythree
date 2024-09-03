@@ -236,15 +236,7 @@ $get_to_know_fields = get_fields();
 			</div>
 			<p class="demoLink"><a href="https://provo.edu/school-demographics/">Learn more about our schools & their demographics <span class="rightarrow"></span></a></p>
 		</section> <!-- End Get to Know the District -->
-		<section id="juicer-area">
-			<h2>Instagram Feed</h2>
-			<!-- start Juicer stuff -->
-			<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
-			<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-			<ul class="juicer-feed" data-feed-id="provocityschooldistrict" data-per="3"></ul>
-			</ul>
-			<!-- end Juicer stuff -->
-		</section> <!-- End Social Media -->
+
 	</div><!-- End of post slider content -->
 </main><!-- End of #mainContent -->
 <?php
