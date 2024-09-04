@@ -142,6 +142,8 @@ window.onload = function () {
     if (targetElement) {
       var img = document.createElement("img"); // create new img element
       img.src = "https://provo.edu/wp-content/uploads/2024/01/translate.png"; // set src attribute
+      img.alt = "Translation Tool"; // set alt attribute for accessibility
+      img.setAttribute("aria-label", "Translation Tool"); // set aria-label attribute for additional context
       targetElement.innerHTML = ""; // clear the current content
       targetElement.appendChild(img); // append the new image
     }
