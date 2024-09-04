@@ -31,10 +31,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<a href="#mainContent" tabindex="5" class="skip-nav-link">
+	<a href="#mainContent" tabindex="5" class="skip-nav-link" aria-label="Skip to main content">
 		Skip To Content
 	</a>
-	<a href="#trp-floater-ls" tabindex="10" class="skip-nav-link">
+	<a href="#trp-floater-ls" tabindex="10" class="skip-nav-link" aria-label="Skip to translation menu">
 		Skip to Translation Menu
 	</a>
 	<header id="mainHeader">
