@@ -5,10 +5,10 @@ jQuery(document).ready(function () {
     autoplaySpeed: 10000,
     responsive: [
       {
-        breakpoint:700,
-        settings:"unslick"
-      }
-    ]
+        breakpoint: 700,
+        settings: "unslick",
+      },
+    ],
   });
 });
 
@@ -20,35 +20,6 @@ jQuery(document).ready(function () {
     autoplaySpeed: 10000,
   });
 });
-
-//Menu reveal;
-// jQuery("#navbar > a").click(function () {
-//   jQuery("#navbar ul").toggleClass("active");
-//   jQuery(this).html(
-//     jQuery("#navbar ul").hasClass("active")
-//       ? '<img src="https://sandbox.provo.edu:8443//wp-content/themes/pcsdtwentysixteen/assets/icons/dark/exit.png" alt="" /> Exit'
-//       : '<img src="https://sandbox.provo.edu:8443//wp-content/themes/pcsdtwentysixteen/assets/icons/dark/menu.png" alt="" /> Menu'
-//   );
-// });
-
-//window resize event listener. clears mobile menu active
-// jQuery(window).resize(function () {
-//   jQuery("#navbar ul").removeClass("active");
-//   jQuery("#navbar > a").html(
-//     '<img src="https://sandbox.provo.edu:8443//wp-content/themes/pcsdtwentysixteen/assets/icons/dark/menu.png" alt="" /> Menu'
-//   );
-// });
-
-// jQuery(document).ready(function () {
-//   jQuery("#navbar > a").html(
-//     '<img src="https://sandbox.provo.edu:8443//wp-content/themes/pcsdtwentysixteen/assets/icons/dark/menu.png" alt="" /> Menu'
-//   );
-// });
-
-// jQuery("#cludo-search-form #search-button").on("click", function () {
-// event.preventDefault();
-// jQuery("#cludo-search-form").toggleClass("active");
-// });
 
 //Clicking the X on the alert will close the alert section. it will also set a cookie with the name "alert"
 jQuery(".closeAlert").click(function () {
@@ -78,12 +49,6 @@ Set cookie that expires at the end of the day
 =============================================================================================================
 */
 function setcookie(cname, cvalue) {
-  //expire in a year
-  //var d = new Date();
-  //d.setTime(d.getTime() + (24 * 60 * 60 * 1000 * 7));
-  //var expires = "expires="+d.toUTCString();
-  //expire at midnight the following day
-
   var now = new Date();
   var expire = new Date();
 
@@ -146,6 +111,11 @@ jQuery(document).ready(function () {
   });
 });
 
+/*
+=============================================================================================================
+Translate element
+=============================================================================================================
+*/
 //inserts a link to the translation request form in the language switcher
 window.onload = function () {
   var wrapper = document.querySelector(".trp-language-wrap");
@@ -155,23 +125,28 @@ window.onload = function () {
     newAnchor.textContent = "Request Translation"; // set link text
     wrapper.insertBefore(newAnchor, wrapper.children[1]); //insert new anchor before first child
 
-    var targetElement = wrapper.querySelector(".trp-floater-ls-disabled-language.trp-ls-disabled-language"); // find the target element
+    var targetElement = wrapper.querySelector(
+      ".trp-floater-ls-disabled-language.trp-ls-disabled-language"
+    ); // find the target element
     if (targetElement) {
       targetElement.textContent += " - Selected"; // append "current lang" to the existing text
     }
   }
-  var parentElement = document.getElementById('trp-floater-ls-current-language'); // get the parent element by ID
+  var parentElement = document.getElementById(
+    "trp-floater-ls-current-language"
+  ); // get the parent element by ID
   if (parentElement) {
-    var targetElement = parentElement.querySelector('.trp-floater-ls-disabled-language.trp-ls-disabled-language'); // find the target element inside the parent
+    var targetElement = parentElement.querySelector(
+      ".trp-floater-ls-disabled-language.trp-ls-disabled-language"
+    ); // find the target element inside the parent
     if (targetElement) {
-      var img = document.createElement('img'); // create new img element
-      img.src = 'https://provo.edu/wp-content/uploads/2024/01/translate.png'; // set src attribute
-      targetElement.innerHTML = ''; // clear the current content
+      var img = document.createElement("img"); // create new img element
+      img.src = "https://provo.edu/wp-content/uploads/2024/01/translate.png"; // set src attribute
+      targetElement.innerHTML = ""; // clear the current content
       targetElement.appendChild(img); // append the new image
     }
   }
 };
-
 
 /*
 ==================================================================================================
