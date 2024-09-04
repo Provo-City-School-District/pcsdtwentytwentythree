@@ -5,7 +5,7 @@ Theme Setup
 function pcsd_assets()
 {
 	//register different script files
-	wp_register_script('mainScripts', get_template_directory_uri() . '/assets/js/main_scripts.js', array('jquery', 'slickScripts'), '1.11.01', true);
+	wp_register_script('mainScripts', get_template_directory_uri() . '/assets/js/main_scripts.js', array('jquery', 'slickScripts'), '1.11.02', true);
 	wp_register_script('cludoScripts', 'https://customer.cludo.com/scripts/bundles/search-script.min.js', '', '1.0.1', true);
 	wp_register_script('slickScripts', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), '1.0.1', true);
 	wp_register_script('linkDetection', get_template_directory_uri() . '/assets/js/linkDetection.js', '', '1.0.0', true);
