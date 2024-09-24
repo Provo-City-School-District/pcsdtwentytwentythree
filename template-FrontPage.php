@@ -162,9 +162,9 @@ $get_to_know_fields = get_fields();
 								<?php
 								echo get_excerpt();
 								?>
-								<!-- <a href="<?php the_permalink(); ?>">Read More <span class="rightarrow"></span></a> -->
+
 							</div>
-							<p class="readMore"><a href="<?php the_permalink(); ?>">Read More <span class="rightarrow"></span></a></p>
+
 							<p class="postDate"><?php echo get_the_date(); ?></p>
 
 						</article>
