@@ -255,9 +255,14 @@ Utility
     color: var(--theme-white);
     padding: 1em;
     text-align: center;
+    text-decoration: none;
 
     justify-self: center stretch;
     align-self: center;
+}
+
+.wpMenu a:hover {
+    text-decoration: underline;
 }
 
 /* media queries */
@@ -461,6 +466,11 @@ Stay Current
     display: grid;
     grid-template-columns: 1fr 1em;
     gap: .5em;
+    text-decoration: none;
+}
+
+#stayCurrent ul a:hover {
+    text-decoration: underline;
 }
 
 #stayCurrent ul a:after {
@@ -522,6 +532,14 @@ Stay Current - Icons
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
+}
+
+.employeeHighlights a {
+    text-decoration: none;
+}
+
+.employeeHighlights a:hover {
+    text-decoration: underline;
 }
 
 /* alerts */
