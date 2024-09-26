@@ -69,7 +69,7 @@ $district7 = '(District 7: Gina Hales)';
 
 					<p><strong>I am a...</strong></p><br>
 					<label>
-						<input type="radio" name="role" value="Community Member" id="commRadio"> Community Member
+						<input type="radio" name="role" value="Community Member" id="commRadio" required> Community Member
 					</label>
 					<br>
 					<label>
