@@ -194,8 +194,11 @@ ul li.ext ul {
 
 /* Removes link marking from button */
 /* a:has(button)::before,*/
-a:has(button)::after {
+a:has(button)::after,
+a:has(img)::after {
     visibility: hidden !important;
+    margin-left: unset !important;
+    min-width: 0 !important;
 }
 
 :target::before {
